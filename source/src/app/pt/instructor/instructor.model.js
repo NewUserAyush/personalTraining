@@ -12,11 +12,13 @@
     /* @ngInject */
     function SalesService(breeze, $q)
     {
-        this.getData = getData;
-
-
         var serviceName='http://w2idemo.azurewebsites.net/breeze/home/';
         var manager = new breeze.EntityManager(serviceName);
+        //interface
+        this.getData = getData;
+        this.addItem = addItem;
+
+
 
 
 
@@ -36,8 +38,32 @@
             })
 
             promise=deferred.promise;
+
             return promise;
 
+         }
+
+
+
+
+        function addItem(a)
+        {
+            var a=
+            {
+                Id:12,
+                Name:"rahul",
+                Student:"ahg",
+                Location:"pune",
+                Student_age:12,
+                student_join_date:"12/14/14"
+            }
+            //var instructtype=manager.metadataStore.getEntities('instuctor');
+            //var newinstruct=instructtype.createEntity(a);
+            //return manager.addEntity(newinstuct);
+
+            return manager.createEntity('Instructor', a);
         }
+
     }
 })();
+

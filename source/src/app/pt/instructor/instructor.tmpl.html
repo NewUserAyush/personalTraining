@@ -26,17 +26,19 @@ background-color: #f1f1c1;
             <!--<td><h2>JOIN_Date</h2></td>-->
         <!--</tr>-->
         <!--</table>-->
-    <input type="text" ng-model="search" >
+    <!--<input type="text" ng-model="search" >-->
         <ul>
-            <li ng-repeat="x in vm.testData | filter: search">
+            <li ng-repeat="x in vm.testData">
             <em>{{x.Id}}</em>
             <em>{{ x.Name }}</em>
             <em>{{ x.Student }}</em>
             <em>{{ x.Student_age }}</em>
-            <em>{{ x.Location }}</em>
+                <em>{{ x.Location }}</em>
             <em>{{ x.Student_join_date }}</em>
         </li>
             </ul>
     <input type="text" ng-model="create">
+
+    <button ng-click="vm.addItem()" > Create </button>
 
 </md-content>

@@ -13,5 +13,16 @@
             // console.log(data);
             vm.testData=data.results;
         });
+
+        vm.addItem = addItem;
+
+        function addItem()
+        {
+            instructormodel.addItem().then(function(data){
+                console.log(data);
+            });
+        }
+
+
     }
 })();
