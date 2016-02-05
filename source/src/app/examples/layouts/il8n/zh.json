@@ -1,0 +1,27 @@
+{
+    "MENU": {
+        "LAYOUTS": {
+            "TITLE": "布局",
+            "COMPOSER": "作曲家",
+            "FULL-WIDTH": "全宽度的设计",
+            "ICON-MENU": "偶像菜单",
+            "TALL-TOOLBAR": "高高的工具条的背景"
+        }
+    },
+    "EXAMPLES": {
+        "LAYOUTS": {
+            "OPTIONS": {
+                "SIDEMENU-SIZES": {
+                    "HIDDEN": "隐藏的",
+                    "ICONS": "偶像",
+                    "FULL": "全面规模"
+                },
+                "TOOLBAR-SIZES": {
+                    "DEFAULT": "违约",
+                    "MEDIUM": "中",
+                    "TALL": "高高的"
+                }
+            }
+        }
+    }
+}

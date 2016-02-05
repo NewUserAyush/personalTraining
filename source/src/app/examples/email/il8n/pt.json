@@ -1,0 +1,52 @@
+{
+    "MENU": {
+        "EMAIL": {
+            "EMAIL": "E-mail",
+            "INBOX": "Entrada",
+            "TRASH": "Lixo",
+            "SENT": "Enviado"
+        }
+    },
+    "EMAIL": {
+        "TOOLBAR": {
+            "SEARCH": "Procura"
+        },
+        "INBOX": {
+            "TITLE": "Entrada",
+            "GROUPS": {
+                "TODAY": "Hoje",
+                "YESTERDAY": "Ontem",
+                "OLDER": "Mais velhos"
+            }
+        },
+        "COMPOSE": {
+            "FROM": "A partir de",
+            "CC": "CC",
+            "BCC": "CCO",
+            "SUBJECT": "Assunto",
+            "SEND": "Enviar",
+            "VALIDATION": {
+                "EMAIL_REQUIRED": "Por favor introduza um endereço para envio.",
+                "EMAIL_VALID": "Por favor introduza um endereço de email válido.",
+                "SUBJECT_REQUIRED": "Por favor insira um assunto para o e-mail."
+            }
+        },
+        "TO": "Para",
+        "NEW": "Compor",
+        "SENT": "E-mail para {{a}} enviada.",
+        "CANCELED": "E-mail cancelada",
+        "REPLY": "Responder",
+        "REPLY_ALL": "Responder A Todos",
+        "FORWARD": "Para a frente",
+        "DELETE": "Apagar",
+        "DELETED": "E-Mail Excluído",
+        "RE": "R. e: ",
+        "CLOSE": "Fechar",
+        "MESSAGE": "Mensagem",
+        "NO_EMAILS_FOUND": "Nenhum e-mail encontrado",
+        "NO_EMAIL_SELECTED": "Nenhum e-mail selecionado",
+        "REPLY_BOTTOM_SHEET": {
+            "TITLE": "Mensagem De Resposta"
+        }
+    }
+}

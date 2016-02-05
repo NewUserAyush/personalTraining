@@ -1,0 +1,27 @@
+{
+    "MENU": {
+        "LAYOUTS": {
+            "TITLE": "Layouts",
+            "COMPOSER": "Composer",
+            "FULL-WIDTH": "Full Width Layout",
+            "ICON-MENU": "Icon Menu",
+            "TALL-TOOLBAR": "Tall Toolbar with background"
+        }
+    },
+    "EXAMPLES": {
+        "LAYOUTS": {
+            "OPTIONS": {
+                "SIDEMENU-SIZES": {
+                    "HIDDEN": "Hidden",
+                    "ICONS": "Icons",
+                    "FULL": "Full Size"
+                },
+                "TOOLBAR-SIZES": {
+                    "DEFAULT": "Default",
+                    "MEDIUM": "Medium",
+                    "TALL": "Tall"
+                }
+            }
+        }
+    }
+}

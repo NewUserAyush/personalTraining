@@ -1,0 +1,47 @@
+{
+    "MENU": {
+        "FORMS": {
+            "FORMS": "Forms",
+            "INPUTS": "Inputs",
+            "BINDING": "Data Binding",
+            "AUTOCOMPLETE": "Autocomplete",
+            "VALIDATION": "Validation",
+            "WIZARD": "Wizard"
+        }
+    },
+    "FORMS": {
+        "WIZARD": {
+            "INTRO": "We have combined material tabs and form inputs to create an interactive form wizardController.  We have also added validation messages to all fields and prevented the user from completing a step in the wizard until it is valid.",
+            "COMPLETE": "Complete",
+            "CREATE": "Account details",
+            "YOUR-ADDRESS": "Your address",
+            "YOUR-BILLING": "Billing details",
+            "CONFIRM": "Confirmation",
+            "USERNAME": "Username",
+            "PASSWORD": "Password",
+            "PASSWORD-CONFIRM": "Confirm password",
+            "NEXT": "Next",
+            "PREV": "Previous",
+            "SEND": "Send",
+            "FIRST-NAME": "First name",
+            "LAST-NAME": "Last name",
+            "ADDRESS": "Address Line 1",
+            "ADDRESS-2": "Address Line 2",
+            "TOWN": "Town",
+            "STATE": "State",
+            "ZIP": "Zip",
+            "COUNTRY": "Country",
+            "US": "United States",
+            "CARD-NUMBER": "Credit card number",
+            "CARD-NAME": "Name on card",
+            "CARD-EX-MONTH": "Expiry date (MM)",
+            "CARD-EX-YEAR": "Expiry date (YYYY)",
+            "PLEASE-ENTER": "This field is required",
+            "PLEASE-VALID": "Please enter a valid email",
+            "CARD-MONTH-ERROR": "Month must be in the format MM",
+            "CARD-YEAR-ERROR": "Year must be in the format YYYY",
+            "CONGRATS": "Congratulations - we will be in touch"
+        }
+    }
+}
+

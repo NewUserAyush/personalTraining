@@ -1,0 +1,45 @@
+<div ng-controller="TablesAdvancedController as vm">
+    <md-data-table-toolbar ng-hide="vm.selected.length || vm.filter.show">
+        <h2 class="md-title">Popular Github Users</h2>
+        <div flex></div>
+        <md-button class="md-icon-button" ng-click="vm.filter.show = true">
+            <!-- <i class="material-icons md-dark">filter_list</i> -->
+            <md-icon md-font-icon="zmdi zmdi-filter-list"></md-icon>
+        </md-button>
+    </md-data-table-toolbar>
+
+    <md-data-table-toolbar ng-show="vm.filter.show && !vm.selected.length" class="md-data-table-toolbar">
+        <md-icon md-font-icon="zmdi zmdi-search"></md-icon>
+        <form flex="" name="vm.filter.form">
+            <input type="text" ng-model="vm.query.filter" ng-model-options="vm.filter.options" placeholder="search">
+        </form>
+        <md-button class="md-icon-button" ng-click="vm.removeFilter()">
+            <md-icon md-font-icon="zmdi zmdi-close"></md-icon>
+        </md-button>
+    </md-data-table-toolbar>
+
+    <md-data-table-toolbar class="alternate" ng-show="vm.selected.length" layout-align="space-between">
+      <div>{{vm.selected.length}} {{vm.selected.length > 1 ? 'users' : 'user'}} selected</div>
+    </md-data-table-toolbar>
+
+    <md-data-table-container>
+        <table md-data-table class="md-primary md-data-table" md-row-select="vm.selected" md-progress="vm.deferred">
+            <thead md-order="vm.query.order" md-trigger="vm.getUsers">
+                <tr>
+                    <th name="avatar"></th>
+                    <th name="login"></th>
+                    <th order-by="id" name="ID"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr md-auto-select ng-repeat="user in vm.users.items">
+                    <td><a href="{{::user.html_url}}"><img ng-src="{{::user.avatar_url}}"/></a></td>
+                    <td>{{::user.login}}</td>
+                    <td>{{::user.id}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </md-data-table-container>
+
+    <md-data-table-pagination md-limit="vm.query.limit" md-page="vm.query.page" md-total="{{vm.users.total_count}}" md-trigger="vm.getUsers"></md-data-table-pagination>
+</div>

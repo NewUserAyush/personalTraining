@@ -1,0 +1,52 @@
+{
+    "MENU": {
+        "EMAIL": {
+            "EMAIL": "电子邮件",
+            "INBOX": "收件箱里",
+            "TRASH": "垃圾",
+            "SENT": "送"
+        }
+    },
+    "EMAIL": {
+        "TOOLBAR": {
+            "SEARCH": "搜查"
+        },
+        "INBOX": {
+            "TITLE": "收件箱里",
+            "GROUPS": {
+                "TODAY": "今天",
+                "YESTERDAY": "昨天",
+                "OLDER": "老年"
+            }
+        },
+        "COMPOSE": {
+            "FROM": "从",
+            "CC": "CC",
+            "BCC": "BCC",
+            "SUBJECT": "受",
+            "SEND": "送",
+            "VALIDATION": {
+                "EMAIL_REQUIRED": "请输入您的地址发送的。",
+                "EMAIL_VALID": "请输入的一个有效的电邮地址。",
+                "SUBJECT_REQUIRED": "请输入的一个主题的邮件了"
+            }
+        },
+        "TO": "去",
+        "NEW": "作曲",
+        "SENT": "电子邮件{{}}发送。",
+        "CANCELED": "电子邮件取消了",
+        "REPLY": "答辩权",
+        "REPLY_ALL": "所有的答复",
+        "FORWARD": "前",
+        "DELETE": "删除",
+        "DELETED": "电子邮件删除",
+        "RE": "R.e： ",
+        "CLOSE": "近",
+        "MESSAGE": "的信息",
+        "NO_EMAILS_FOUND": "没有邮件找到的",
+        "NO_EMAIL_SELECTED": "没有电子邮件选择",
+        "REPLY_BOTTOM_SHEET": {
+            "TITLE": "信息的答复"
+        }
+    }
+}

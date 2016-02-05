@@ -1,0 +1,26 @@
+<md-dialog>
+    <md-toolbar md-theme="{{triSkin.elements.toolbar}}">
+        <div class="md-toolbar-tools">
+            <h2 flex>
+                <span translate>DASHBOARDS.WIDGETS.FULLDATA</span>
+            </h2>
+            <md-button class="md-icon-button" aria-label="Settings">
+                <md-icon md-font-icon="zmdi zmdi-close" ng-click="closeDialog()"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content class="md-dialog-content">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th ng-repeat="header in data.header">{{header}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="referral in data.data">
+                    <td ng-repeat="data in referral">{{data}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </md-dialog-content>
+</md-dialog>

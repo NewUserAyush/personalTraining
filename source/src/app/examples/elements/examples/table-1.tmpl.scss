@@ -1,0 +1,17 @@
+.elements-image-table-example {
+  .thumb-cell {
+    max-width: 104px;
+    width: 104px;
+    padding: 16px 32px;
+
+    div {
+      overflow:hidden;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      border: 1px solid rgba(0,0,0,0.2);
+      background-size: cover;
+      box-shadow: 0 8px 10px rgba(0,0,0,.3);
+    }
+  }
+}

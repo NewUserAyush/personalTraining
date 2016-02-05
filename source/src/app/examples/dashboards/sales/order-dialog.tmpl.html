@@ -1,0 +1,86 @@
+<md-dialog class="order-dialog mobile-fullwidth-dialog" flex="60" flex-xs="100">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2 flex >
+                <span translate>DASHBOARDS.SALES.ORDER.TITLE</span><span>{{vm.order.id}}</span>
+            </h2>
+            <md-button class="md-icon-button" ng-click="vm.printClick()" aria-label="print">
+                <md-icon md-font-icon="zmdi zmdi-print"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" ng-click="vm.cancelClick()" aria-label="cancel">
+                <md-icon md-font-icon="zmdi zmdi-close"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <md-dialog-content class="md-dialog-content">
+        <div flex layout="row" class="margin-bottom-10">
+            <div flex>
+                <strong translate>DASHBOARDS.SALES.ORDER.DATE</strong>
+            </div>
+            <div flex>
+                <span>{{vm.order.date | amDateFormat:'MMMM Do YYYY, h:mm:ss a'}}</span>
+            </div>
+        </div>
+        <div flex layout="row" class="margin-bottom-10">
+            <div flex>
+                <strong translate>DASHBOARDS.SALES.ORDER.BUYER-NAME</strong>
+            </div>
+            <div flex>
+                <span>{{vm.order.name}}</span>
+            </div>
+        </div>
+        <div flex layout="row" class="margin-bottom-10">
+            <div flex>
+                <strong translate>DASHBOARDS.SALES.ORDER.BUYER-EMAIL</strong>
+            </div>
+            <div flex>
+                <span>{{vm.order.buyer}}</span>
+            </div>
+        </div>
+        <div flex layout="row" class="margin-bottom-10">
+            <div flex>
+                <strong translate>DASHBOARDS.SALES.ORDER.NUM-ITEMS</strong>
+            </div>
+            <div flex>
+                <span>{{vm.order.items.length}}</span>
+            </div>
+        </div>
+
+        <md-divider class="margin-bottom-40 margin-top-40"></md-divider>
+
+        <table class="order-dialog-product-table md-table">
+            <thead>
+                <tr>
+                    <th translate>DASHBOARDS.SALES.ORDER.PRODUCT</th>
+                    <th translate>DASHBOARDS.SALES.ORDER.CATEGORY</th>
+                    <th class="text-right" translate>DASHBOARDS.SALES.ORDER.PRICE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in vm.order.items">
+                    <td>{{item.name}}</td>
+                    <td>{{item.category}}</td>
+                    <td class="text-right padding-right-10">{{item.price | currency}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="font-weight-600" translate>DASHBOARDS.SALES.ORDER.SUB-TOTAL</td>
+                    <td class="text-right font-weight-600 padding-right-10">{{vm.order.subTotal | currency}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="font-weight-600" translate>DASHBOARDS.SALES.ORDER.TAX</td>
+                    <td class="text-right font-weight-600 padding-right-10">{{vm.order.tax | currency}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="font-weight-600" translate>DASHBOARDS.SALES.ORDER.TOTAL</td>
+                    <td class="text-right font-weight-600 padding-right-10">{{vm.order.total | currency}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+        <span flex></span>
+        <md-button ng-click="vm.okClick()" class="md-primary" aria-label="{{GENERAL.OK | translate}}" translate="GENERAL.OK"></md-button>
+    </md-dialog-actions>
+</md-dialog>

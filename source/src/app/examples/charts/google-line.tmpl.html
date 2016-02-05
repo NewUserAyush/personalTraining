@@ -1,0 +1,33 @@
+<div class="padded-content-page">
+    <p class="md-subhead">Triangular uses the Google Chart Tools Directive Module to bring you all the chart types available from Google Charts.</p>
+
+    <p class="md-subhead">Material Line Charts have many small improvements over Classic Line Charts, including an improved color palette, rounded corners, clearer label formatting, tighter default spacing between series, softer gridlines and titles (and the addition of subtitles).</p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Google Material Line Chart Example</h2>
+            </div>
+        </md-toolbar>
+
+        <md-tabs class="example-tabs" md-dynamic-height md-border-bottom>
+            <md-tab label="example">
+                <div class="md-tabs-content padding-40">
+                    <md-card>
+                        <md-card-content ng-controller="GoogleChartsLineController as vm" ng-include="'app/examples/charts/examples/google-line.tmpl.html'"></md-card-content>
+                    </md-card>
+                </div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/charts/examples/google-line.tmpl.html'"></div>
+                </div>
+            </md-tab>
+            <md-tab label="JS">
+                <div class="md-tabs-content">
+                    <div flex hljs language="javascript" include="'app/examples/charts/examples/google-line.controller.js'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </div>
+</div>

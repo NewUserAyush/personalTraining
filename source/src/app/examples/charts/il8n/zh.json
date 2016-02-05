@@ -1,0 +1,14 @@
+{
+    "MENU": {
+        "CHARTS": {
+            "CHARTS": "图",
+            "GOOGLE": "谷歌",
+            "CHARTJS": "Chart.js",
+            "BAR": "酒吧",
+            "LINE": "线",
+            "SCATTER": "散开",
+            "PIE": "馅饼",
+            "TICKER": "心脏"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<h2>Enter your email</h2>
+<form name="login" novalidate>
+    <md-input-container class="md-block">
+        <label for="email">email</label>
+        <input id="email" label="email" name="email" type="email" ng-model="user.email" required/>
+        <div ng-messages="login.email.$error">
+            <div ng-message="required">
+                Please enter your email address.
+            </div>
+            <div ng-message="email">
+                Please enter a valid email address.
+            </div>
+        </div>
+    </md-input-container>
+
+    <div class="button-toolbar" layout="row" layout-align="end center">
+        <md-button class="md-primary" ng-disabled="login.$invalid">Create</md-button>
+        <md-button>Cancel</md-button>
+    </div>
+</form>

@@ -1,0 +1,28 @@
+<div class="padded-content-page">
+    <p class="md-subhead">Checkboxes allow the user to select multiple options from a set.  If you have multiple on/off options appearing in a list, checkboxes are a good way to preserve space.</p>
+
+    <p>Checkboxes use animation to communicate focused and pressed states.</p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Simple Checkbox</h2>
+            </div>
+        </md-toolbar>
+
+        <md-tabs class="example-tabs" md-dynamic-height md-border-bottom>
+            <md-tab label="example">
+                <div class="md-tabs-content padding-40">
+                    <md-card ng-init="checkboxes = { primary: true, default: true, warn: true }">
+                        <md-card-content class="padding-40" layout-padding layout-align="space-around start" ng-include="'app/examples/elements/examples/checkboxes-1.tmpl.html'"></md-card-content>
+                    </md-card>
+                </div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/elements/examples/checkboxes-1.tmpl.html'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </div>
+</div>

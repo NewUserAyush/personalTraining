@@ -1,0 +1,46 @@
+{
+    "MENU": {
+        "FORMS": {
+            "FORMS": "Les formes",
+            "INPUTS": "Entrées",
+            "BINDING": "La Liaison De Données",
+            "AUTOCOMPLETE": "La saisie semi-automatique",
+            "VALIDATION": "Validation",
+            "WIZARD": "Assistant"
+        }
+    },
+    "FORMS": {
+        "WIZARD": {
+            "INTRO": "Nous avons combiné le matériel des onglets et des entrées d'un formulaire pour créer un formulaire interactif wizardController. Nous avons également ajouté des messages de validation à tous les domaines et a empêché l'utilisateur à partir de l'achèvement d'une étape de l'assistant jusqu'à ce qu'il est valide.",
+            "COMPLETE": "Complet",
+            "CREATE": "Détails du compte",
+            "YOUR-ADDRESS": "Votre adresse",
+            "YOUR-BILLING": "Détails de facturation",
+            "CONFIRM": "Confirmation",
+            "USERNAME": "Nom d'utilisateur",
+            "PASSWORD": "Mot de passe",
+            "PASSWORD-CONFIRM": "Confirmer le mot de passe",
+            "NEXT": "Prochaine",
+            "PREV": "Précédente",
+            "SEND": "Envoyer",
+            "FIRST-NAME": "Prénom",
+            "LAST-NAME": "Nom de famille",
+            "ADDRESS": "Adresse (Ligne 1)",
+            "ADDRESS-2": "Adresse (Ligne 2)",
+            "TOWN": "Ville",
+            "STATE": "État",
+            "ZIP": "Zip",
+            "COUNTRY": "Pays",
+            "US": "États-Unis",
+            "CARD-NUMBER": "Numéro de carte de crédit",
+            "CARD-NAME": "Nom sur la carte",
+            "CARD-EX-MONTH": "Date d'expiration (MM)",
+            "CARD-EX-YEAR": "Date d'expiration (AAAA)",
+            "PLEASE-ENTER": "Ce champ est obligatoire",
+            "PLEASE-VALID": "Veuillez entrer un courriel valide",
+            "CARD-MONTH-ERROR": "Mois doit être dans le format MM",
+            "CARD-YEAR-ERROR": "L'année doit être dans le format AAAA",
+            "CONGRATS": "Félicitations - nous allons être en contact"
+        }
+    }
+}

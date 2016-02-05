@@ -1,0 +1,129 @@
+// Buttons page
+.elements-button-examples md-card-content {
+  min-height: 100px;
+}
+
+.elements-buttons-raised-usage {
+  width: 400px;
+  .elements-raised-content {
+    padding: 16px;
+  }
+  .elements-raised-buttons {
+    padding: 16px;
+    .md-button {
+      margin-left: 5px;
+    }
+  }
+}
+
+.elements-buttons-fab-usage {
+  position: relative;
+
+  .md-fab {
+    position: absolute;
+    bottom: 26px;
+    right: 26px;
+  }
+}
+
+// - Cards
+.elements-cards-example1 {
+  background: rgb(242, 242, 242);
+  .example-area {
+    padding: 24px;
+    width: 450px;
+  }
+  md-card-content {
+    padding: 0;
+    background: white;
+  }
+  .content-padded {
+    padding: 16px;
+  }
+  .button-toolbar {
+    .md-button {
+      margin-left: 16px;
+    }
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+// - Icons
+.elements-icons {
+  md-content {
+    min-width: 400px;
+
+    height: 500px;
+    .md-font {
+      font-size: 24px;
+    }
+  }
+}
+
+$size-list: 16px 24px 32px 48px;
+@each $size in $size-list {
+    $i: index($size-list, $size);
+    .elements-icon-size-#{$i} {
+        width: $size;
+        height: $size;
+        span {
+          font-size: $size;
+        }
+    }
+}
+
+.elements-icons-preview {
+  .md-button {
+    md-icon {
+      font-size: 24px;
+    }
+  }
+  .elements-icon-small {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// - Radios Pages
+.elements-radio-avatar {
+  img {
+    width: 150px;
+  }
+}
+
+// - Tabs Pages
+.example-tabs-content {
+  md-content {
+    background: none !important;
+  }
+}
+
+// - Grids Pages
+.elements-grids-example {
+  md-grid-tile {
+    background-size: 100%;
+  }
+}
+
+// - Sidebar Pages
+.elements-sidebar-example {
+  md-sidenav {
+    md-content {
+      background: none;
+    }
+  }
+
+  .md-button {
+    margin: 0px 20px;
+  }
+}
+
+// Whiteframe page
+.elements-whiteframe-example {
+  md-whiteframe {
+    min-width: 500px;
+    background-color: white;
+  }
+}

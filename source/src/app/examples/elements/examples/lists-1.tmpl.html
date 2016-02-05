@@ -1,0 +1,21 @@
+<md-list>
+    <md-subheader class="md-no-sticky">3 line items</md-subheader>
+    <md-list-item class="md-3-line" ng-repeat="item in ::vm.emails">
+        <img ng-src="{{::item.from.image}}" class="md-avatar" alt="{{::item.from.name}}" />
+        <div class="md-list-item-text">
+            <h3>{{::item.from.name}}</h3>
+            <h4>{{::item.subject}}</h4>
+            <p>{{::item.content[0]}}</p>
+        </div>
+    </md-list-item>
+    <md-divider ></md-divider>
+    <md-subheader class="md-no-sticky">2 line items</md-subheader>
+    <md-list-item class="md-2-line" ng-repeat="item in ::vm.emails">
+        <img ng-src="{{::item.from.image}}" class="md-avatar" alt="{{::item.from.name}}" />
+        <div class="md-list-item-text">
+            <h3>{{::item.from.name}}</h3>
+            <p>{{::item.content[0]}}</p>
+        </div>
+    </md-list-item>
+    <md-divider ></md-divider>
+</md-list>

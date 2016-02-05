@@ -1,0 +1,14 @@
+{
+    "MENU": {
+        "CHARTS": {
+            "CHARTS": "Gráficos",
+            "GOOGLE": "O Google",
+            "CHARTJS": "Chart.js",
+            "BAR": "Bar",
+            "LINE": "Linha",
+            "SCATTER": "Dispersão",
+            "PIE": "Torta",
+            "TICKER": "Breves"
+        }
+    }
+}

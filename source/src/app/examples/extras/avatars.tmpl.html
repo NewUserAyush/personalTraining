@@ -1,0 +1,11 @@
+<md-content class="padded-content-page">
+    <p class="md-subhead">Triangular includes an enormous set of Material Design Avatars. Amazing details and 1000s of combinations. Includes original Adobe Illustrator file as well as 1440 exported images</p>
+
+    <md-grid-list md-cols="6" md-cols-xs="4" md-row-height="1:1" md-gutter="4px">
+        <md-grid-tile md-rowspan="{{::avatar.rowspan}}" md-colspan="{{::avatar.colspan}}" ng-repeat="avatar in ::vm.avatars" ng-style="::{ 'background-image': 'url(' + avatar.image + ')', 'background-size' : 'cover' }" palette-background="{{::avatar.color}}:{{::avatar.hue}}">
+            <md-grid-tile-footer>
+                <h3>{{::avatar.title}}</h3>
+            </md-grid-tile-footer>
+        </md-grid-tile>
+    </md-grid-list>
+</md-content>

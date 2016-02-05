@@ -1,0 +1,82 @@
+<md-dialog class="mobile-fullwidth-dialog" flex>
+    <md-toolbar class="toolbar-default" md-theme="{{vm.triSkin.elements.toolbar}}">
+        <div class="md-toolbar-tools">
+            <h2>
+              <span>{{vm.title}}</span>
+            </h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="vm.cancel()" aria-label="cancel">
+                <md-icon md-font-icon="zmdi zmdi-close"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <md-divider></md-divider>
+
+    <md-dialog-content class="md-dialog-content">
+        <form name="emailForm" novalidate>
+            <div class="email-dialog-to" layout="row">
+                <md-contact-chips
+                    flex
+                    ng-model="vm.email.to"
+                    md-contacts="vm.queryContacts($query)"
+                    md-contact-name="name"
+                    md-contact-image="image"
+                    md-contact-email="email"
+                    md-require-match
+                    filter-selected="true"
+                    placeholder="{{'EMAIL.TO' | translate}}"
+                    secondary-placeholder="{{'EMAIL.TO' | translate}}">
+                </md-contact-chips>
+                <md-button class="md-icon-button" ng-click="vm.toggleCCS($event)" aria-label="toggle ccs">
+                    <md-icon md-font-icon ng-class="vm.showCCSIcon"></md-icon>
+                </md-button>
+            </div>
+
+            <div class="email-dialog-ccs ng-hide" layout="column" ng-show="vm.showCCS" >
+                <md-contact-chips
+                    ng-model="vm.email.cc"
+                    md-contacts="vm.queryContacts($query)"
+                    md-contact-name="name"
+                    md-contact-image="image"
+                    md-contact-email="email"
+                    md-require-match
+                    filter-selected="true"
+                    placeholder="{{'EMAIL.COMPOSE.CC' | translate}}"
+                    secondary-placeholder="{{'EMAIL.COMPOSE.CC' | translate}}">
+                </md-contact-chips>
+                <md-contact-chips
+                    ng-model="vm.email.bcc"
+                    md-contacts="vm.queryContacts($query)"
+                    md-contact-name="name"
+                    md-contact-image="image"
+                    md-contact-email="email"
+                    md-require-match
+                    filter-selected="true"
+                    placeholder="{{'EMAIL.COMPOSE.BCC' | translate}}"
+                    secondary-placeholder="{{'EMAIL.COMPOSE.BCC' | translate}}">
+                </md-contact-chips>
+            </div>
+
+            <md-input-container class="md-block">
+                <label for="subject" translate>EMAIL.COMPOSE.SUBJECT</label>
+                <input ng-model="vm.email.subject" name="subject" required>
+                <div ng-messages="emailForm.subject.$error">
+                    <div ng-message when="required">
+                        <span translate>EMAIL.COMPOSE.VALIDATION.SUBJECT_REQUIRED</span>
+                    </div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <text-angular name="emailBody" ng-model="vm.email.content" ta-target-toolbars="editor-toolbar"></text-angular>
+            </md-input-container>
+        </form>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+        <text-angular-toolbar name="editor-toolbar" class="email-dialog-editor-toolbar" ta-toolbar-active-button-class="active"></text-angular-toolbar>
+        <span flex></span>
+        <md-button ng-click="vm.send()" class="md-primary" ng-disabled="emailForm.$invalid" aria-label="send" translate="EMAIL.COMPOSE.SEND"></md-button>
+    </md-dialog-actions>
+</md-dialog>

@@ -1,0 +1,46 @@
+{
+    "MENU": {
+        "FORMS": {
+            "FORMS": "Formas",
+            "INPUTS": "Entradas",
+            "BINDING": "Ligação De Dados",
+            "AUTOCOMPLETE": "Autocompletar",
+            "VALIDATION": "Validação",
+            "WIZARD": "Assistente de"
+        }
+    },
+    "FORMS": {
+        "WIZARD": {
+            "INTRO": "Nós combinamos de material de guias e de forma entradas para criar um formulário interativo wizardController. Nós também adicionamos as mensagens de validação para todos os campos e impediu que o usuário concluir uma etapa no assistente até que ela seja válida.",
+            "COMPLETE": "Completo",
+            "CREATE": "Detalhes da conta",
+            "YOUR-ADDRESS": "O seu endereço",
+            "YOUR-BILLING": "Detalhes de faturamento",
+            "CONFIRM": "Confirmação",
+            "USERNAME": "Nome de usuário",
+            "PASSWORD": "Palavra-passe",
+            "PASSWORD-CONFIRM": "Confirmar senha",
+            "NEXT": "Próximo",
+            "PREV": "Anterior",
+            "SEND": "Enviar",
+            "FIRST-NAME": "Primeiro nome",
+            "LAST-NAME": "Último nome",
+            "ADDRESS": "Endereço Linha 1",
+            "ADDRESS-2": "Endereço Linha 2",
+            "TOWN": "Cidade",
+            "STATE": "Estado",
+            "ZIP": "Zip",
+            "COUNTRY": "País",
+            "US": "Estados Unidos",
+            "CARD-NUMBER": "Número de cartão de crédito",
+            "CARD-NAME": "Nome no cartão",
+            "CARD-EX-MONTH": "Data de validade (MM)",
+            "CARD-EX-YEAR": "Data de expiração (AAAA)",
+            "PLEASE-ENTER": "Este campo é obrigatório",
+            "PLEASE-VALID": "Por favor insira um email válido",
+            "CARD-MONTH-ERROR": "Mês deve ser no formato MM",
+            "CARD-YEAR-ERROR": "Ano devem estar no formato AAAA",
+            "CONGRATS": "Parabéns, entraremos em contacto"
+        }
+    }
+}

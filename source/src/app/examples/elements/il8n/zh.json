@@ -1,0 +1,31 @@
+{
+    "MENU": {
+        "ELEMENTS": {
+            "ELEMENTS": "的内容",
+            "BUTTONS": "按钮",
+            "CARDS": "卡",
+            "ICONS": "偶像",
+            "CHECKBOXES": "Checkboxes",
+            "SWITCHES": "开关",
+            "RADIOS": "无线电",
+            "DIALOGS": "之间的对话",
+            "GRIDS": "网",
+            "FAB-SPEED": "布隆迪武装部队的快速拨号",
+            "FAB-TOOLBAR": "布隆迪武装部队的工具条",
+            "TABS": "监视",
+            "SLIDERS": "巨无霸",
+            "SELECTS": "选择",
+            "TABLES": "表",
+            "PROGRESS": "进展",
+            "SIDEBARS": "Sidebars",
+            "TOOLBARS": "Toolbars",
+            "TEXTANGULAR": "Textangular",
+            "TOOLTIPS": "Tooltips",
+            "WHITEFRAMES": "Whiteframes",
+            "TOASTS": "敬酒",
+            "LISTS": "清单",
+            "CHIPS": "薯片",
+            "MENUS": "菜单"
+        }
+    }
+}

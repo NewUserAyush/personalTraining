@@ -1,0 +1,104 @@
+<md-content class="padded-content-page">
+    <p class="md-subhead">Text fields allow the user to input text. They can be single line, with or without scrolling, or multi-line, and can have an icon.</p>
+
+    <p>Touching a text field places the cursor and automatically displays the keyboard. In addition to typing, text fields allow for a variety of other tasks, such as text selection (cut, copy, paste) and data lookup via auto-completion. See Patterns > Selection for text selection design.</p>
+
+    <p>With floating inline labels, when the user engages with the text input field, the labels move to float above the field.</p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Floating labels</h2>
+            </div>
+        </md-toolbar>
+        <md-tabs class="example-tabs margin-bottom-40" md-dynamic-height md-border-bottom>
+            <md-tab label="example">
+                <div class="md-tabs-content padding-40">
+                    <md-card>
+                        <md-card-content ng-include="'app/examples/forms/examples/inputs-float.tmpl.html'"></md-card-content>
+                    </md-card>
+                </div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/forms/examples/inputs-float.tmpl.html'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </div>
+
+    <p>You can also add informative icons to your input fields.</p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Forms with icons</h2>
+            </div>
+        </md-toolbar>
+        <md-tabs class="example-tabs margin-bottom-40" md-dynamic-height md-border-bottom>
+            <md-tab label="example">
+                <div class="md-tabs-content padding-40">
+                    <md-card>
+                        <md-card-content ng-include="'app/examples/forms/examples/inputs-icons.tmpl.html'"></md-card-content>
+                    </md-card>
+                </div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/forms/examples/inputs-icons.tmpl.html'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </div>
+
+    <p>You can use a character counter in fields where a character restriction is in place.</p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Inputs with counter</h2>
+            </div>
+        </md-toolbar>
+
+        <md-tabs class="example-tabs margin-bottom-40" md-dynamic-height md-border-bottom>
+            <md-tab label="example">
+                <div class="md-tabs-content padding-40">
+                    <md-card>
+                        <md-card-content ng-include="'app/examples/forms/examples/inputs-counter.tmpl.html'"></md-card-content>
+                    </md-card>
+                </div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/forms/examples/inputs-counter.tmpl.html'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+
+    </div>
+
+    <p>You can also toggle the state of inputs by setting <code>ng-disabled</code></p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Input state</h2>
+            </div>
+        </md-toolbar>
+
+        <md-tabs class="example-tabs margin-bottom-40" md-dynamic-height md-border-bottom>
+            <md-tab label="example">
+                <div class="md-tabs-content padding-40">
+                    <md-card>
+                        <md-card-content layout="row" layout-align="space-around center" ng-include="'app/examples/forms/examples/inputs-states.tmpl.html'"></md-card-content>
+                    </md-card>
+                </div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/forms/examples/inputs-states.tmpl.html'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </div>
+</md-tab>

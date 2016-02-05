@@ -1,0 +1,36 @@
+{
+    "MENU": {
+        "UI": {
+            "UI": "UI",
+            "COLORS": "Colors",
+            "FONT_AWESOME": "Font Awesome",
+            "MATERIAL_ICONS": "Material Icons",
+            "TYPOGRAPHY": "Typography",
+            "TOOLBAR": "Toolbar",
+            "THEME-TEST": "Sandbox",
+            "SKINS": "Skins",
+            "WEATHER_ICONS": "Weather Icons"
+        }
+    },
+    "UI": {
+        "TOOLBARS": {
+            "SIZE": "Size",
+            "SIZE_CHOOSE": "Choose a size",
+            "SIZE_SHOW": "Change the size of the admin panel top toolbar",
+            "BACKGROUND": "Background",
+            "BACKGROUND_SHOW": "Use image background on toolbar",
+            "SHRINK": "Scroll Shrink",
+            "SHRINK_SHOW": "Hide toolbar on scroll"
+        },
+        "SKINS": {
+            "ELEMENTS": {
+                "LOGO": "Logo",
+                "SIDEBAR": "Sidebar",
+                "CONTENT": "Content",
+                "TOOLBAR": "Toolbar"
+            },
+            "SKIN_CHOOSE": "Choose a skin",
+            "SKIN_TRY": "Try It"
+        }
+    }
+}

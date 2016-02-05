@@ -1,0 +1,34 @@
+<div class="padded-content-page">
+    <p class="md-subhead">Triangular includes the <a href="http://textangular.com/">Textangular</a> text editor.</p>
+
+    <p>We have materialised some of the toolbar options so that your text editor will look great.</p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Email example</h2>
+            </div>
+        </md-toolbar>
+        <md-tabs class="example-tabs" md-dynamic-height md-border-bottom>
+            <md-tab label="example">
+                <div class="md-tabs-content padding-40">
+                    <md-card>
+                        <md-toolbar>
+                            <div class="md-toolbar-tools">
+                                <h2>
+                                    <span>Compose Email</span>
+                                </h2>
+                            </div>
+                        </md-toolbar>
+                        <md-card-content ng-include="'app/examples/elements/examples/textangular-1.tmpl.html'"></md-card-content>
+                    </md-card>
+                </div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/elements/examples/textangular-1.tmpl.html'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </div>
+</div>

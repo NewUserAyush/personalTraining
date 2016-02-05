@@ -1,0 +1,185 @@
+<div class="padded-content-page">
+    <p class="md-subhead">A button consists of text and/or an image that clearly communicates what action will occur when the user touches it.  Triangular provides all the button types recommended in the <a href="http://www.google.com/design/spec/components/buttons.html">material design specification</a></p>
+
+    <p>There are three types of main buttons: </p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Flat Button</h2>
+            </div>
+        </md-toolbar>
+
+        <md-tabs class="example-tabs" md-dynamic-height md-border-bottom >
+            <md-tab label="example">
+                <div class="padding-40 md-tabs-content">
+                    <md-card>
+                        <md-card-content layout="row" layout-xs="column" layout-padding layout-align="space-around center" ng-include="'app/examples/elements/examples/button-flat.tmpl.html'"></md-card-content>
+                    </md-card>
+                </div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/elements/examples/button-flat.tmpl.html'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </div>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Raised Button</h2>
+            </div>
+        </md-toolbar>
+
+        <md-tabs class="example-tabs" md-dynamic-height md-border-bottom>
+            <md-tab label="example">
+                <div class="padding-40 md-tabs-content">
+                    <md-card>
+                        <md-card-content layout="row" layout-xs="column" layout-padding layout-align="space-around center" ng-include="'app/examples/elements/examples/button-raised.tmpl.html'"></md-card-content>
+                    </md-card>
+                </div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/elements/examples/button-raised.tmpl.html'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </div>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Floating action button (FAB)</h2>
+            </div>
+        </md-toolbar>
+
+        <md-tabs class="example-tabs" md-dynamic-height md-border-bottom>
+            <md-tab label="example">
+                <div class="padding-40 md-tabs-content">
+                    <md-card>
+                        <md-card-content layout="row" layout-xs="column" layout-padding layout-align="space-around center" ng-include="'app/examples/elements/examples/button-fab.tmpl.html'"></md-card-content>
+                    </md-card>
+                </div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/elements/examples/button-fab.tmpl.html'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </div>
+
+    <h2 class="md-headline">Example Usage</h2>
+
+    <p>Choosing a button style depends on the primacy of the button, the number of containers on screen, and the overall layout of the screen.</p>
+    <p>First, look at the button’s function: is it important and ubiquitous enough to be a floating action button?</p>
+    <p>Next, choose raised or flat dimensionality depending on the container it will be in and how many z-space layers you have on screen. There should not be layers upon layers upon layers of objects on the screen.</p>
+    <p>Finally, look at your specific layout. You should primarily use one type of button per container. Only mix button types when you have a good reason to, such as emphasizing an important function.</p>
+
+    <md-divider class="margin-top-20 margin-bottom-20"></md-divider>
+
+    <div layout="row" layout-xs="column" layout-align="space-around start">
+        <div flex="40" flex-xs="100" layout="column">
+            <h3 class="md-title">Raised Button Example</h3>
+            <p>Raised buttons emphasize functions that would otherwise get lost on a busy or wide space. They add dimension to mostly flat layouts.</p>
+            <p><strong>Thats not an image, try it out <md-icon hide-xs md-font-icon="zmdi zmdi-chevron-right"></md-icon></strong></p>
+        </div>
+
+        <div flex flex-xs="100" class="elements-buttons-raised-usage md-whiteframe-z1" layout="column">
+            <md-toolbar>
+                <h2 class="md-toolbar-tools">
+                    <span>Raised Button</span>
+                </h2>
+            </md-toolbar>
+            <div class="elements-raised-content">
+                <h3>Uploading</h3>
+                <h1>{{vm.determinateValue}}%</h1>
+                <md-progress-linear class="md-warn" md-mode="buffer" value="{{vm.determinateValue}}" md-buffer-value="{{vm.determinateValue2}}"></md-progress-linear>
+            </div>
+            <div class="elements-raised-buttons" layout="row" layout-align="end center">
+                <md-button class="md-raised md-primary" aria-label="pause">Pause</md-button>
+                <md-button class="md-raised md-warn" aria-label="cancel">Cancel</md-button>
+            </div>
+        </div>
+    </div>
+
+    <md-divider class="margin-top-20 margin-bottom-20"></md-divider>
+
+    <div layout="row" layout-xs="column" layout-align="space-around start">
+        <div flex="40" flex-xs="100" layout="column">
+            <h3 class="md-title">Floating Action Button (FAB)</h3>
+            <p>Floating action buttons are used for a special type of promoted action. They are distinguished by a circled icon floating above the UI and have special motion behaviors related to morphing, launching, and the transferring anchor point.</p>
+            <p><strong>Thats not an image, try it out <md-icon hide-xs md-font-icon="zmdi zmdi-chevron-right"></md-icon></strong></p>
+        </div>
+        <div flex flex-xs="100" class="elements-buttons-fab-usage md-whiteframe-z3" layout="column">
+            <img src="http://lorempixel.com/400/200/" alt="">
+            <md-toolbar>
+                <h2 class="md-toolbar-tools">
+                    <span>Fab Button</span>
+                </h2>
+            </md-toolbar>
+            <md-button class="md-fab md-accent" aria-label="fab button">
+                <md-icon md-font-icon="zmdi zmdi-plus"></md-icon>
+            </md-button>
+        </div>
+    </div>
+
+    <md-divider class="margin-top-20 margin-bottom-20"></md-divider>
+
+    <div layout="row" layout-xs="column" layout-align="space-around start">
+        <div flex="40" flex-xs="100" layout="column">
+            <h3 class="md-title">Flat button</h3>
+            <p>Use flat buttons for contexts such as toolbars and dialogs to avoid gratuitous layering.</p>
+            <p><strong>Thats not an image, try it out <md-icon hide-xs md-font-icon="zmdi zmdi-chevron-right"></md-icon></strong></p>
+        </div>
+        <div flex flex-xs="100" class="elements-buttons-flat-usage md-whiteframe-z3" layout="column">
+            <div class="md-padding">
+                <h2>Would you like to use our location service?</h2>
+                <p>Let us monitor your location to keep you up to date with everything that is happening in your current area.</p>
+            </div>
+            <md-divider></md-divider>
+            <div class="md-padding" layout="row" layout-align="end center">
+                <md-button class="md-primary">Disagree</md-button>
+                <md-button class="md-primary">Agree</md-button>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="md-headline">Button Ripple Options</h2>
+    <p>You can also change the style of ripple effects using the <code>md-ripple-size</code> and <code>md-no-ink</code> attribute</p>
+    <div class="elements-button-colors" layout="row" layout-xs="column" layout-align="space-around center">
+        <div layout="column" layout-align="center center">
+            <md-button class="md-primary md-raised" md-ripple-size="full" aria-label="ripple full">Full</md-button>
+            <h3>Ripple Full</h3>
+        </div>
+        <div layout="column" layout-align="center center">
+            <md-button class="md-primary md-raised" md-ripple-size="partial" aria-label="ripple partial">Partial</md-button>
+            <h3>Ripple Partial</h3>
+        </div>
+        <div layout="column" layout-align="center center">
+            <md-button class="md-primary md-raised" md-ripple-size="auto" aria-label="ripple auto">Auto</md-button>
+            <h3>Ripple Auto</h3>
+        </div>
+        <div layout="column" layout-align="center center">
+            <md-button class="md-primary md-raised" md-no-ink aria-label="no ink">No Ink</md-button>
+            <h3>No Ink</h3>
+        </div>
+    </div>
+
+    <h2>Button States</h2>
+    <p>You can also change the style of ripple effects using the <code>md-ripple-size</code> attribute</p>
+    <div class="elements-button-colors" layout="row" layout-xs="column" layout-align="space-around center">
+        <div layout="column" layout-align="center center">
+            <md-switch ng-model="vm.buttonDisabled" aria-label="Switch 2" class="md-primary">
+                Toggle Button Disabled
+            </md-switch>
+        </div>
+        <div layout="column" layout-align="center center">
+            <md-button class="md-primary md-raised" ng-disabled="vm.buttonDisabled" aria-label="disabled button">Disabled</md-button>
+            <h3>Disabled: {{vm.buttonDisabled}}</h3>
+        </div>
+    </div>
+</div>

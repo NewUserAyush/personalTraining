@@ -1,0 +1,6 @@
+<div class="calendar-page" flex>
+    <h2 class="font-weight-300 font-size-5 text-light margin-top-60 margin-bottom-30" flex ng-hide="vm.currentView == 'agendaWeek'">{{vm.currentDay | amDateFormat:vm.viewFormats[vm.currentView]}}</h2>
+    <h2 class="font-weight-300 font-size-5 text-light margin-top-60 margin-bottom-30" flex ng-show="vm.currentView == 'agendaWeek'">Week {{vm.currentDay | amDateFormat:vm.viewFormats[vm.currentView]}} - {{vm.currentDay | amDateFormat:'YYYY'}}</h2>
+
+    <div class="margin-bottom-60" flex ui-calendar="vm.calendarOptions" ng-model="vm.eventSources" calendar="triangular-calendar" class="triangular-calendar"></div>
+</div>

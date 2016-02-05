@@ -1,0 +1,31 @@
+<div class="padded-content-page">
+    <p class="md-subhead">You can use the <code>triMenu</code> service in any controller to add and remove menu items from the side menu</p>
+
+    <p>Here is how you can modify the side menu dynamically</p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Add and remove a menu item using triMenu service</h2>
+            </div>
+        </md-toolbar>
+        <md-tabs class="example-tabs margin-bottom-40" md-dynamic-height md-border-bottom>
+            <md-tab label="example">
+                <div class="md-tabs-content padding-40">
+                    <md-card>
+                        <md-card-content layout="row" layout-padding layout-align="space-around center" ng-include="'app/examples/menu/examples/dynamic-menu.tmpl.html'"></md-card-content>
+                    </md-card>
+                </div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/menu/examples/dynamic-menu.tmpl.html'"></div>
+                </div>
+            </md-tab>
+            <md-tab label="JS">
+                <div class="md-tabs-content">
+                    <div flex hljs language="js" include="'app/examples/menu/examples/dynamic-menu.controller.js'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+</div>

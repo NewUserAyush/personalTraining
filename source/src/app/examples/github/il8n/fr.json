@@ -1,0 +1,17 @@
+{
+    "MENU": {
+        "GITHUB": {
+            "GITHUB": "GitHub"
+        }
+    },
+    "GITHUB": {
+        "JOIN": "Rejoignez l'équipe",
+        "INTRO": "Toute personne qui achète des triangulaires peuvent maintenant se joindre à l'équipe et de voir les changements à mesure qu'ils surviennent, de soumettre des pull requests, de créer des questions et de s'impliquer!",
+        "TOOLBAR-TITLE": "Remplissez le formulaire ci-dessous pour participer",
+        "PURCHASE-CODE": "Triangulaire Achat Code",
+        "GITHUB-USER": "GitHub Nom D'Utilisateur",
+        "PURCHASE-CODE-ERROR": "Veuillez saisir un achat valable code",
+        "GITHUB-USER-ERROR": "Veuillez entrer votre nom d'utilisateur GitHub",
+        "SIGNUP": "Donnez-moi accès au dépôt"
+    }
+}

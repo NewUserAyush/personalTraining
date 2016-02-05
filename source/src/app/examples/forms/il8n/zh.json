@@ -1,0 +1,46 @@
+{
+    "MENU": {
+        "FORMS": {
+            "FORMS": "形式",
+            "INPUTS": "投入",
+            "BINDING": "数据的具有约束力的",
+            "AUTOCOMPLETE": "Autocomplete",
+            "VALIDATION": "验证",
+            "WIZARD": "巫师"
+        }
+    },
+    "FORMS": {
+        "WIZARD": {
+            "INTRO": "我们联合材料的监视和种形式的投入，以创造一个互动形式wizardController的。 我们还增加了一个验证的信息的所有领域，并阻碍用户完成的一个步骤的巫师才是有效的。",
+            "COMPLETE": "完成",
+            "CREATE": "账户的详细情况",
+            "YOUR-ADDRESS": "你的地址",
+            "YOUR-BILLING": "账单详情",
+            "CONFIRM": "的确认",
+            "USERNAME": "用户名",
+            "PASSWORD": "密码",
+            "PASSWORD-CONFIRM": "确认密码",
+            "NEXT": "下",
+            "PREV": "前",
+            "SEND": "送",
+            "FIRST-NAME": "第一的名字",
+            "LAST-NAME": "最后一名",
+            "ADDRESS": "处理1号线",
+            "ADDRESS-2": "处理2号线",
+            "TOWN": "镇上",
+            "STATE": "国",
+            "ZIP": "拉拉链",
+            "COUNTRY": "国",
+            "US": "美国的",
+            "CARD-NUMBER": "信用卡号码",
+            "CARD-NAME": "名字卡",
+            "CARD-EX-MONTH": "过期失效日(MM)",
+            "CARD-EX-YEAR": "过期失效日(YYYY)",
+            "PLEASE-ENTER": "这一领域的需要",
+            "PLEASE-VALID": "请输入的一个有效的电子邮件",
+            "CARD-MONTH-ERROR": "一个月都必须在形式上嗯",
+            "CARD-YEAR-ERROR": "年必须在形式YYYY",
+            "CONGRATS": "恭喜你-我们会再联系你"
+        }
+    }
+}

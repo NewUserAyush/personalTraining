@@ -1,0 +1,44 @@
+<div layout="column" class="padded-content-page">
+    <h2>Creating containers with draggable elements</h2>
+    <p>Triangular allows you to easily build amazing containers with draggable elements. The examples below display such a functionality by creating simple containers with draggable widgets. Drag them around in order to re-order them. More examples can be found in analytics and server pages under the dashboard menu.</p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Horizontal dragging</h2>
+            </div>
+        </md-toolbar>
+
+        <md-tabs class="example-tabs" md-dynamic-height md-border-bottom>
+            <md-tab label="example">
+                <div class="md-tabs-content" ng-include="'app/examples/dashboards/examples/widget-draggable.tmpl.html'"></div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/dashboards/examples/widget-draggable.tmpl.html'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </div>
+
+    <p>Example Column container. More complex layouts are also allowed, offering two degrees of freedom in movement.</p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Vertical dragging</h2>
+            </div>
+        </md-toolbar>
+
+        <md-tabs class="example-tabs" md-dynamic-height md-border-bottom>
+            <md-tab label="example">
+                <div class="md-tabs-content" ng-include="'app/examples/dashboards/examples/widget-draggable-vertical.tmpl.html'"></div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/dashboards/examples/widget-draggable-vertical.tmpl.html'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </div>
+</div>

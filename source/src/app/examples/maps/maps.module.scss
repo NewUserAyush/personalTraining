@@ -1,0 +1,16 @@
+.maps-example .angular-google-map-container {
+	height: 550px;
+}
+
+ #map_canvas {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    .angular-google-map-container {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+    }
+}

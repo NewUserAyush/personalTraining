@@ -1,0 +1,15 @@
+<md-switch ng-model="switches.default" aria-label="Default Switch" ng-init="switches.default = true">
+    Default Switch
+</md-switch>
+<md-switch class="md-primary" ng-model="switches.primary" aria-label="Primary Switch" ng-init="switches.primary = true">
+    Primary Switch
+</md-switch>
+<md-switch class="md-warn" ng-model="switches.warn" aria-label="Warn Switch" ng-init="switches.warn = true">
+    Warn Switch
+</md-switch>
+<md-switch ng-model="switches.disabled" aria-label="Disabled Switch" disabled ng-init="switches.disabled = true">
+    Disabled Switch
+</md-switch>
+<md-switch ng-model="switches.master" aria-label="Master Switch" ng-change="vm.toggleAll(switches, switches.master)" ng-init="switches.master = true">
+    Master Switch
+</md-switch>

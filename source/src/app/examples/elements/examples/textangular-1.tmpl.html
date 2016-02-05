@@ -1,0 +1,17 @@
+<md-input-container class="md-block">
+    <label for="subject" translate>EMAIL.COMPOSE.SUBJECT</label>
+    <input ng-model="email.subject" name="subject" required>
+    <div ng-messages="emailForm.subject.$error">
+        <div ng-message when="required"><span translate>EMAIL.COMPOSE.VALIDATION.SUBJECT_REQUIRED</span></div>
+    </div>
+</md-input-container>
+
+<md-input-container flex class="md-block">
+    <text-angular name="emailBody" ng-model="email.content" ta-target-toolbars="editor-toolbar"></text-angular>
+</md-input-container>
+
+<text-angular-toolbar name="editor-toolbar" class="email-dialog-editor-toolbar" ta-toolbar-active-button-class="active"></text-angular-toolbar>
+
+<div layout="row" layout-align="end center">
+    <md-button class="md-primary">Send</md-button>
+</div>

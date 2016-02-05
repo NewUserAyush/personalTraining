@@ -1,0 +1,36 @@
+{
+    "MENU": {
+        "UI": {
+            "UI": "UI",
+            "COLORS": "颜色",
+            "FONT_AWESOME": "字体太棒了",
+            "MATERIAL_ICONS": "材料的偶像",
+            "TYPOGRAPHY": "字体排印设计",
+            "TOOLBAR": "工具条",
+            "THEME-TEST": "沙坑",
+            "SKINS": "皮",
+            "WEATHER_ICONS": "天气的标志"
+        }
+    },
+    "UI": {
+        "TOOLBARS": {
+            "SIZE": "规模",
+            "SIZE_CHOOSE": "选择一个规模",
+            "SIZE_SHOW": "变革的规模管理小组的最高工具条",
+            "BACKGROUND": "背景",
+            "BACKGROUND_SHOW": "使用形象的背景工具条",
+            "SHRINK": "卷轴心理医生",
+            "SHRINK_SHOW": "隐瞒工具条关于卷轴"
+        },
+        "SKINS": {
+            "ELEMENTS": {
+                "LOGO": "标志",
+                "SIDEBAR": "一边说话",
+                "CONTENT": "的内容",
+                "TOOLBAR": "工具条"
+            },
+            "SKIN_CHOOSE": "选择一个皮肤",
+            "SKIN_TRY": "试试这"
+        }
+    }
+}

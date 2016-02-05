@@ -1,0 +1,41 @@
+<style>
+table#t01 {
+width: 100%;
+background-color: #f1f1c1;
+}
+</style>
+<md-content class="padded-content-page">
+
+    <div layout="row" layout-align="center center">
+        <h2 class="md-display-3" translate> Instructor </h2>
+    </div>
+
+        <!--<form action="">-->
+       <!--<div layout="row">-->
+        <!--<h3>Instructor Name: <input type="text" ng-model="t1"></h3>-->
+         <!--<p align="right">&nbsp;&nbsp; <input type="submit" value="search" ng-model="submit"></p>-->
+       <!--</div>-->
+        <!--</form>-->
+        <!--<table style="width:100%" >-->
+        <!--<tr>-->
+            <!--<td><h2>Id</h2></td>-->
+            <!--<td><h2>Name</h2></td>-->
+            <!--<td><h2>Student</h2></td>-->
+            <!--<td><h2>Age</h2></td>-->
+            <!--<td><h2>Location</h2></td>-->
+            <!--<td><h2>JOIN_Date</h2></td>-->
+        <!--</tr>-->
+        <!--</table>-->
+    <input type="text" ng-model="search" >
+        <ul>
+            <li ng-repeat="x in vm.testData | filter: search">
+            <em>{{x.Id}}</em>
+            <em>{{ x.Name }}</em>
+            <em>{{ x.Student }}</em>
+            <em>{{ x.Student_age }}</em>
+            <em>{{ x.Location }}</em>
+            <em>{{ x.Student_join_date }}</em>
+        </li>
+            </ul>
+
+</md-content>

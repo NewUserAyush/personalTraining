@@ -1,0 +1,69 @@
+<style>
+    .box1{
+        position: relative;
+        -webkit-animation: mymove1 20s infinite; /* Chrome, Safari, Opera */
+        animation: mymove1 20s infinite;
+       }
+
+    @-webkit-keyframes mymove1 {
+        from {left: 0px;}
+        to {left: 1000px;}
+    }
+
+    @keyframes mymove1 {
+        from {left: 0px;}
+        to {left: 1000px;}
+    }
+
+    .box2{
+        position: relative;
+        -webkit-animation: mymove2 20s infinite; /* Chrome, Safari, Opera */
+        animation: mymove2 20s infinite;
+    }
+
+    @-webkit-keyframes mymove2 {
+        from {left: 1000px;}
+        to {left:  0px;}
+    }
+
+    @keyframes mymove2 {
+        from {left: 1000px;}
+        to {left: 0px;}
+    }
+
+</style>
+
+
+<md-content class="padded-content-page">
+    <link rel="stylesheet" href="ism/css/my-slider.css"/>
+    <script src="ism/js/ism-2.1.js"></script>
+    <div ng-repeat="x in vm.testData" layout="row" layout-align="center center">
+        <h2 class="md-display-3" translate>{{x.Id}}</h2>
+    </div>
+
+
+    <div  layout="row" layout-xs="column" layout-align="left" layout-margin>
+        <tri-widget flex=40 title="Background Image" subtitle="Use any image as a background" background-image="assets/images/backgrounds/material-backgrounds/mb-bg-03.jpg" title-position="top"  content-layout="center center" overlay-title palette-background="triCyan:600"><p class="padding-100"></p>
+            <p class="padding-100">
+                <!-- Your Content -->
+            </p>
+        </tri-widget>
+           <p>{{vm.testData[0].content}}</p>
+    </div>
+
+    <div layout="row" layout-xs="column" layout-align="right" layout-margin>
+        <p>{{vm.testData.content}}</p>
+        <tri-widget flex=40 title="Background Image" subtitle="Use any image as a background" background-image="assets/images/backgrounds/material-backgrounds/mb-bg-03.jpg" title-position="bottom"  content-layout="right" overlay-title palette-background="triCyan:600">
+            <p class="padding-100"></p>
+            <p class="padding-100">
+                <!-- Your Content -->
+            </p>
+        </tri-widget>
+    </div>
+
+    <div class="margin-20" layout="row" layout-align="center center">
+
+                {{vm.testData.content}}
+
+    </div>
+</md-content>

@@ -1,0 +1,23 @@
+<md-card>
+    <md-card-content>
+        <form name="dialogForm">
+            <md-input-container class="md-block">
+                <label>Title</label>
+                <input type="text" ng-model="vm.newDialog.title"/>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>Content</label>
+                <textarea ng-model="vm.newDialog.content"></textarea>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>OK Button</label>
+                <input type="text" ng-model="vm.newDialog.ok"/>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>Cancel Button</label>
+                <input type="text" ng-model="vm.newDialog.cancel"/>
+            </md-input-container>
+            <md-button class="md-primary md-raised" ng-disabled="dialogForm.$invalid" ng-click="vm.createDialog($event, vm.newDialog)">Create Dialog</md-button>
+        </form>
+    </md-card-content>
+</md-card>

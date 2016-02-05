@@ -1,0 +1,38 @@
+<md-dialog aria-label="Mango (Fruit)" flex="30" flex-xs="100">
+    <md-toolbar md-theme="{{triSkin.elements.content}}">
+        <div class="md-toolbar-tools">
+            <h2>
+                <span translate>MENU.TODO.DIALOG.NEW</span>
+            </h2>
+        </div>
+    </md-toolbar>
+
+    <md-divider></md-divider>
+
+    <md-dialog-content class="md-dialog-content">
+        <form name="taskForm" novalidate layout="column">
+            <md-input-container>
+                <label translate>MENU.TODO.DIALOG.DESC</label>
+                <input ng-model="vm.item.description" class="dialog-close" name="task" required/>
+                <div ng-messages="taskForm.task.$error">
+                    <div ng-message when="required">
+                        <span translate>MENU.TODO.DIALOG.TASKFORM.PLEASE_ENTER</span>
+                    </div>
+                </div>
+            </md-input-container>
+            <md-input-container>
+                <label translate>MENU.TODO.DIALOG.PRIORITY</label>
+                <md-select placeholder="{{'MENU.TODO.DIALOG.PRIORITY' | translate}}" ng-model="vm.item.priority">
+                    <md-option value="high" translate>MENU.TODO.DIALOG.HIGH</md-option>
+                    <md-option value="medium" translate>MENU.TODO.DIALOG.MEDIUM</md-option>
+                    <md-option value="low" translate>MENU.TODO.DIALOG.LOW</md-option>
+                </md-select>
+            </md-input-container>
+        </form>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+        <span flex></span>
+        <md-button ng-click="vm.cancel()">Cancel</md-button>
+        <md-button ng-click="vm.hide()" class="md-primary" ng-disabled="taskForm.$invalid">Ok</md-button>
+    </md-dialog-actions>
+</md-dialog>

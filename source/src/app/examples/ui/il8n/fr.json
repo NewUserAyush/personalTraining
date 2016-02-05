@@ -1,0 +1,36 @@
+{
+    "MENU": {
+        "UI": {
+            "UI": "L'INTERFACE utilisateur",
+            "COLORS": "Les couleurs",
+            "FONT_AWESOME": "Police Impressionnant",
+            "MATERIAL_ICONS": "Matériel Icônes",
+            "TYPOGRAPHY": "La typographie",
+            "TOOLBAR": "Barre d'outils",
+            "THEME-TEST": "Sandbox",
+            "SKINS": "Peaux",
+            "WEATHER_ICONS": "Icônes Météo"
+        }
+    },
+    "UI": {
+        "TOOLBARS": {
+            "SIZE": "Taille",
+            "SIZE_CHOOSE": "Choisissez une taille",
+            "SIZE_SHOW": "Modifier la taille du panneau d'admin en haut de la barre d'outils",
+            "BACKGROUND": "Arrière-plan",
+            "BACKGROUND_SHOW": "L'utilisation de l'image d'arrière-plan sur la barre d'outils",
+            "SHRINK": "Faites Défiler Jusqu'À Rétrécir",
+            "SHRINK_SHOW": "Masquer la barre d'outils de défilement"
+        },
+        "SKINS": {
+            "ELEMENTS": {
+                "LOGO": "Logo",
+                "SIDEBAR": "Barre latérale",
+                "CONTENT": "Contenu",
+                "TOOLBAR": "Barre d'outils"
+            },
+            "SKIN_CHOOSE": "Choisir une peau",
+            "SKIN_TRY": "L'Essayer"
+        }
+    }
+}

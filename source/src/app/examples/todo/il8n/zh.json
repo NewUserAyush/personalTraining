@@ -1,0 +1,21 @@
+{
+    "MENU": {
+        "TODO": {
+            "TITLE": "做",
+            "HEADER": "做清单",
+            "NOTE": "注意到",
+            "REMOVEMSG": "删除的项目清单的swipping的权利",
+            "DIALOG": {
+                "NEW": "增加的任务",
+                "DESC": "任务名称",
+                "HIGH": "高",
+                "MEDIUM": "中",
+                "LOW": "低",
+                "PRIORITY": "优先事项",
+                "TASKFORM": {
+                    "PLEASE_ENTER": "请输入的一项任务的名字"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<div class="padded-content-page">
+    <p class="md-subhead">Color is inspired by bold color statements juxtaposed with muted environments, taking cues from contemporary architecture, road signs, pavement marking tape, and sports courts. Emphasize bold shadows and highlights. Introduce unexpected and vibrant colors</p>
+
+    <p>Triangular comes with the default <a href="http://www.google.com/design/spec/style/color.html#color-color-palette">material design color palettes</a>.  These can be used in multiple combinations to create stunning eye catching themes to color your admin panels.</p>
+
+    <h2>Palette Colors</h2>
+
+    <p>These color palettes comprise of primary and accent colors that can be used for illustration or to develop your brand colors. They’ve been designed to work harmoniously with each other.</p>
+
+    <p>The color palette starts with primary colors and fills in the spectrum to create a complete and usable palette for Android, Web, and iOS. Google suggests using the 500 colors as the primary colors in your app and the other colors as accents colors.</p>
+
+    <p>As well as the pre-defined palettes you can also create your own color palettes.</p>
+
+    <p class="md-caption">Click on a palette below to see it's available colors and contrast text colors.</p>
+    <div class="example-code md-whiteframe-z1">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Available Color Palettes</h2>
+            </div>
+        </md-toolbar>
+        <md-content class="md-padding">
+            <md-grid-list class="ui-color-grid" md-cols-xs="2" md-cols-md="3" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-xs="8px">
+                <md-grid-tile md-rowspan="1" md-colspan="1" ng-repeat="(name,palette) in ::vm.palettes" ng-style="::vm.colourRGBA(palette['500'].value)" ng-click="vm.selectPalette($event, name, palette)">
+                    <md-grid-tile-footer>
+                        <h3>{{::name}}</h3>
+                    </md-grid-tile-footer>
+                </md-grid-tile>
+            </md-grid-list>
+        </md-content>
+    </div>
+</div>

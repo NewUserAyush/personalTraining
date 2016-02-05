@@ -1,0 +1,15 @@
+{
+    "MENU": {
+        "MENU": {
+            "MENU": "Menu",
+            "1-1": "Niveau 1-1",
+            "2-1": "Niveau 2-1",
+            "3-1": "Niveau 3-1",
+            "4-1": "Niveau 4-1",
+            "4-2": "Niveau 4-2",
+            "4-3": "Niveau 4-3",
+            "DYNAMIC": "Menu Dynamique",
+            "DYNAMIC-MENU": "Dynamique De La Page Du Menu"
+        }
+    }
+}

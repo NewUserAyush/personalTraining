@@ -1,0 +1,111 @@
+{
+    "MENU": {
+        "DASHBOARDS": {
+            "DASHBOARDS": "仪表盘",
+            "GENERAL": "长",
+            "ANALYTICS": "析",
+            "SERVER": "服务器",
+            "SALES": "销售",
+            "WIDGETS": "东西",
+            "SOCIAL": "社会",
+            "DRAGGABLE": "Draggable"
+        }
+    },
+    "DASHBOARDS": {
+        "GENERAL": {
+            "CONTACTS": "接触",
+            "CHAT": "聊天"
+        },
+        "SALES": {
+            "SALES": "销售",
+            "TOTAL-SALES": "销售总额",
+            "ALL-TIME-EARNINGS": "所有时间收入",
+            "TOTAL-EARNINGS": "总收入",
+            "ORDERS": "命令",
+            "ORDER-STATUS": "为了状况",
+            "TOP-PRODUCT-CATEGORIES": "最高产品种类",
+            "DATE-UPDATED": "约范围的更新",
+            "DATE-CHANGE": {
+                "TITLE": "选定一个日期范围",
+                "START-DATE": "开始约会",
+                "END-DATE": "结束日期",
+                "YEAR-PICK": "年",
+                "MONTH-PICK": "一个月",
+                "DATE-PICK": "约会"
+            },
+            "ORDER": {
+                "TITLE": "为了#",
+                "DATE": "为了约会",
+                "BUYER-NAME": "客户的名字",
+                "BUYER-EMAIL": "客户的电子邮件",
+                "NUM-ITEMS": "项目的数目",
+                "PRODUCT": "产品说明",
+                "CATEGORY": "职类",
+                "PRICE": "价格",
+                "SUB-TOTAL": "小计",
+                "TAX": "税务",
+                "TOTAL": "总"
+            }
+        },
+        "ANALYTICS": {
+            "COMMENTS": "评论意见",
+            "TWEETS": "鸣叫",
+            "LIKES": "喜欢",
+            "REACH": "到达",
+            "PAGEVIEWS": "Pageviews&访问",
+            "REFERRALS": "转诊交通",
+            "SOCIAL": "网络的移交",
+            "LOCATION": "地点",
+            "DATE": "11/03/15-11/4/15"
+        },
+        "SERVER": {
+            "IP": "IP地址",
+            "MEMORY": "的记忆",
+            "DISK": "磁盘",
+            "LOCATION": "地点",
+            "REAL_TIME": "真正的时间",
+            "24HRS": "24小时",
+            "7DAYS": "7天",
+            "365DAYS": "365天",
+            "CPU": "中央处理器",
+            "BANDWIDTH": "宽带",
+            "DISKS": "磁盘",
+            "JOB": "东道工作队",
+            "STATUS": "服务器地位",
+            "CURRENTLY": "目前正在你的服务器",
+            "RUNNING": "跑",
+            "RESTART": "重新开始",
+            "SHUTDOWN": "关闭",
+            "USAGE": "每月的使用情况",
+            "LIMIT": "每月限制",
+            "TASKS": "目前的任务",
+            "DATE": "11/03/15-11/4/15",
+            "DISKUSAGE": "磁盘的使用"
+        },
+        "SOCIAL": {
+            "STATUS": {
+                "UPDATE": "更新你的地位",
+                "MIND": "什么你想什么呢?"
+            }
+        },
+        "WIDGETS": {
+            "MENU": {
+                "REFRESH": "刷新",
+                "DETAILS": "详细情况",
+                "SHARE": "分享",
+                "PRINT": "印"
+            },
+            "SALES": "销售",
+            "COMMENTS": "评论意见",
+            "SERVER_UPTIME": "服务器开始",
+            "FULLDATA": "全面的数据"
+        },
+        "DRAGGABLE": {
+            "TITLE": "拉我!",
+            "SUBTITLE1": "你只需要说明的集装箱你想使用。",
+            "SUBTITLE2": "你能重新以这些东西是集装箱内货物的。",
+            "SUBTITLE3": "这工作的所有因素，不只是东西!",
+            "SUBTITLE4": "他们在外面他们的集装箱是不可能的。"
+        }
+    }
+}

@@ -1,0 +1,52 @@
+{
+    "MENU": {
+        "EMAIL": {
+            "EMAIL": "E-mail",
+            "INBOX": "Boîte de réception",
+            "TRASH": "Corbeille",
+            "SENT": "Envoyé"
+        }
+    },
+    "EMAIL": {
+        "TOOLBAR": {
+            "SEARCH": "Recherche"
+        },
+        "INBOX": {
+            "TITLE": "Boîte de réception",
+            "GROUPS": {
+                "TODAY": "Aujourd'hui",
+                "YESTERDAY": "Hier",
+                "OLDER": "Les plus âgés"
+            }
+        },
+        "COMPOSE": {
+            "FROM": "À partir de",
+            "CC": "CC",
+            "BCC": "CCI",
+            "SUBJECT": "Sujet",
+            "SEND": "Envoyer",
+            "VALIDATION": {
+                "EMAIL_REQUIRED": "Veuillez entrer une adresse pour envoyer.",
+                "EMAIL_VALID": "Veuillez entrer une adresse email valide.",
+                "SUBJECT_REQUIRED": "Veuillez saisir un objet pour le courrier électronique."
+            }
+        },
+        "TO": "Pour",
+        "NEW": "Composer",
+        "SENT": "E-mail à {{pour}} a envoyé.",
+        "CANCELED": "E-mail annulé",
+        "REPLY": "Répondre",
+        "REPLY_ALL": "Répondre À Tous",
+        "FORWARD": "Avant",
+        "DELETE": "Supprimer",
+        "DELETED": "Email Supprimé",
+        "RE": "R. e: ",
+        "CLOSE": "Fermer",
+        "MESSAGE": "Message",
+        "NO_EMAILS_FOUND": "Pas de courriels trouvé",
+        "NO_EMAIL_SELECTED": "Aucun e-mail sélectionné",
+        "REPLY_BOTTOM_SHEET": {
+            "TITLE": "Réponse À Un Message"
+        }
+    }
+}

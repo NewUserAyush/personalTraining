@@ -1,0 +1,14 @@
+{
+    "MENU": {
+        "CHARTS": {
+            "CHARTS": "Charts",
+            "GOOGLE": "Google",
+            "CHARTJS": "Chart.js",
+            "BAR": "Bar",
+            "LINE": "Line",
+            "SCATTER": "Scatter",
+            "PIE": "Pie",
+            "TICKER": "Ticker"
+        }
+    }
+}

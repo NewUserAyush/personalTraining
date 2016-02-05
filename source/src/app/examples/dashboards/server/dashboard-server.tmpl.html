@@ -1,0 +1,138 @@
+<div class="dashboard-container overlay-10 padded-content-page" layout="column">
+    <div layout="row" layout-margin>
+        <tri-widget flex="70" flex-xs="100" server-widget>
+            <md-tabs layout-fill flex md-dynamic-height md-no-disconnect md-stretch-tabs="always" md-no-pagination>
+                <md-tab label="{{'DASHBOARDS.SERVER.REAL_TIME' | translate}}">
+                    <md-content class="md-padding">
+                        <h1 class="md-headline"><span translate>DASHBOARDS.SERVER.BANDWIDTH</span> <span class="md-caption">(Mbps)</span></h1>
+                        <canvas flex class="chart-line" chart-data="serverCharts.bandwidth.data" chart-labels="serverCharts.bandwidth.labels" chart-legend="false" chart-options="serverCharts.bandwidth.options" chart-colours="serverCharts.bandwidth.colours"></canvas>
+                        <h1 class="md-headline"><span translate>DASHBOARDS.SERVER.CPU</span> <span class="md-caption">(%)</span></h1>
+                        <canvas flex class="chart-line" chart-data="serverCharts.cpu.data" chart-labels="serverCharts.cpu.labels" chart-legend="false" chart-options="serverCharts.cpu.options" chart-colours="serverCharts.cpu.colours"></canvas>
+                    </md-content>
+                </md-tab>
+                <md-tab label="{{'DASHBOARDS.SERVER.24HRS' | translate}}">
+                    <md-content class="md-padding">
+                        <canvas flex class="chart-bar" chart-data="serverCharts.data24hrs.data" chart-labels="serverCharts.data24hrs.labels" chart-legend="true" chart-options="serverCharts.data24hrs.options" chart-series="serverCharts.data24hrs.series"></canvas>
+                    </md-content>
+                </md-tab>
+                <md-tab label="{{'DASHBOARDS.SERVER.7DAYS' | translate}}">
+                    <md-content class="md-padding">
+                        <canvas flex class="chart-bar" chart-data="serverCharts.data7days.data" chart-labels="serverCharts.data7days.labels" chart-legend="true" chart-options="serverCharts.data7days.options" chart-series="serverCharts.data7days.series"></canvas>
+                    </md-content>
+                </md-tab>
+                <md-tab label="{{'DASHBOARDS.SERVER.365DAYS' | translate}}">
+                    <md-content class="md-padding">
+                        <canvas flex class="chart-bar" chart-data="serverCharts.data365days.data" chart-labels="serverCharts.data365days.labels" chart-legend="true" chart-options="serverCharts.data365days.options" chart-series="serverCharts.data365days.series"></canvas>
+                    </md-content>
+                </md-tab>
+            </md-tabs>
+        </tri-widget>
+        <div flex="30" flex-xs="100" class="drag-container" layout="column" layout-margin dragula='"drag-server-container"'>
+            <tri-widget palette-background="triCyan:500" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
+                <div>
+                    <md-icon class="font-size-5 opacity-50" md-font-icon="zmdi zmdi-gps-dot"></md-icon>
+                </div>
+                <div layout="column" layout-align="center end">
+                    <p class="md-display-1 font-weight-100 margin-top-0 margin-bottom-0 text-ellipsis">192.168.1.1</p>
+                    <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>DASHBOARDS.SERVER.IP</p>
+                </div>
+            </tri-widget>
+            <tri-widget palette-background="triCyan:600" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
+                <div>
+                    <md-icon class="font-size-5 opacity-50" md-font-icon="zmdi zmdi-memory"></md-icon>
+                </div>
+                <div layout="column" layout-align="center end">
+                    <p class="md-display-1 font-weight-100 margin-top-0 margin-bottom-0 text-ellipsis" countupto="2" decimals="0" options="{suffix: 'Gb'}"></p>
+                    <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>DASHBOARDS.SERVER.MEMORY</p>
+                </div>
+            </tri-widget>
+            <tri-widget palette-background="triCyan:700" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
+                <div>
+                    <md-icon class="font-size-5 opacity-50" md-font-icon="zmdi zmdi-storage"></md-icon>
+                </div>
+                <div layout="column" layout-align="center end">
+                    <p class="md-display-1 font-weight-100 margin-top-0 margin-bottom-0" countupto="30" decimals="0" options="{suffix: 'Gb'}"></p>
+                    <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>DASHBOARDS.SERVER.DISK</p>
+                </div>
+            </tri-widget>
+            <tri-widget palette-background="triCyan:800" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
+                <div>
+                    <md-icon class="font-size-5 opacity-50" md-font-icon="zmdi zmdi-pin"></md-icon>
+                </div>
+                <div layout="column" layout-align="center end">
+                    <p class="md-display-1 font-weight-100 margin-top-0 margin-bottom-0">London</p>
+                    <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>DASHBOARDS.SERVER.LOCATION</p>
+                </div>
+            </tri-widget>
+        </div>
+    </div>
+    <div layout="row" layout-xs="column" layout-margin>
+        <tri-widget class="flex" flex="50" flex-xs="100" title="DASHBOARDS.SERVER.DISKS">
+            <md-divider></md-divider>
+            <md-list>
+                <md-list-item ng-repeat="disk in ::vm.disks">
+                    <md-icon md-font-icon="{{::disk.icon}}" class="md-primary"></md-icon>
+                    <p class="text-ellipsis padding-right-50">{{::disk.name}}</p>
+                    <md-switch class="md-secondary" ng-model="disk.enabled"></md-switch>
+                    <md-divider ng-hide="::$last"></md-divider>
+                </md-list-item>
+            </md-list>
+        </tri-widget>
+        <tri-widget flex title="DASHBOARDS.SERVER.JOB" background="primary" content-layout="row">
+            <md-divider></md-divider>
+            <md-list flex>
+                <md-list-item class="md-2-line" ng-repeat="job in ::vm.jobs">
+                    <div class="md-list-item-text">
+                        <h3>{{::job.job}}</h3>
+                        <p>{{::job.time}}</p>
+                    </div>
+                    <md-icon md-font-icon="zmdi zmdi-check alert-success" ng-show="::job.complete"></md-icon>
+                    <md-icon md-font-icon="zmdi zmdi-close alert-error" ng-hide="::job.complete"></md-icon>
+                    <md-divider ng-hide="$last"></md-divider>
+                </md-list-item>
+            </md-list>
+        </tri-widget>
+
+    </div>
+
+    <div layout="row" layout-xs="column" layout-margin>
+        <tri-widget chartjs-pie-widget class="flex" flex="40" flex-md="40" flex-xs="100" title="DASHBOARDS.SERVER.DISKUSAGE" subtitle="DASHBOARDS.SERVER.DATE" content-padding>
+            <div flex>
+                <canvas class="chart-doughnut full-width" chart-data="vm.serverChart.data" chart-legend="true" chart-labels="vm.serverChart.labels"></canvas>
+            </div>
+        </tri-widget>
+        <tri-widget flex-xs="100" title="DASHBOARDS.SERVER.USAGE" palette-background="triCyan:600" content-layout="column" content-layout-align="start center">
+            <div class="full-width" layout="row" layout-padding>
+                <h4 flex="20" class="opacity-80 margin-0 margin-right-20" translate>DASHBOARDS.SERVER.DISK</h4>
+                <div flex>
+                    <md-progress-linear class="md-warn margin-bottom-10" md-mode="determinate" value="60"></md-progress-linear>
+                    <span class="md-caption">(60% <span translate>DASHBOARDS.SERVER.LIMIT</span>)</span>
+                </div>
+            </div>
+            <md-divider flex></md-divider>
+            <div class="full-width" layout="row" layout-padding>
+                <h4 flex="20" class="opacity-80 margin-0 margin-right-20" translate>DASHBOARDS.SERVER.BANDWIDTH</h4>
+                <div flex>
+                    <md-progress-linear class="md-accent margin-bottom-10" md-mode="determinate" value="30"></md-progress-linear>
+                    <span class="md-caption">(30% <span translate>DASHBOARDS.SERVER.LIMIT</span>)</span>
+                </div>
+            </div>
+            <md-divider flex></md-divider>
+            <div class="full-width" layout="row" layout-padding>
+                <h4 flex="20" class="opacity-80 margin-0 margin-right-20" translate>DASHBOARDS.SERVER.USAGE</h4>
+                <div flex>
+                    <md-progress-linear class="md-warn margin-bottom-10" md-mode="determinate" value="83"></md-progress-linear>
+                    <span class="md-caption">(83% <span translate>DASHBOARDS.SERVER.LIMIT</span>)</span>
+                </div>
+            </div>
+            <md-divider flex></md-divider>
+            <div class="full-width" layout="row" layout-padding>
+                <h4 flex="20" class="opacity-80 margin-0 margin-right-20" translate>DASHBOARDS.SERVER.MEMORY</h4>
+                <div flex>
+                    <md-progress-linear class="md-accent margin-bottom-10" md-mode="determinate" value="65"></md-progress-linear>
+                    <span class="md-caption">(65% <span translate>DASHBOARDS.SERVER.LIMIT</span>)</span>
+                </div>
+            </div>
+        </tri-widget>
+    </div>
+</div>

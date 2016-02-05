@@ -1,0 +1,97 @@
+<div class="dashboard-container overlay-10 padded-content-page" layout="column">
+    <div class="drag-container" layout="row" layout-xs="column" layout-margin dragula='"drag-analytics-container"'>
+        <tri-widget palette-background="deep-orange:500" content-layout="row" content-layout-align="space-between center" content-padding>
+            <div>
+                <md-icon class="font-size-5 opacity-50 margin-left-10" md-font-icon="fa fa-comments"></md-icon>
+            </div>
+            <div layout="column" layout-align="center end">
+                <p class="md-display-3 font-weight-100 margin-top-0 margin-bottom-0 text-ellipsis" countupto="54" decimals="0"></p>
+                <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>DASHBOARDS.ANALYTICS.COMMENTS</p>
+            </div>
+        </tri-widget>
+        <tri-widget palette-background="triCyan:500" content-layout="row" content-layout-align="space-between center" content-padding>
+            <div>
+                <md-icon class="font-size-5 opacity-50 margin-left-10" md-font-icon="fa fa-twitter"></md-icon>
+            </div>
+            <div layout="column" layout-align="center end">
+                <p class="md-display-3 font-weight-100 margin-top-0 margin-bottom-0 text-ellipsis" countupto="101" decimals="0"></p>
+                <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>DASHBOARDS.ANALYTICS.TWEETS</p>
+            </div>
+        </tri-widget>
+        <tri-widget palette-background="indigo:500" content-layout="row" content-layout-align="space-between center" content-padding>
+            <div>
+                <md-icon class="font-size-5 opacity-50 margin-left-10" md-font-icon="fa fa-facebook"></md-icon>
+            </div>
+            <div layout="column" layout-align="center end">
+                <p class="md-display-3 font-weight-100 margin-top-0 margin-bottom-0" countupto="943" decimals="0"></p>
+                <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>DASHBOARDS.ANALYTICS.LIKES</p>
+            </div>
+        </tri-widget>
+        <tri-widget palette-background="teal:500" content-layout="row" content-layout-align="space-between center" content-padding>
+            <div>
+                <md-icon class="font-size-5 opacity-50 margin-left-10" md-font-icon="fa fa-eye"></md-icon>
+            </div>
+            <div layout="column" layout-align="center end">
+                <p class="md-display-3 font-weight-100 margin-top-0 margin-bottom-0" countupto="944" decimals="0"></p>
+                <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>DASHBOARDS.ANALYTICS.REACH</p>
+            </div>
+        </tri-widget>
+    </div>
+    <div layout="row" layout-xs="column" layout-margin>
+        <tri-widget chartjs-line-widget title="DASHBOARDS.ANALYTICS.PAGEVIEWS" subtitle="DASHBOARDS.ANALYTICS.DATE" content-layout="row" content-padding>
+            <canvas class="chart-line" chart-data="lineChart.data" chart-labels="lineChart.labels" chart-legend="true" chart-series="lineChart.series" chart-options="lineChart.options"></canvas>
+        </tri-widget>
+        <tri-widget chartjs-pie-widget title="DASHBOARDS.ANALYTICS.SOCIAL" subtitle="DASHBOARDS.ANALYTICS.DATE" content-padding>
+            <canvas class="chart-doughnut" chart-data="pieChart.data" chart-legend="true" chart-labels="pieChart.labels"></canvas>
+        </tri-widget>
+    </div>
+    <div layout="row" layout-xs="column" layout-margin>
+        <tri-widget flex load-data-widget="{ referrals: 'app/examples/dashboards/data/referrals.json' }" title="DASHBOARDS.ANALYTICS.REFERRALS" subtitle="DASHBOARDS.ANALYTICS.DATE" content-padding>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th ng-repeat="header in ::referrals.header | limitTo:3">{{::header}}</th>
+                    </tr>
+                </thead>
+                <tbody class="md-caption">
+                    <tr ng-repeat="referral in ::referrals.data | limitTo:5">
+                        <td ng-repeat="data in ::referral | limitTo:3">{{::data}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </tri-widget>
+        <tri-widget flex load-data-widget="{ social: 'app/examples/dashboards/data/social.json' }" title="DASHBOARDS.ANALYTICS.SOCIAL" subtitle="DASHBOARDS.ANALYTICS.DATE" content-padding>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th ng-repeat="header in ::social.header | limitTo:3">{{::header}}</th>
+                    </tr>
+                </thead>
+                <tbody class="md-caption">
+                    <tr ng-repeat="socialData in ::social.data | limitTo:5">
+                        <td ng-repeat="data in ::socialData | limitTo:3">{{::data}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </tri-widget>
+    </div>
+    <div layout="row" layout-md="column" layout-xs="column" layout-margin>
+        <tri-widget google-geochart-widget flex title="DASHBOARDS.ANALYTICS.LOCATION" subtitle="DASHBOARDS.ANALYTICS.DATE" title-position="top" content-padding>
+            <div class="google-chart" google-chart chart="geoChartData"></div>
+        </tri-widget>
+        <tri-widget flex load-data-widget="{ social: 'app/examples/dashboards/data/location.json' }" title="DASHBOARDS.ANALYTICS.SOCIAL" subtitle="DASHBOARDS.ANALYTICS.DATE" content-padding>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th ng-repeat="header in ::social.header | limitTo:3">{{::header}}</th>
+                    </tr>
+                </thead>
+                <tbody class="md-caption">
+                    <tr ng-repeat="socialData in ::social.data | limitTo:5">
+                        <td ng-repeat="data in ::socialData | limitTo:3">{{::data}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </tri-widget>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<div layout="row" layout-align="space-around center">
+    <md-button class="md-primary md-raised md-fab" ngf-select="vm.upload($files)" ng-disabled="vm.status != 'idle'" ngf-multiple="true" aria-label="upload">
+        <md-icon md-font-icon ng-class="{ 'zmdi zmdi-cloud-upload': vm.status == 'idle', 'fa fa-spinner fa-pulse': vm.status == 'uploading', 'zmdi zmdi-check': vm.status == 'complete'}"></md-icon>
+    </md-button>
+</div>

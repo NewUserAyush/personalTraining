@@ -1,0 +1,57 @@
+<md-tabs class="md-primary" md-selected="selectedTabIndex" md-stretch-tabs="always">
+    <md-tab label="General">
+        <md-content class="md-padding">
+            <h3>User Details</h3>
+            <form>
+                <md-input-container class="md-block">
+                    <label>Username</label>
+                    <input type="text">
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Password</label>
+                    <input type="text">
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Email</label>
+                    <input type="text">
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Twitter</label>
+                    <input type="text">
+                </md-input-container>
+                <div layout="row" layout-align="end center">
+                    <md-button>Update</md-button>
+                </div>
+            </form>
+            <md-grid-list md-cols-gt-md="3" md-cols-xs="3" md-cols-md="4" md-row-height="1:1" md-gutter="2px">
+                <md-grid-tile md-colspan="1" md-rowspan="1" ng-repeat="album in music.albums" ng-style="{ 'background-image': 'url(' + album.cover + ')' }">
+                    <md-grid-tile-footer>
+                        <h3>{{album.title}}</h3>
+                    </md-grid-tile-footer>
+                </md-grid-tile>
+            </md-grid-list>
+        </md-content>
+    </md-tab>
+    <md-tab label="Settings">
+        <md-content class="md-padding">
+            <h3>Settings</h3>
+            <md-list>
+                <md-list-item layout="row" layout-align="space-around center">
+                    <md-icon md-font-icon="zmdi zmdi-account"></md-icon>
+                    <p>Show Username</p>
+                    <md-switch class="md-secondary"></md-switch>
+                </md-list-item>
+                <md-list-item layout="row" layout-align="space-around center">
+                    <md-icon md-font-icon="zmdi zmdi-account-box"></md-icon>
+                    <p>Show Avatar</p>
+                    <md-switch class="md-secondary"></md-switch>
+                </md-list-item>
+                <md-list-item layout="row" layout-align="space-around center">
+                    <md-icon md-font-icon="zmdi zmdi-cloud-upload"></md-icon>
+                    <p>Allow Backups</p>
+                    <md-switch class="md-secondary"></md-switch>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </md-tab>
+</md-tabs>

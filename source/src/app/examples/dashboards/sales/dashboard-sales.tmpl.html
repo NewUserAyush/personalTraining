@@ -1,0 +1,67 @@
+<div class="sales-dashboard" layout="column">
+    <tri-widget title="DASHBOARDS.SALES.SALES" subtitle="{{vm.dateRange.start | amDateFormat:'MMMM Do YYYY'}} - {{vm.dateRange.end | amDateFormat:'MMMM Do YYYY'}}" palette-background="triCyan:800" class="padding-left-40 padding-right-40 padding-top-20 padding-bottom-20 no-shadow">
+        <canvas height="300" class="chart-line" chart-data="vm.chartLineData.data" chart-labels="vm.chartLineData.labels" chart-series="vm.chartLineData.series" chart-options="vm.chartLineData.options" chart-colours="vm.chartLineData.colors"></canvas>
+    </tri-widget>
+
+    <div layout="row" layout-xs="column" layout-margin dragula='"drag-analytics-container"'>
+        <tri-widget palette-background="triCyan:600" content-layout="column" content-layout-align="space-between center" content-padding>
+            <p class="md-display-2 font-weight-100 margin-top-10 margin-bottom-0" countupto="vm.salesData.totalSales" duration="1.5" decimals="0"></p>
+            <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-10" translate>DASHBOARDS.SALES.TOTAL-SALES</p>
+        </tri-widget>
+        <tri-widget palette-background="triCyan:600" content-layout="column" content-layout-align="space-between center" content-padding>
+            <p class="md-display-2 font-weight-100 margin-top-10 margin-bottom-0" countupto="vm.salesData.totalEarnings" duration="1.5" options="{ prefix: '$' }" decimals="2"></p>
+            <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-10" translate>DASHBOARDS.SALES.TOTAL-EARNINGS</p>
+        </tri-widget>
+        <tri-widget palette-background="triCyan:600" content-layout="column" content-layout-align="space-between center" content-padding>
+            <p class="md-display-2 font-weight-100 margin-top-10 margin-bottom-0" countupto="971315.53" duration="1.5" options="{ prefix: '$' }" decimals="2"></p>
+            <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-10" translate>DASHBOARDS.SALES.ALL-TIME-EARNINGS</p>
+        </tri-widget>
+    </div>
+
+    <div layout="row" layout-xs="column" layout-margin>
+        <tri-widget flex title="DASHBOARDS.SALES.ORDERS" content-layout="column" content-layout-align="center">
+            <md-data-table-container>
+                <table md-data-table class="md-data-table" md-progress="vm.deferred">
+                    <thead md-order="vm.query.order" md-trigger="vm.getUsers">
+                        <tr>
+                            <th name="Date" order-by="date" decend-first></th>
+                            <th name="Buyer" order-by="buyer"></th>
+                            <th name="Items" order-by="items.length"></th>
+                            <th name="Status" order-by="status"></th>
+                            <th name="Total" order-by="total"></th>
+                            <th name="Details"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="order in vm.salesData.orders | orderBy: vm.query.order | limitTo: vm.query.limit : (vm.query.page -1) * vm.query.limit">
+                            <td>{{::order.date | amDateFormat:'MMMM Do YYYY, h:mm:ss a'}}</td>
+                            <td>{{::order.buyer}}</td>
+                            <td>{{::order.items.length}}</td>
+                            <td>
+                                <span class="status" ng-class="'status-' + order.status">
+                                    {{::order.status}}
+                                </span>
+                            </td>
+                            <td>{{::order.total | currency}}</td>
+                            <td>
+                                <md-button ng-click="vm.openOrder(order, $event)" class="md-icon-button" aria-label="Open Order">
+                                    <md-icon md-font-icon="zmdi zmdi-search"></md-icon>
+                                </md-button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </md-data-table-container>
+            <md-data-table-pagination md-limit="vm.query.limit" md-page="vm.query.page" md-total="{{vm.salesData.orders.length}}"></md-data-table-pagination>
+        </tri-widget>
+    </div>
+
+    <div layout="row" layout-xs="column" layout-margin>
+        <tri-widget flex flex-xs="100" title="DASHBOARDS.SALES.ORDER-STATUS" content-padding>
+            <canvas class="chart-doughnut" chart-data="vm.chartPieData.data" chart-legend="true" chart-labels="vm.chartPieData.labels"></canvas>
+        </tri-widget>
+        <tri-widget flex flex-xs="100" title="DASHBOARDS.SALES.TOP-PRODUCT-CATEGORIES" content-padding>
+            <canvas class="chart-bar" chart-data="vm.chartBarData.data" chart-labels="vm.chartBarData.labels" chart-legend="true" chart-options="vm.chartBarData.options" chart-colours="vm.chartBarData.colours" chart-series="vm.chartBarData.series"></canvas>
+        </tri-widget>
+    </div>
+</div>

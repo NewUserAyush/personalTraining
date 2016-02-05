@@ -1,0 +1,40 @@
+// Dashboard
+
+// Dashboard Container
+.dashboard-container {
+  .layout-margin {
+    margin: 0px;
+  }
+
+  // until layout is fixed in material we need to add this
+  // https://github.com/angular/material/issues/5014
+  .layout-margin > .widget {
+    margin: 8px;
+  }
+}
+// - Chart Container
+.dashboard-fullwidth-chart {
+  .chart-container {
+    position: relative;
+    left: -5px;
+    bottom: -5px;
+    width: calc(100% + 10px);
+  }
+}
+
+.dashboard-no-bar-tabs {
+  md-tabs-wrapper {
+    display: none;
+  }
+}
+.google-chart {
+  height: 100%;
+  width: 100%;
+}
+
+// Social Dashboard
+.tabs-tall {
+  md-pagination-wrapper, md-tabs-canvas {
+    height: 72px;
+  }
+}

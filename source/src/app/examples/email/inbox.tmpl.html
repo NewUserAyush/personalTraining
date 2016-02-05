@@ -1,0 +1,40 @@
+<div class="email-inbox full-height overflow-hidden" layout="row" flex>
+    <md-button ng-click="vm.composeClick($event)" class="md-fab md-accent md-fab-bottom-right" aria-label="{{'EMAIL.COMPOSE_EMAIL' | translate}}">
+        <md-icon md-font-icon="zmdi zmdi-edit"></md-icon>
+    </md-button>
+    <div class="email-inbox-list md-whiteframe-z1" flex="100" flex-gt-xs="50" flex-gt-lg="40" ng-show="vm.showEmailList" layout="column">
+        <md-content>
+            <section class="email-inbox-list-animate-repeat" ng-repeat="group in vm.emailGroups" ng-if="vm.emails.length > 0">
+                <md-subheader ng-show="group.emails.length > 0" class="md-primary">{{::group.name}}</md-subheader>
+                <md-divider></md-divider>
+                <md-list>
+
+                    <md-list-item class="email-inbox-list-item email-inbox-list-animate-repeat md-3-line" ng-repeat="email in group.emails | orderBy:'-date'" ng-click="vm.openMail(email)" ng-class="{ active: selectedMail === email.id, 'email-inbox-list-item-unread': email.unread }">
+
+                        <img class="md-avatar animate" ng-src="{{::email.from.image}}" alt="{{::email.from.name}}">
+
+                        <div class="md-list-item-text">
+                            <div class="email-inbox-list-item-name-time" layout="row" layout-align="space-between start">
+                                <h3>{{::email.from.name}}</h3>
+                                <p class="md-caption" am-time-ago="email.date"></p>
+                            </div>
+                            <h4>{{::email.subject}}</h4>
+                            <p>{{::email.content[0] | cut:true:80:' ...'}}</p>
+                        </div>
+
+                        <md-divider></md-divider>
+                    </md-list-item>
+                </md-list>
+            </section>
+            <h2 ng-if="vm.emails.length === 0" translate>EMAIL.NO_EMAILS_FOUND</h2>
+        </md-content>
+    </div>
+
+    <div class="animate-wrapper" layout="column" layout-align="start center" flex>
+        <div flex id="ui-admin-email" ui-view layout="column" layout-align="start center" class="overflow-auto">
+            <div flex class="email-inbox-no-email-selected" layout="column" layout-align="center">
+                <h2 hide-xs translate>EMAIL.NO_EMAIL_SELECTED</h2>
+            </div>
+        </div>
+    </div>
+</div>

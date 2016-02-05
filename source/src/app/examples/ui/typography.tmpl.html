@@ -1,0 +1,121 @@
+<div class="padded-content-page">
+    <p class="md-subhead">The <a href="http://www.google.com/design/spec/style/typography.html">Material Design specification</a> recommends using Roboto for all languages that use Latin, Greek and Cyrillic scripts and Noto for all other languages.</p>
+    <p>Triangular uses Google Fonts so you have the choice of using <a href="http://www.google.com/fonts">any of it's 600+ fonts</a> for your admin template.  We have provided a few of the more popular ones for you to try in this demo below.</p>
+
+    <p class="caption">We have provided a font switcher for you to try out some of the fonts available with this template.  Select a font from the select box to check out how the triangular looks.</p>
+
+    <md-whiteframe flex class="md-whiteframe-z1 margin-bottom-20" layout="column" layout-align="space-between center">
+        <md-toolbar>
+            <h2 class="md-toolbar-tools">
+                <span>Why not try a different font?</span>
+            </h2>
+        </md-toolbar>
+        <md-select placeholder="Choose a font" ng-model="vm.currentFont" ng-change="vm.changeFont()">
+            <md-option ng-repeat="font in vm.fonts" ng-value="font">{{font.name}}</md-option>
+        </md-select>
+        <p class="ui-typography-try-font">Try selecting a font above, it will be saved and used from now on as you browse the site.</p>
+    </md-whiteframe>
+
+    <p class="caption">Triangular uses the <a href="http://www.google.com/design/spec/style/typography.htm">Material Design Typography Guidelines</a> for it's typography rules.  Too many type sizes and styles at once can wreck any layout. A typographic scale has a limited set of type sizes that work well together along with the layout grid. The basic set of styles are based on a typographic scale of 12, 14, 16, 20 and 34.</p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Typographic Scale</h2>
+            </div>
+        </md-toolbar>
+        <md-content class="md-padding">
+            <div layout="row" layout-xs="column" layout-align="start center">
+                <p flex="30" flex-xs="100">Display 4</p>
+                <div layout="column">
+                    <span class="ui-typography-heading-example md-display-4">Light 112sp</span>
+                </div>
+            </div>
+            <div layout="row" layout-xs="column" layout-align="start center">
+                <p flex="30" flex-xs="100">Display 3</p>
+                <div layout="column">
+                    <span class="ui-typography-heading-example md-display-3">Regular 56sp</span>
+                </div>
+            </div>
+            <div layout="row" layout-xs="column" layout-align="start center">
+                <p flex="30" flex-xs="100">Display 2</p>
+                <div layout="column">
+                    <span class="ui-typography-heading-example md-display-2">Regular 45sp</span>
+                </div>
+            </div>
+            <div layout="row" layout-xs="column" layout-align="start center">
+                <p flex="30" flex-xs="100">Display 1</p>
+                <div layout="column">
+                    <span class="ui-typography-heading-example md-display-1">Regular 34sp</span>
+                </div>
+            </div>
+            <div layout="row" layout-xs="column" layout-align="start center">
+                <p flex="30" flex-xs="100">Headline</p>
+                <div layout="column">
+                    <span class="ui-typography-heading-example md-headline">Regular 24sp</span>
+                </div>
+            </div>
+            <div layout="row" layout-xs="column" layout-align="start center">
+                <p flex="30" flex-xs="100">Title</p>
+                <div layout="column">
+                    <span class="ui-typography-heading-example md-title">Medium 20sp</span>
+                </div>
+            </div>
+            <div layout="row" layout-xs="column" layout-align="start center">
+                <p flex="30" flex-xs="100">Subhead</p>
+                <div layout="column">
+                    <span class="ui-typography-heading-example md-subhead">Regular 16sp</span>
+                </div>
+            </div>
+            <div layout="row" layout-xs="column" layout-align="start center">
+                <p flex="30" flex-xs="100">Body 2</p>
+                <div layout="column">
+                    <span class="ui-typography-heading-example md-body-2">Medium 14sp</span>
+                </div>
+            </div>
+            <div layout="row" layout-xs="column" layout-align="start center">
+                <p flex="30" flex-xs="100">Body 1</p>
+                <div layout="column">
+                    <span class="ui-typography-heading-example md-body-1">Regular 14sp</span>
+                </div>
+            </div>
+            <div layout="row" layout-xs="column" layout-align="start center">
+                <p flex="30" flex-xs="100">Caption</p>
+                <div layout="column">
+                    <span class="ui-typography-heading-example md-caption">Regular 12sp</span>
+                </div>
+            </div>
+            <div layout="row" layout-xs="column" layout-align="start center">
+                <p flex="30" flex-xs="100">Button</p>
+                <div layout="column">
+                    <span class="ui-typography-heading-example md-button">MEDIUM (ALL CAPS) 14sp</span>
+                </div>
+            </div>
+        </md-content>
+    </div>
+
+    <p class="caption">Triangular uses classes to set the scale of typography inside HTML elements, here is an example of how the code above looks.</p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Typographic Scale Usage</h2>
+            </div>
+        </md-toolbar>
+        <md-content class="md-padding">
+            <div hljs>
+            <span class="md-display-4">Light 112sp</span>
+            <span class="md-display-3">Regular 56sp</span>
+            <span class="md-display-2">Regular 45sp</span>
+            <span class="md-display-1">Regular 34sp</span>
+            <span class="md-headline">Regular 24sp</span>
+            <span class="md-title">Medium 20sp</span>
+            <span class="md-subhead">Regular 16sp</span>
+            <span class="md-body-2">Medium 14sp</span>
+            <span class="md-body-1">Regular 14sp</span>
+            <span class="md-caption">Regular 12sp</span>
+            <span class="md-button">MEDIUM (ALL CAPS) 14sp</span></div>
+        </md-content>
+    </div>
+</div>
+

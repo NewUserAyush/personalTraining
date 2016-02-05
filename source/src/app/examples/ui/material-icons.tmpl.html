@@ -1,0 +1,30 @@
+<div class="padded-content-page">
+    <p class="md-subhead">Triangular comes with the <a href="http://zavoloklom.github.io/material-design-iconic-font/index.html">Material Design Iconic Font</a> built in.  This font has over 740 material design icons to choose from.</p>
+
+    <p>Click one of the icons below to find out how to add it to triangular!</p>
+
+    <div class="example-code md-whiteframe-z1">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Material Icons</h2>
+            </div>
+        </md-toolbar>
+        <md-content class="md-padding">
+            <div layout="column">
+                <div layout="row">
+                    <md-input-container flex>
+                        <label>Search icons</label>
+                        <input type="text" ng-model="searchIcon">
+                    </md-input-container>
+                </div>
+
+                <div layout="row" layout-wrap>
+                    <div class="ui-icons-box-icon padding-10" flex="20" layout="column" layout-align="start center" ng-repeat="icon in vm.icons | filter:{ name: searchIcon }" ng-click="vm.selectIcon($event, icon.class)">
+                        <md-icon class="font-size-4" md-font-icon="{{::icon.class}}"></md-icon>
+                        <span class="md-caption margin-top-10">{{::icon.name}}</span>
+                    </div>
+                </div>
+            </div>
+        </md-content>
+    </div>
+</div>

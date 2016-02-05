@@ -1,0 +1,19 @@
+
+
+
+
+<div class="overlay-5 padded-content-page" animate-elementsbb>
+    <div class="timeline" layout="row" ng-repeat="event in ::vm.events" ng-attr-layout-align="{{$odd? 'end end':'start start'}}">
+        <div layout="row" flex="50" flex-xs="100" ng-attr-layout-align="{{$odd? 'end':'start'}} center">
+            <div class="timeline-point md-whiteframe-z1" theme-background="primary" md-theme="{{triSkin.elements.content}}">
+                <img ng-src="{{::event.image}}" class="timeline-point-avatar"/>
+                <span class="timeline-point-date">{{::event.date}}</span>
+            </div>
+            <md-divider class="timeline-x-axis" class="margin-0" flex flex-order="2"></md-divider>
+            <tri-widget class="timeline-widget margin-0 flex-70 flex-xs-100 {{::event.classes}}" title="{{::event.title}}" subtitle="{{::event.subtitle}}" title-position="bottom" ng-attr-flex-order="{{$odd? 2:1}}" palette-background="{{::event.palette}}" >
+                <div replace-with='{{event.content}}'></div>
+            </tri-widget>
+            <md-divider class="timeline-y-axis"></md-divider>
+        </div>
+    </div>
+</div>

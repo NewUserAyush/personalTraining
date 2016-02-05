@@ -1,0 +1,35 @@
+<div class="padded-content-page">
+    <p class="md-subhead">Chips represent complex entities in small blocks, such as a contact.  They can contain a photo, short title string, and brief information.</p>
+
+    <p>Contact chips represent contact information that users have for people in a compact way. They are invoked and inserted into a text field (usually the To field) when the user starts typing a contact’s name, sees the contact’s addresses, and selects the correct one. Contact chips can be added directly to a text field from a menu of contacts.</p>
+
+    <p class="md-caption">Type in the TO, CC or BCC fields to see how the chips work.</p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Email Example</h2>
+            </div>
+        </md-toolbar>
+
+        <md-tabs class="example-tabs" md-dynamic-height md-border-bottom>
+            <md-tab label="example">
+                <div class="md-tabs-content padding-40">
+                    <md-card>
+                        <md-card-content ng-include="'app/examples/elements/examples/chips-1.tmpl.html'"></md-card-content>
+                    </md-card>
+                </div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/elements/examples/chips-1.tmpl.html'"></div>
+                </div>
+            </md-tab>
+            <md-tab label="JS">
+                <div class="md-tabs-content">
+                    <div flex hljs language="javascript" include="'app/examples/elements/examples/chips.controller.js'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+</div>

@@ -1,0 +1,10 @@
+{
+    "MENU": {
+        "MYAPP": {
+            "HOME": "home",
+            "INSTRUCTOR": "instructor",
+            "TEAM": "Team",
+
+        }
+    }
+}

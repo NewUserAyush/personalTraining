@@ -1,0 +1,14 @@
+<md-button class="md-fab" ng-class="[vm.buttonClass, vm.buttonHue]" aria-label="fab button">
+    <md-icon md-font-icon="zmdi zmdi-plus"></md-icon>
+</md-button>
+<md-select placeholder="Choose a style" ng-model="vm.buttonClass">
+    <md-option value="md-primary">Primary</md-option>
+    <md-option value="md-accent">Accent</md-option>
+    <md-option value="md-warn">Warn</md-option>
+</md-select>
+<md-select placeholder="Choose a hue" ng-model="vm.buttonHue">
+    <md-option value="md-default">Default Hue</md-option>
+    <md-option value="md-hue-1">Hue 1</md-option>
+    <md-option value="md-hue-2">Hue 2</md-option>
+    <md-option value="md-hue-3">Hue 3</md-option>
+</md-select>

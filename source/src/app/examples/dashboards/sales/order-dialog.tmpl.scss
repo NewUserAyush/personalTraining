@@ -1,0 +1,27 @@
+.order-dialog {
+  box-shadow: none;
+}
+
+.order-dialog-product-table {
+  border: 1px solid #FEFEFE;
+}
+
+@media print {
+  .md-dialog-container, .order-dialog {
+    top: 0px;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    top: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    box-shadow: none;
+    border: none;
+  }
+
+  .order-dialog .md-icon-button, .order-dialog md-dialog-actions {
+    display: none;
+  }
+}

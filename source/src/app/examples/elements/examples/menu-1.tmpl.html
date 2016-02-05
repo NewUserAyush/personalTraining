@@ -1,0 +1,34 @@
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>
+            My App
+        </h2>
+        <span flex></span>
+        <md-menu>
+            <md-button class="md-icon-button" aria-label="open menu" ng-click="$mdOpenMenu()">
+                <md-icon md-font-icon="zmdi zmdi-more-vert"></md-icon>
+            </md-button>
+            <md-menu-content width="3">
+                <md-menu-item>
+                    <md-button ng-click="$mdCloseMenu">
+                        <md-icon md-font-icon="zmdi zmdi-settings"></md-icon>
+                        Settings
+                    </md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button ng-click="$mdCloseMenu">
+                        <md-icon md-font-icon="zmdi zmdi-account"></md-icon>
+                        Profile
+                    </md-button>
+                </md-menu-item>
+                <md-menu-divider></md-menu-divider>
+                <md-menu-item>
+                    <md-button ng-click="$mdCloseMenu">
+                        <md-icon md-font-icon="zmdi zmdi-sign-in"></md-icon>
+                        Log out
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+    </div>
+</md-toolbar>

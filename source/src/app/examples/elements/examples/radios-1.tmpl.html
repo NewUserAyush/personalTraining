@@ -1,0 +1,17 @@
+<div layout="column">
+    <p>Default Radio : <strong>{{data.default}}</strong></p>
+    <md-radio-group ng-model="data.default" ng-init="data.default = 'Red'">
+        <md-radio-button value="Red">Red</md-radio-button>
+        <md-radio-button value="Green">Green</md-radio-button>
+        <md-radio-button value="Blue">Blue</md-radio-button>
+    </md-radio-group>
+</div>
+
+<div layout="column">
+    <p>Primary Radio : <strong>{{data.primary}}</strong></p>
+    <md-radio-group class="md-primary" ng-model="data.primary" ng-init="data.primary = 'Red'">
+        <md-radio-button value="Red">Red</md-radio-button>
+        <md-radio-button value="Green">Green</md-radio-button>
+        <md-radio-button value="Blue">Blue</md-radio-button>
+    </md-radio-group>
+</div>

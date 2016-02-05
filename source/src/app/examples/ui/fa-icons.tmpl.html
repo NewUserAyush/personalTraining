@@ -1,0 +1,30 @@
+<div class="padded-content-page">
+    <p class="md-subhead">Triangular comes with the <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome Icon Fontset</a> built in.</p>
+
+    <p>Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS.</p>
+
+    <p>Click one of the icons below to find out how to add it to triangular!</p>
+
+    <div class="example-code md-whiteframe-z1">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Font Awesome Icons</h2>
+            </div>
+        </md-toolbar>
+        <md-content class="md-padding">
+            <div layout="column">
+                <md-input-container>
+                    <label>Search icons</label>
+                    <input type="text" ng-model="searchIcon">
+                </md-input-container>
+
+                <div layout="row" layout-wrap>
+                    <div class="ui-icons-box-icon padding-10" flex="10" layout="column" layout-align="space-around center" ng-repeat="icon in vm.icons | filter:{ name: searchIcon }" ng-click="vm.selectIcon($event, icon)">
+                        <md-icon class="font-size-4" md-font-icon="{{::icon.className}}"></md-icon>
+                        <span class="md-caption margin-top-10">{{::icon.name}}</span>
+                    </div>
+                </div>
+            </div>
+        </md-content>
+    </div>
+</div>

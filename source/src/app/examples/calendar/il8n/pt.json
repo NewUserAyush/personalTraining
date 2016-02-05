@@ -1,0 +1,58 @@
+{
+    "MENU": {
+        "CALENDAR": {
+            "CALENDAR": "Calendário"
+        }
+    },
+    "CALENDAR": {
+        "ADD": "Adicionar",
+        "SAVE": "Salvar",
+        "ADD-EVENT": "Adicionar Eventos",
+        "EDIT-EVENT": "Para Editar O Evento",
+        "CANCEL": "Cancelar",
+        "DELETE": "Apagar",
+        "EVENT": {
+            "TITLE": "Título",
+            "ALL-DAY": "Todos os dias",
+            "START": "Início",
+            "END": "Fim",
+            "START-TIME": "Hora De Início",
+            "END-TIME": "Fim Do Horário De",
+            "LOCATION": "Localização",
+            "DESCRIPTION": "Descrição",
+            "COLOR": "Cor",
+            "COLOR-PICK": "Escolha uma cor",
+            "NEW-EVENT": "Novo Evento",
+            "EVENT-CREATED": "Evento Criado",
+            "EVENT-UPDATED": "Evento Atualizado",
+            "EVENT-DELETED": "Evento Excluídos",
+            "YEAR-PICK": "Ano",
+            "MONTH-PICK": "Mês",
+            "DATE-PICK": "Data",
+            "HOUR-PICK": "Hora",
+            "MINUTE-PICK": "Minutos"
+        },
+        "MONTHNAMES": {
+            "JANUARY": "Janeiro",
+            "FEBRUARY": "Fevereiro",
+            "MARCH": "Março",
+            "APRIL": "Abril",
+            "MAY": "Pode",
+            "JUNE": "Junho",
+            "JULY": "Julho",
+            "AUGUST": "Agosto",
+            "SEPTEMBER": "Setembro",
+            "OCTOBER": "Outubro",
+            "NOVEMBER": "Novembro",
+            "DECEMBER": "Dezembro"
+        },
+        "TOOLBAR": {
+            "CHANGE-VIEW": "Mudar Modo De Exibição",
+            "VIEWS": {
+                "MONTH": "Mês",
+                "WEEK": "Semana",
+                "DAY": "Dia"
+            }
+        }
+    }
+}

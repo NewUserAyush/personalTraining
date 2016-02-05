@@ -1,0 +1,29 @@
+<div class="padded-content-page">
+    <p class="md-subhead">Toasts provide lightweight feedback about an operation. They show a brief message at the bottom of the screen on mobile and lower left on desktop. Toasts appear above all other elements on screen. Toasts can contain an action.</p>
+
+    <p>They automatically disappear after a timeout or after user interaction elsewhere on the screen, particularly after interactions that summon a new surface or activity. Toasts can be swiped off screen. They do not block input on the screens on which they appear. Show only one snackbar on screen at a time.</p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Pop a toast</h2>
+            </div>
+        </md-toolbar>
+        <md-tabs class="example-tabs" md-dynamic-height md-border-bottom>
+            <md-tab label="example">
+                <div class="md-tabs-content example-tabs-500-height" ng-controller="Toast1Controller as vm" ng-include="'app/examples/elements/examples/toast-1.tmpl.html'">
+                </div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/elements/examples/toast-1.tmpl.html'"></div>
+                </div>
+            </md-tab>
+            <md-tab label="JS">
+                <div class="md-tabs-content">
+                    <div flex hljs language="javascript" include="'app/examples/elements/examples/toast-1.controller.js'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </div>
+</div>

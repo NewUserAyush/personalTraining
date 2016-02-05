@@ -1,0 +1,43 @@
+<div ng-controller="Fab1Controller as vm" flex>
+    <div layout="row" layout-align="center center" style="min-height: 300px" flex ng-cloak>
+        <md-fab-speed-dial md-direction="{{vm.fabDirection}}" md-open="vm.fabStatus" ng-class="vm.fabAnimation">
+            <md-fab-trigger>
+                <md-button aria-label="share this post" class="md-fab md-warn">
+                    <md-icon md-font-icon="zmdi zmdi-share"></md-icon>
+                </md-button>
+            </md-fab-trigger>
+            <md-fab-actions>
+                <md-button aria-label="twitter" class="md-fab md-raised md-mini" ng-click="vm.share('Shared on Twitter', $event)">
+                    <md-icon md-font-icon="fa fa-twitter"></md-icon>
+                </md-button>
+                <md-button aria-label="facebook" class="md-fab md-raised md-mini" ng-click="vm.share('Shared on Facebook', $event)">
+                    <md-icon md-font-icon="fa fa-facebook"></md-icon>
+                </md-button>
+                <md-button aria-label="google-plus" class="md-fab md-raised md-mini" ng-click="vm.share('Shared on Google+', $event)">
+                    <md-icon md-font-icon="fa fa-google-plus"></md-icon>
+                </md-button>
+            </md-fab-actions>
+        </md-fab-speed-dial>
+    </div>
+
+    <div layout="row" flex>
+        <div layout="column" layout-align="start center" flex>
+            <h3>Direction</h3>
+            <md-radio-group class="text-capitalize" ng-model="vm.fabDirection">
+                <md-radio-button ng-repeat="direction in vm.fabDirections" ng-value="direction" class="md-primary">{{direction}}</md-radio-button>
+            </md-radio-group>
+        </div>
+        <div layout="column" layout-align="start center" flex>
+            <h3>Animation</h3>
+            <md-radio-group ng-model="vm.fabAnimation">
+                <md-radio-button ng-repeat="animation in vm.fabAnimations" ng-value="animation" class="md-primary">{{animation}}</md-radio-button>
+            </md-radio-group>
+        </div>
+        <div layout="column" layout-align="start center" flex>
+            <h3>Status</h3>
+            <md-radio-group class="text-capitalize" ng-model="vm.fabStatus">
+                <md-radio-button ng-repeat="status in vm.fabStatuses" ng-value="status" class="md-primary">{{status}}</md-radio-button>
+            </md-radio-group>
+        </div>
+    </div>
+</div>

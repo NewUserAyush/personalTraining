@@ -1,0 +1,30 @@
+<md-content class="padded-content-page">
+    <p class="md-subhead">Data-binding in Angular apps is the automatic synchronization of data between the model and view components. The way that Angular implements data-binding lets you treat the model as the single-source-of-truth in your application. The view is a projection of the model at all times. When the model changes, the view reflects the change, and vice versa.</p>
+
+    <p class="md-caption">Try filling in the form below to see what happens to the user data structure in the second panel.</p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Binding a form to data</h2>
+            </div>
+        </md-toolbar>
+        <md-tabs class="example-tabs margin-bottom-40" md-dynamic-height md-border-bottom>
+            <md-tab label="example">
+                <div class="md-tabs-content padding-40">
+                    <div ng-controller="Binding1Controller" ng-include="'app/examples/forms/examples/binding-1.tmpl.html'" layout="row" layout-xs="column" layout-align="center center"></div>
+                </div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/forms/examples/binding-1.tmpl.html'"></div>
+                </div>
+            </md-tab>
+            <md-tab label="JS">
+                <div class="md-tabs-content">
+                    <div flex hljs language="javascript" include="'app/examples/forms/examples/binding-1.controller.js'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </div>
+</md-content>

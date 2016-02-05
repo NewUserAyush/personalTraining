@@ -1,0 +1,66 @@
+<div class="padded-content-page">
+    <p class="md-subhead">Triangular comes with Material and Font Awesome Icons which can be used in your admin pages and buttons.</p>
+
+    <div class="elements-icons md-whiteframe-z3" layout="column">
+        <md-toolbar class="md-primary">
+            <div class="md-toolbar-tools">
+                <h2>
+                  <span>{{::vm.icons.length}} Font Icons</span>
+                </h2>
+            </div>
+        </md-toolbar>
+
+        <div layout="row" layout-align="space-around center">
+            <md-input-container>
+                <label>Search icons</label>
+                <input type="text" ng-model="searchIcon">
+            </md-input-container>
+            <md-select placeholder="Pick a font family" ng-model="family">
+                <md-option ng-value="family" ng-repeat="family in ::vm.families">{{::family}}</md-option>
+            </md-select>
+        </div>
+
+        <div layout="row" class="md-whiteframe-z1">
+            <md-content>
+                <md-list>
+                    <md-list-item class="md-2-line" ng-repeat="icon in vm.icons | filter:{ name: searchIcon, family: family }" ng-click="vm.selectIcon(icon)">
+                        <div class="md-list-item-text">
+                            <h3>{{::icon.name}}</h3>
+                            <h4>{{::icon.family}}</h4>
+                        </div>
+                        <md-icon class="md-avatar" md-font-icon="{{::icon.className}}"></md-icon>
+                    </md-list-item>
+                </md-list>
+            </md-content>
+            <div class="elements-icons-preview" layout="column" layout-align="space-around center" flex>
+                <p ng-show="vm.selectedIcon == null">Select an icon from the list on the left</p>
+                <div layout="row" layout-align="space-around center" layout-fill layout-padded ng-hide="vm.selectedIcon == null">
+                    <div layout="column" layout-align="center center">
+                        <md-button class="md-fab md-primary" aria-label="primary button">
+                            <md-icon ng-class="vm.selectedIcon.className"></md-icon>
+                        </md-button>
+                        <p class="md-caption">Primary</p>
+                    </div>
+                    <div layout="column" layout-align="center center">
+                        <md-button class="md-fab md-accent" aria-label="accent button">
+                            <md-icon ng-class="vm.selectedIcon.className"></md-icon>
+                        </md-button>
+                        <p class="md-caption">Accent</p>
+                    </div>
+                    <div layout="column" layout-align="center center">
+                        <md-button class="md-fab md-warn" aria-label="warn button">
+                            <md-icon ng-class="vm.selectedIcon.className"></md-icon>
+                        </md-button>
+                        <p class="md-caption">Warn</p>
+                    </div>
+                </div>
+                <div layout="row" layout-align="space-around center" layout-fill layout-padded ng-hide="vm.selectedIcon == null">
+                    <div layout="column" ng-repeat="size in ['16px','24px', '36px', '48px']" layout-align="center center">
+                        <md-icon ng-style="{ 'font-size': size, 'height': size, 'width': size }" ng-class="vm.selectedIcon.className"></md-icon>
+                        <p class="md-caption">{{size}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

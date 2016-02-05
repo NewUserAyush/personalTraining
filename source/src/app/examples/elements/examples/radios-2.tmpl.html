@@ -1,0 +1,8 @@
+<p>Please choose an avatar : <strong>{{data.avatar}}</strong></p>
+<div layout="row" layout-align="center center">
+    <md-radio-group class="elements-radio-avatar" ng-model="::data.avatar" ng-init="data.avatar = 'avatar-1'; avatars = ['avatar-1','avatar-2','avatar-3','avatar-4','avatar-5', 'avatar-6']">
+        <md-radio-button ng-repeat="avatar in ::avatars" value="{{::avatar}}" style="float:left;" aria-label="avatar">
+            <img ng-src="assets/images/avatars/{{::avatar}}.png" alt="{{::avatar}}">
+        </md-radio-button>
+    </md-radio-group>
+</div>

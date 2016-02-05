@@ -1,0 +1,27 @@
+<div class="padded-content-page">
+    <p class="md-subhead">Tabs make it easy to explore and switch between different views or functional aspects of an app or to browse categorized data sets.</p>
+
+    <p>A tab provides the affordance for displaying grouped content. A tab label succinctly describes the tab’s associated grouping of content.</p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Tabs example</h2>
+            </div>
+        </md-toolbar>
+        <md-tabs class="example-tabs-nopadding margin-bottom-40" md-dynamic-height md-border-bottom>
+            <md-tab label="example">
+                <div class="md-tabs-content padding-40" style="background: rgba(100, 100, 100, 0.2);">
+                    <md-card>
+                        <md-card-content class="example-tabs-content" ng-include="'app/examples/elements/examples/tabs-1.tmpl.html'"></md-card-content>
+                    </md-card>
+                </div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/elements/examples/tabs-1.tmpl.html'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<md-dialog flex="60" flex-xs="100">
+    <md-toolbar class="toolbar-default">
+        <div class="md-toolbar-tools">
+            <h2 flex translate>DASHBOARDS.SALES.DATE-CHANGE.TITLE</h2>
+            <md-button class="md-icon-button" ng-click="vm.cancelClick()" aria-label="cancel">
+                <md-icon md-font-icon="zmdi zmdi-close"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <md-dialog-content class="md-dialog-content">
+        <div layout="row" layout-padding>
+            <div flex layout="column" layout-align="center center">
+                <h2 translate>DASHBOARDS.SALES.DATE-CHANGE.START-DATE</h2>
+                <md-datepicker ng-model="vm.start" md-placeholder="'DASHBOARDS.SALES.DATE-CHANGE.START-DATE' | translate"></md-datepicker>
+            </div>
+            <div layout="column" layout-align="center center">
+                <md-icon style="font-size:2.4em" md-font-icon="zmdi zmdi-long-arrow-right"></md-icon>
+            </div>
+            <div flex layout="column" layout-align="center center">
+                <h2 translate>DASHBOARDS.SALES.DATE-CHANGE.END-DATE</h2>
+                <md-datepicker ng-model="vm.end" md-placeholder="'DASHBOARDS.SALES.DATE-CHANGE.END-DATE' | translate"></md-datepicker>
+            </div>
+        </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+        <span flex></span>
+        <md-button ng-click="vm.cancelClick()" aria-label="{{'GENERAL.CANCEL' | translate}}" translate="GENERAL.CANCEL"></md-button>
+        <md-button ng-click="vm.okClick()" class="md-primary" aria-label="{{GENERAL.OK | translate}}" translate="GENERAL.OK"></md-button>
+    </md-dialog-actions>
+</md-dialog>

@@ -1,0 +1,30 @@
+<div class="padded-content-page">
+    <p class="md-subhead">Triangular comes with the <a href="https://github.com/erikflowers/weather-icons">Weather Icon Fontset</a> built in.</p>
+
+    <p>189 weather themed icons inspired by Font Awesome.</p>
+
+    <p>Click one of the icons below to find out how to add it to triangular!</p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Weather Icons</h2>
+            </div>
+        </md-toolbar>
+        <md-content class="md-padding">
+            <div layout="column">
+                <md-input-container>
+                    <label>Search icons</label>
+                    <input type="text" ng-model="searchIcon">
+                </md-input-container>
+
+                <div layout="row" layout-wrap>
+                    <div class="ui-icons-box-icon padding-10" flex="10" layout="column" layout-align="space-around center" ng-repeat="icon in vm.icons | filter:{ name: searchIcon }" ng-click="vm.selectIcon($event, icon)">
+                        <md-icon class="font-size-4" md-font-icon="{{::icon.className}}"></md-icon>
+                        <span class="md-caption margin-top-10">{{::icon.name}}</span>
+                    </div>
+                </div>
+            </div>
+        </md-content>
+    </div>
+</div>

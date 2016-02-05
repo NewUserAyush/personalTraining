@@ -1,0 +1,33 @@
+<md-card flex>
+    <md-card-content>
+        <h2>Create User</h2>
+        <md-input-container class="md-block">
+            <label>Username</label>
+            <input type="text" ng-model="vm.user.username">
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Password</label>
+            <input type="password" ng-model="vm.user.password">
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Favoutite Color</label>
+            <md-select ng-model="vm.user.favouriteColor" placeholder="Favorite Color">
+                <md-option ng-value="color" ng-repeat="color in ['red', 'green', 'blue']">{{color}}</md-option>
+            </md-select>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Description</label>
+            <textarea ng-model="vm.user.description"></textarea>
+        </md-input-container>
+        <div layout="row" layout-align="end center">
+            <md-button class="md-primary">Create</md-button>
+            <md-button>Cancel</md-button>
+        </div>
+    </md-card-content>
+</md-card>
+<md-card flex>
+    <md-card-content>
+        <h2>JSON</h2>
+        <pre>{{vm.user | json}}</pre>
+    </md-card-content>
+</md-card>

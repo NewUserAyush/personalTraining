@@ -1,0 +1,7 @@
+<div ng-controller="MenuDynamicController as vm" layout="column">
+    <div layout="row">
+         <md-switch ng-model="vm.dynamicMenu.showDynamicMenu" aria-label="Show extra menu" ng-change="vm.toggleExtraMenu(vm.dynamicMenu.showDynamicMenu)">
+            Show extra menu
+        </md-switch>
+    </div>
+</div>

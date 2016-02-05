@@ -1,0 +1,52 @@
+<div class="padded-content-page">
+    <p>Triangular allows you to change the look of various parts of the template themes.</p>
+
+    <p>We have created several cool looking skins for you to use.  But of course you can always <strong>roll your own!</strong></p>
+
+    <p>Select a theme below and click the try it button to test drive one of the skins!</p>
+
+    <div class="example-code md-whiteframe-z1">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Try a skin out!</h2>
+            </div>
+        </md-toolbar>
+        <md-content class="md-padding">
+
+            <div layout="row" layout-align="space-around center">
+                <md-select placeholder="{{'UI.SKINS.SKIN_CHOOSE' | translate}}" ng-model="vm.selectedSkin" ng-change="vm.updatePreview()">
+                    <md-option ng-repeat="skin in ::vm.skins" ng-value="skin">{{::skin.name}}</md-option>
+                </md-select>
+                <md-button class="md-primary md-raised" ng-click="vm.trySkin()" translate="UI.SKINS.SKIN_TRY"></md-button>
+            </div>
+
+            <div class="full-image-background mb-bg-08 padding-40" layout layout-align="center center">
+                <div class="ui-skin-preview-window md-whiteframe-z5" flex="70" layout="column">
+                    <div layout="row">
+                        <div flex="30" ng-style="{ 'background-color' : vm.elementColors.logo }" class="padding-20 ui-skin-preview-window-logo">
+                            <span translate>UI.SKINS.ELEMENTS.LOGO</span>
+                        </div>
+                        <div flex="70" ng-style="{ 'background-color' : vm.elementColors.toolbar }" class="padding-20 ui-skin-preview-window-toolbar">
+                            <span translate>UI.SKINS.ELEMENTS.TOOLBAR</span>
+                        </div>
+                    </div>
+                    <div flex layout="row">
+                        <div flex="30" ng-style="{ 'background-color' : vm.elementColors.sidebar }" class="padding-20 ui-skin-preview-window-sidebar">
+                            <span translate>UI.SKINS.ELEMENTS.SIDEBAR</span>
+                        </div>
+                        <md-content flex="70" layout="column"  layout-align="space-between start" class="padding-20 ui-skin-preview-window-content" md-content>
+
+                            <div class="ui-skin-preview-window-content-line padding-20"></div>
+                            <div class="ui-skin-preview-window-content-line padding-20"></div>
+                            <div class="ui-skin-preview-window-content-line padding-20"></div>
+                            <div class="ui-skin-preview-window-content-line padding-20"></div>
+                            <div class="ui-skin-preview-window-content-line padding-20"></div>
+                            <div class="ui-skin-preview-window-content-fab md-whiteframe-z4" ng-style="{ 'background-color' : vm.elementColors.content }"></div>
+
+                        </md-content>
+                    </div>
+                </div>
+            </div>
+        </md-content>
+    </div>
+</div>

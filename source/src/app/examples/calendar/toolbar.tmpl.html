@@ -1,0 +1,35 @@
+<div class="md-toolbar-tools">
+    <md-button class="md-icon-button" hide-gt-md ng-click="vm.openSideNav('left')" aria-label="side navigation">
+        <md-icon md-font-icon="zmdi zmdi-menu"></md-icon>
+    </md-button>
+    <h2 flex>
+        <span ng-repeat="crumb in vm.breadcrumbs.crumbs">
+            <span translate>{{crumb.name}}</span>
+            <md-icon md-font-icon="zmdi zmdi-chevron-right" ng-if="!$last">
+        </span>
+    </h2>
+
+    <div class="widget-buttons">
+        <md-button class="widget-button md-icon-button" ng-click="vm.changeMonth('prev')" aria-label="previous month">
+            <md-icon md-font-icon="zmdi zmdi-chevron-left"></md-icon>
+        </md-button>
+        <md-button hide show-gt-lg class="widget-button md-icon-button" ng-click="vm.changeMonth('today')" aria-label="today">
+            <md-icon md-font-icon="zmdi zmdi-calendar-alt"></md-icon>
+        </md-button>
+        <md-button class="widget-button md-icon-button" ng-click="vm.changeMonth('next')" aria-label="next month">
+            <md-icon md-font-icon="zmdi zmdi-chevron-right"></md-icon>
+        </md-button>
+    </div>
+
+    <md-menu>
+        <md-button class="md-icon-button" aria-label="{{'CALENDAR.TOOLBAR.CHANGE-VIEW' | translate}}" ng-click="$mdOpenMenu()">
+            <md-icon md-font-icon="{{vm.currentView.icon}}" ng-class="vm.currentView.icon"></md-icon>
+        </md-button>
+        <md-menu-content width="2">
+            <md-menu-item ng-repeat="view in vm.views">
+                <md-button ng-click="vm.changeView(view)" translate="{{::view.name}}" aria-label="{{::view.name}}"></md-button>
+            </md-menu-item>
+        </md-menu-content>
+    </md-menu>
+</div>
+

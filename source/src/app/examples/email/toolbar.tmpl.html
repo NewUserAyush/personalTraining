@@ -1,0 +1,24 @@
+<div class="md-toolbar-tools">
+    <md-button class="md-icon-button" ng-if="!vm.hideMenuButton()" ng-click="vm.openSideNav('left')" aria-label="side navigation">
+        <md-icon md-font-icon="zmdi zmdi-menu"></md-icon>
+    </md-button>
+
+    <h2 hide-xs flex>
+        <span ng-repeat="crumb in vm.breadcrumbs.crumbs">
+            <span translate>{{crumb.name}}</span>
+            <md-icon md-font-icon="zmdi zmdi-chevron-right" ng-if="!$last">
+        </span>
+    </h2>
+
+    <md-button class="md-icon-button" ng-click="vm.toggleSearch()" aria-label="{{'ADMIN.TOOLBAR.SIDEBAR_TOGGLE' | translate}}">
+        <md-icon md-font-icon="zmdi zmdi-search"></md-icon>
+    </md-button>
+
+    <input class="toolbar-search" ng-show="vm.showSearch" ng-model="emailSearch" ng-change="vm.filterEmailList(emailSearch)" type="text" placeholder="{{'EMAIL.TOOLBAR.SEARCH' | translate}}">
+
+    <md-button class="md-icon-button" ng-repeat="menu in ::vm.toolbarMenu" ui-sref="{{::menu.state}}" aria-label="{{::menu.name}}">
+        <md-icon md-font-icon="{{::menu.icon}}"></md-icon>
+        <md-tooltip>{{::menu.name}}</md-tooltip>
+    </md-button>
+</div>
+

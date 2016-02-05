@@ -1,0 +1,21 @@
+{
+    "MENU": {
+        "TODO": {
+            "TITLE": "Faire",
+            "HEADER": "Pour faire la liste",
+            "NOTE": "Note",
+            "REMOVEMSG": "Supprimer des éléments de la liste par swipping droit",
+            "DIALOG": {
+                "NEW": "Ajouter Une Tâche",
+                "DESC": "Nom De La Tâche",
+                "HIGH": "Haute",
+                "MEDIUM": "Moyen",
+                "LOW": "Faible",
+                "PRIORITY": "Priorité",
+                "TASKFORM": {
+                    "PLEASE_ENTER": "Veuillez entrer un nom de tâche"
+                }
+            }
+        }
+    }
+}

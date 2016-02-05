@@ -1,0 +1,16 @@
+<md-dialog>
+    <md-toolbar md-theme="{{triSkin.elements.toolbar}}">
+        <h2 class="md-toolbar-tools">
+            {{vm.name}}
+        </h2>
+    </md-toolbar>
+    <md-dialog-content class="ui-color-dialog-content">
+        <md-list>
+            <md-list-item ng-repeat="color in vm.palette" ng-style="vm.itemStyle(color.palette)">
+                <div class="md-list-item-text">
+                    <h3>{{color.code}}</h3>
+                </div>
+            </md-list-item>
+        </md-list>
+    </md-dialog-content>
+</md-dialog>

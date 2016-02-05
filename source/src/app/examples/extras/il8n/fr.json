@@ -1,0 +1,13 @@
+{
+    "MENU": {
+        "EXTRAS": {
+            "404": "Page 404",
+            "500": "500 Page",
+            "EXTRAS": "Extras",
+            "GALLERY": "Galerie",
+            "AVATARS": "Les Avatars",
+            "BLANK": "Page Blanche",
+            "TIMELINE": "Montage"
+        }
+    }
+}

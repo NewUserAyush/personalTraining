@@ -1,0 +1,12 @@
+// Single Email
+.email-single {
+  background: transparent !important;
+  md-toolbar {
+    padding: 16px;
+    .email-single-title {
+    	> span {
+    		display: block;
+    	}
+    }
+  }
+}

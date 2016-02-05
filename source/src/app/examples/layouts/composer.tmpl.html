@@ -1,0 +1,75 @@
+<div class="padded-content-page">
+    <h2 class="md-heading">Layout Composer</h2>
+    <p class="md-subhead">Use this page to try out the many different page layouts at your disposal when using triangular!</p>
+    <div layout="row" layout-align="center center">
+        <md-card flex>
+            <div layout="column" layout-fill>
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>Create a page layout</h2>
+                    </div>
+                </md-toolbar>
+            </div>
+            <md-card-content>
+                <div layout="row" layout-align="space-around center">
+                    <label>Toolbar Size</label>
+                    <md-select ng-model="vm.layout.toolbarSize" ng-change="vm.updateOption('toolbarSize')" placeholder="Select a size">
+                        <md-option ng-value="value" ng-repeat="(value, label) in vm.options.toolbarSizes" translate>{{label}}</md-option>
+                    </md-select>
+                </div>
+                <div layout="row" layout-align="space-around center">
+                    <label>Toolbar Background</label>
+                    <md-select ng-model="vm.layout.toolbarClass" ng-change="vm.updateOption('toolbarClass')" placeholder="Select a background">
+                        <md-option ng-value="value" ng-repeat="(value, label) in vm.options.toolbarBackgrounds" translate>{{label}}</md-option>
+                    </md-select>
+                </div>
+                <div layout="row" layout-align="space-around center">
+                    <label>Toolbar Shrink</label>
+                    <md-switch ng-model="vm.layout.toolbarShrink" ng-change="vm.updateOption('toolbarShrink')"></md-switch>
+                </div>
+                <div layout="row" layout-align="space-around center">
+                    <label>Content Background</label>
+                    <md-select ng-model="vm.layout.contentClass" ng-change="vm.updateOption('contentClass')" placeholder="Select a background">
+                        <md-option ng-value="value" ng-repeat="(value, label) in vm.options.toolbarBackgrounds" translate>{{label}}</md-option>
+                    </md-select>
+                </div>
+                <div layout="row" layout-align="space-around center">
+                    <label>Side Menu Size</label>
+                    <md-select ng-model="vm.layout.sideMenuSize" ng-change="vm.updateOption('sideMenuSize')" placeholder="Select a size">
+                        <md-option ng-value="value" ng-repeat="(value, label) in vm.options.sideMenuSizes" translate>{{label}}</md-option>
+                    </md-select>
+                </div>
+                <div layout="row" layout-align="space-around center">
+                    <label>Show Footer</label>
+                    <md-switch ng-model="vm.layout.footer" ng-change="vm.updateOption('footer')"></md-switch>
+                </div>
+            </md-card-content>
+        </md-card>
+    </div>
+    <div layout="row" layout-align="center start">
+        <md-card flex>
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>Apply to all pages</h2>
+                </div>
+            </md-toolbar>
+            <md-card-content>
+                <p>Change your <code>config.triangular.layout.js</code> file to contain the following to set your whole site to use this layout.</p>
+                <div hljs source="vm.allPagesCode" language="javascript"></div>
+            </md-card-content>
+        </md-card>
+    </div>
+    <div layout="row" layout-align="center start">
+        <md-card flex>
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>Apply to one page</h2>
+                </div>
+            </md-toolbar>
+            <md-card-content>
+                <p>Use a state like this to use this layout on a single page.</p>
+                <div hljs source="vm.onePageCode" language="javascript"></div>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>

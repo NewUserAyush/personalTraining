@@ -1,0 +1,25 @@
+<md-input-container class="md-block">
+    <md-checkbox ng-model="checkboxes.default" aria-label="Default Checkbox">
+        Default Checkbox
+    </md-checkbox>
+</md-input-container>
+<md-input-container class="md-block">
+    <md-checkbox class="md-primary" ng-model="checkboxes.primary" aria-label="Primary Checkbox">
+        Primary Checkbox
+    </md-checkbox>
+</md-input-container>
+<md-input-container class="md-block">
+    <md-checkbox class="md-warn" ng-model="checkboxes.warn" aria-label="Warn Checkbox">
+        Warn Checkbox
+    </md-checkbox>
+</md-input-container>
+<md-input-container class="md-block">
+    <md-checkbox ng-model="checkboxes.disabled" aria-label="Disabled Checkbox" ng-disabled="true">
+        Disabled Checkbox
+    </md-checkbox>
+</md-input-container>
+<md-input-container class="md-block">
+    <md-checkbox ng-model="checkboxes.disabledChecked" aria-label="Disabled Checkbox" ng-disabled="true" ng-init="checkboxes.disabledChecked = true">
+        Disabled Checkbox Checked
+    </md-checkbox>
+</md-input-container>

@@ -1,0 +1,58 @@
+{
+    "MENU": {
+        "CALENDAR": {
+            "CALENDAR": "Calendar"
+        }
+    },
+    "CALENDAR": {
+        "ADD": "Add",
+        "SAVE": "Save",
+        "ADD-EVENT": "Add Event",
+        "EDIT-EVENT": "Edit Event",
+        "CANCEL": "Cancel",
+        "DELETE": "Delete",
+        "EVENT": {
+            "TITLE": "Title",
+            "ALL-DAY": "All day",
+            "START": "Start",
+            "END": "End",
+            "START-TIME": "Start Time",
+            "END-TIME": "End Time",
+            "LOCATION": "Location",
+            "DESCRIPTION": "Description",
+            "COLOR": "Color",
+            "COLOR-PICK": "Pick a color",
+            "NEW-EVENT": "New Event",
+            "EVENT-CREATED": "Event Created",
+            "EVENT-UPDATED": "Event Updated",
+            "EVENT-DELETED": "Event Deleted",
+            "YEAR-PICK": "Year",
+            "MONTH-PICK": "Month",
+            "DATE-PICK": "Date",
+            "HOUR-PICK": "Hour",
+            "MINUTE-PICK": "Minute"
+        },
+        "MONTHNAMES": {
+            "JANUARY": "January",
+            "FEBRUARY": "February",
+            "MARCH": "March",
+            "APRIL": "April",
+            "MAY": "May",
+            "JUNE": "June",
+            "JULY": "July",
+            "AUGUST": "August",
+            "SEPTEMBER": "September",
+            "OCTOBER": "October",
+            "NOVEMBER": "November",
+            "DECEMBER": "December"
+        },
+        "TOOLBAR": {
+            "CHANGE-VIEW": "Change View",
+            "VIEWS": {
+                "MONTH": "Month",
+                "WEEK": "Week",
+                "DAY": "Day"
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+<form name="emailForm" class="md-padding">
+    <md-contact-chips
+        ng-model="vm.email.to"
+        md-contacts="vm.queryContacts($query)"
+        md-contact-name="name"
+        md-contact-image="image"
+        md-contact-email="email"
+        md-require-match
+        filter-selected="true"
+        placeholder="To"
+        secondary-placeholder="To">
+    </md-contact-chips>
+    <md-contact-chips
+        ng-model="vm.email.cc"
+        md-contacts="vm.queryContacts($query)"
+        md-contact-name="name"
+        md-contact-image="image"
+        md-contact-email="email"
+        md-require-match
+        filter-selected="true"
+        placeholder="CC"
+        secondary-placeholder="CC">
+    </md-contact-chips>
+    <md-contact-chips
+        ng-model="vm.email.bcc"
+        md-contacts="vm.queryContacts($query)"
+        md-contact-name="name"
+        md-contact-image="image"
+        md-contact-email="email"
+        md-require-match
+        filter-selected="true"
+        placeholder="BCC"
+        secondary-placeholder="BCC">
+    </md-contact-chips>
+    <md-input-container class="md-block">
+        <label for="subject">Subject</label>
+        <input ng-model="vm.email.subject" name="subject" required>
+    </md-input-container>
+</form>

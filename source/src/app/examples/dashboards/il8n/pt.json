@@ -1,0 +1,111 @@
+{
+    "MENU": {
+        "DASHBOARDS": {
+            "DASHBOARDS": "Painéis",
+            "GENERAL": "Geral",
+            "ANALYTICS": "O google Analytics",
+            "SERVER": "Servidor",
+            "SALES": "Vendas",
+            "WIDGETS": "Widgets",
+            "SOCIAL": "Social",
+            "DRAGGABLE": "Arrastáveis"
+        }
+    },
+    "DASHBOARDS": {
+        "GENERAL": {
+            "CONTACTS": "Contactos",
+            "CHAT": "Bate-papo"
+        },
+        "SALES": {
+            "SALES": "Vendas",
+            "TOTAL-SALES": "Total De Vendas",
+            "ALL-TIME-EARNINGS": "Todos Os Ganhos De Tempo",
+            "TOTAL-EARNINGS": "Total De Receitas",
+            "ORDERS": "Encomendas",
+            "ORDER-STATUS": "Status Do Pedido",
+            "TOP-PRODUCT-CATEGORIES": "Top Categorias De Produtos",
+            "DATE-UPDATED": "Intervalo De Data Atualizada",
+            "DATE-CHANGE": {
+                "TITLE": "Seleccione um intervalo de datas",
+                "START-DATE": "Data De Início",
+                "END-DATE": "Data Final",
+                "YEAR-PICK": "Ano",
+                "MONTH-PICK": "Mês",
+                "DATE-PICK": "Data"
+            },
+            "ORDER": {
+                "TITLE": "Fim #",
+                "DATE": "Data Do Pedido",
+                "BUYER-NAME": "Nome Do Cliente",
+                "BUYER-EMAIL": "Cliente De E-Mail",
+                "NUM-ITEMS": "Número de Itens",
+                "PRODUCT": "Descrição Do Produto",
+                "CATEGORY": "Categoria",
+                "PRICE": "Preço",
+                "SUB-TOTAL": "Sub-Total",
+                "TAX": "Imposto",
+                "TOTAL": "Total"
+            }
+        },
+        "ANALYTICS": {
+            "COMMENTS": "Comentários",
+            "TWEETS": "Tweets",
+            "LIKES": "Gosta de",
+            "REACH": "Chegar",
+            "PAGEVIEWS": "Page Views E Visitas",
+            "REFERRALS": "O Tráfego De Referência",
+            "SOCIAL": "Rede De Referências",
+            "LOCATION": "Localização",
+            "DATE": "11/03/15 - 11/4/15"
+        },
+        "SERVER": {
+            "IP": "Endereço IP",
+            "MEMORY": "Memória",
+            "DISK": "Disco",
+            "LOCATION": "Localização",
+            "REAL_TIME": "Tempo Real",
+            "24HRS": "24 Horas",
+            "7DAYS": "7 Dias",
+            "365DAYS": "365 Dias",
+            "CPU": "CPU",
+            "BANDWIDTH": "Largura de banda",
+            "DISKS": "Discos",
+            "JOB": "Host Fila De Trabalho",
+            "STATUS": "Status Do Servidor",
+            "CURRENTLY": "Seu servidor não está actualmente",
+            "RUNNING": "Execução",
+            "RESTART": "Reinicie",
+            "SHUTDOWN": "Encerrar",
+            "USAGE": "O Uso Mensal",
+            "LIMIT": "do limite mensal",
+            "TASKS": "Tarefas actuais",
+            "DATE": "11/03/15 - 11/4/15",
+            "DISKUSAGE": "O Uso Do Disco"
+        },
+        "SOCIAL": {
+            "STATUS": {
+                "UPDATE": "Atualize seu status",
+                "MIND": "O que está em sua mente?"
+            }
+        },
+        "WIDGETS": {
+            "MENU": {
+                "REFRESH": "Atualização",
+                "DETAILS": "Detalhes",
+                "SHARE": "Compartilhar",
+                "PRINT": "Imprimir"
+            },
+            "SALES": "Vendas",
+            "COMMENTS": "Comentários",
+            "SERVER_UPTIME": "Uptime Do Servidor",
+            "FULLDATA": "De Dados Completo"
+        },
+        "DRAGGABLE": {
+            "TITLE": "Arraste-Me!",
+            "SUBTITLE1": "Você só precisa especificar o recipiente que você deseja usar.",
+            "SUBTITLE2": "Você pode reordenar esses widgets no interior do recipiente.",
+            "SUBTITLE3": "Ele funciona para todos os elementos, não só os widgets!",
+            "SUBTITLE4": "Movendo-los fora do seu recipiente não é possível."
+        }
+    }
+}

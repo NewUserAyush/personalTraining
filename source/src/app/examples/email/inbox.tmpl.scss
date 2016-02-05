@@ -1,0 +1,96 @@
+// Email list
+.email-inbox {
+  background: rgba(0, 0, 0, 0.05);
+}
+.email-inbox-list {
+  position: relative;
+  z-index: 1;
+  md-content {
+    transform: translate3d(0,0,0);
+  }
+  md-list {
+    padding: 0px;
+  }
+}
+.email-inbox-list-item {
+  transition: all .2s;
+  &.active {
+    background: rgba(0,0,0, .05);
+  }
+  &.active {
+    .md-avatar {
+      display: block;
+      animation: swing 1s;
+    }
+  }
+  .md-list-item-text {
+    white-space: normal;
+  }
+}
+
+.email-inbox-list-item-name-time {
+  h3 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  p {
+    line-height: 1.2em !important;
+  }
+}
+
+.email-inbox-list-item-unread {
+  h3, h4 {
+    font-weight: 500 !important;
+  }
+}
+
+.email-inbox-list .md-subheader {
+  margin-right: 0;
+  &:after {
+    display: none;
+  }
+}
+
+// - No email selected
+.email-inbox-no-email-selected {
+  text-align: center;
+  opacity: 0.5;
+  h2 {
+    font-weight: lighter;
+  }
+}
+
+// search filter animations
+.email-inbox-list-animate-repeat.ng-move,
+.email-inbox-list-animate-repeat.ng-enter,
+.email-inbox-list-animate-repeat.ng-leave {
+  transition:all linear 1s;
+  width: 100%;
+  position: relative;
+}
+
+.email-inbox-list-animate-repeat.ng-leave.ng-leave-active,
+.email-inbox-list-animate-repeat.ng-move,
+.email-inbox-list-animate-repeat.ng-enter {
+  opacity:0;
+  max-height: 0;
+
+}
+
+.email-inbox-list-animate-repeat.ng-leave,
+.email-inbox-list-animate-repeat.ng-move.ng-move-active,
+.email-inbox-list-animate-repeat.ng-enter.ng-enter-active {
+  opacity:1;
+  max-height: 500px;
+}
+
+#ui-admin-email {
+  &.ng-enter {
+    @include slideInRight();
+  }
+  &.ng-leave {
+    @include slideOutRight();
+  }
+}

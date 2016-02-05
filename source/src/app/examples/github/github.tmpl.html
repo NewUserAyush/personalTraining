@@ -1,0 +1,57 @@
+<div layout="column" layout-align="center center">
+    <h1 class="font-weight-100 font-size-8 margin-top-40 text-light" translate>GITHUB.JOIN</h1>
+    <div layout="row" layout-align="center center">
+        <p flex="70"  flex-xs="90" class="md-headline font-weight-300 text-center text-light" translate>GITHUB.INTRO</p>
+    </div>
+
+    <div flex layout="row" layout-align="center center" layout-fill>
+
+        <md-card class="margin-top-40 margin-bottom-200" flex="70" flex-xs="90">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2 translate>GITHUB.TOOLBAR-TITLE</h2>
+                </div>
+            </md-toolbar>
+            <md-card-content>
+                <form name="githubForm">
+                    <md-input-container class="md-block">
+                        <label translate>GITHUB.PURCHASE-CODE</label>
+                        <input name="purchaseCode" ng-model="vm.data.purchaseCode" required>
+                        <div ng-messages="githubForm.purchaseCode.$error">
+                            <div ng-message when="required"><span translate>GITHUB.PURCHASE-CODE-ERROR</span></div>
+                        </div>
+                    </md-input-container>
+                    <md-autocomplete
+                        md-input-name="githubUser"
+                        md-floating-label="{{'GITHUB.GITHUB-USER' | translate}}"
+                        md-selected-item="vm.data.githubUser"
+                        md-search-text="vm.searchText"
+                        md-items="user in vm.userSearch(vm.searchText)"
+                        md-item-text="user.login"
+                        md-min-length="0"
+                        md-delay="400"
+                        md-autoselect
+                        md-select-on-match
+                        placeholder="Please enter your GitHub username"
+                        md-menu-class="autocomplete-custom-template"
+                        required>
+                        <md-item-template>
+                            <div class="github-user-dropdown" layout="row" layout-align="start center">
+                                <img class="github-user-avatar" ng-src="{{user.avatar_url}}" alt="{{user.login}}">
+                                <span flex>{{user.login}}</span>
+                            </div>
+                        </md-item-template>
+                        <div ng-messages="githubForm.githubUser.$error">
+                            <div ng-message when="required"><span translate>GITHUB.GITHUB-USER-ERROR</span></div>
+                        </div>
+                    </md-autocomplete>
+                </form>
+
+                <div class="margin-top-40" layout="row" layout-align="end center">
+                    <md-button class="md-primary" ng-disabled="githubForm.$invalid" ng-click="vm.register()" translate="GITHUB.SIGNUP" aria-label="{{'GITHUB.SIGNUP' | translate}}"></md-button>
+                </div>
+
+            </md-card-content>
+        </md-card>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="padded-content-page">
+    <p class="md-subhead">Triangular includes the <a href="https://github.com/danialfarid/ng-file-upload">ng-file-upload directive</a> to allow easy upload form creation.</p>
+
+    <p>Here are some examples</p>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h3>Simple upload button (allow multiple)</h3>
+            </div>
+        </md-toolbar>
+
+        <md-tabs class="example-tabs" md-dynamic-height md-border-bottom>
+            <md-tab label="example">
+                <div class="padding-40 md-tabs-content">
+                    <md-card>
+                        <md-card-content ng-controller="ElementsUpload1Controller as vm" ng-include="'app/examples/elements/examples/upload-1.tmpl.html'"></md-card-content>
+                    </md-card>
+                </div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/elements/examples/upload-1.tmpl.html'"></div>
+                </div>
+            </md-tab>
+            <md-tab label="JS">
+                <div class="md-tabs-content">
+                    <div flex hljs language="javascript" include="'app/examples/elements/examples/upload-1.controller.js'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </div>
+
+    <div class="example-code md-whiteframe-z1 margin-bottom-20">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h3>Upload button with animation</h3>
+            </div>
+        </md-toolbar>
+
+        <md-tabs class="example-tabs" md-dynamic-height md-border-bottom>
+            <md-tab label="example">
+                <div class="padding-40 md-tabs-content">
+                    <md-card>
+                        <md-card-content ng-controller="ElementsUploadAnimateController as vm" ng-include="'app/examples/elements/examples/upload-animate.tmpl.html'"></md-card-content>
+                    </md-card>
+                </div>
+            </md-tab>
+            <md-tab label="HTML">
+                <div class="md-tabs-content">
+                    <div flex hljs language="html" include="'app/examples/elements/examples/upload-animate.tmpl.html'"></div>
+                </div>
+            </md-tab>
+            <md-tab label="JS">
+                <div class="md-tabs-content">
+                    <div flex hljs language="javascript" include="'app/examples/elements/examples/upload-animate.controller.js'"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<md-content class="extras-gallery-container">
+    <md-list>
+        <div ng-repeat="day in ::vm.feed">
+            <md-subheader>{{day.date | amCalendar}}</md-subheader>
+            <md-list-item>
+                <md-grid-list flex md-cols="6" md-cols-xs="4" md-row-height="4:3" md-gutter="4px">
+                    <md-grid-tile ng-click="vm.openImage(day, image, $event)" md-rowspan="{{::image.rowspan}}" md-colspan="{{::image.colspan}}" ng-repeat="image in ::day.images" ng-style="::{ 'background-image': 'url(' + image.url + ')', 'background-size' : 'cover' }">
+                        <md-grid-tile-footer>
+                            <h3>{{::image.title}}</h3>
+                        </md-grid-tile-footer>
+                    </md-grid-tile>
+                </md-grid-list>
+            </md-list-item>
+        </div>
+    </md-list>
+</md-content>

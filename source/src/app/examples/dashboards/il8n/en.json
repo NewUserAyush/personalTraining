@@ -1,0 +1,111 @@
+{
+    "MENU": {
+        "DASHBOARDS": {
+            "DASHBOARDS": "Dashboards",
+            "GENERAL": "General",
+            "ANALYTICS": "Analytics",
+            "SERVER": "Server",
+            "SALES": "Sales",
+            "WIDGETS": "Widgets",
+            "SOCIAL": "Social",
+            "DRAGGABLE": "Draggable"
+        }
+    },
+    "DASHBOARDS": {
+        "GENERAL": {
+            "CONTACTS": "Contacts",
+            "CHAT": "Chat"
+        },
+        "SALES": {
+            "SALES": "Sales",
+            "TOTAL-SALES": "Total Sales",
+            "ALL-TIME-EARNINGS": "All Time Earnings",
+            "TOTAL-EARNINGS": "Total Earnings",
+            "ORDERS": "Orders",
+            "ORDER-STATUS": "Order Status",
+            "TOP-PRODUCT-CATEGORIES": "Top Product Categories",
+            "DATE-UPDATED": "Date Range Updated",
+            "DATE-CHANGE": {
+                "TITLE": "Select a date range",
+                "START-DATE": "Start Date",
+                "END-DATE": "End Date",
+                "YEAR-PICK": "Year",
+                "MONTH-PICK": "Month",
+                "DATE-PICK": "Date"
+            },
+            "ORDER": {
+                "TITLE": "Order #",
+                "DATE": "Order Date",
+                "BUYER-NAME": "Customer Name",
+                "BUYER-EMAIL": "Customer Email",
+                "NUM-ITEMS": "Number of Items",
+                "PRODUCT": "Product Description",
+                "CATEGORY": "Category",
+                "PRICE": "Price",
+                "SUB-TOTAL": "Sub Total",
+                "TAX": "Tax",
+                "TOTAL": "Total"
+            }
+        },
+        "ANALYTICS": {
+            "COMMENTS": "Comments",
+            "TWEETS": "Tweets",
+            "LIKES": "Likes",
+            "REACH": "Reach",
+            "PAGEVIEWS": "Pageviews & Visits",
+            "REFERRALS": "Referral Traffic",
+            "SOCIAL": "Network Referrals",
+            "LOCATION": "Location",
+            "DATE": "11/03/15 - 11/4/15"
+        },
+        "SERVER": {
+            "IP": "IP Address",
+            "MEMORY": "Memory",
+            "DISK": "Disk",
+            "LOCATION": "Location",
+            "REAL_TIME": "Real Time",
+            "24HRS": "24 Hours",
+            "7DAYS": "7 Days",
+            "365DAYS": "365 Days",
+            "CPU": "CPU",
+            "BANDWIDTH": "Bandwidth",
+            "DISKS": "Disks",
+            "JOB": "Host Job Queue",
+            "STATUS": "Server Status",
+            "CURRENTLY": "Your server is currently",
+            "RUNNING": "Running",
+            "RESTART": "Restart",
+            "SHUTDOWN": "Shut Down",
+            "USAGE": "Monthly Usage",
+            "LIMIT": "of monthly limit",
+            "TASKS": "Current tasks",
+            "DATE": "11/03/15 - 11/4/15",
+            "DISKUSAGE": "Disk Usage"
+        },
+        "SOCIAL": {
+            "STATUS": {
+                "UPDATE": "Update your status",
+                "MIND": "Whats on your mind?"
+            }
+        },
+        "WIDGETS": {
+            "MENU": {
+                "REFRESH": "Refresh",
+                "DETAILS": "Details",
+                "SHARE": "Share",
+                "PRINT": "Print"
+            },
+            "SALES": "Sales",
+            "COMMENTS": "Comments",
+            "SERVER_UPTIME": "Server Uptime",
+            "FULLDATA": "Full Data"
+        },
+        "DRAGGABLE": {
+            "TITLE": "Drag Me!",
+            "SUBTITLE1": "You only need to specify the container you want to use.",
+            "SUBTITLE2": "You can re-order these widgets inside the container.",
+            "SUBTITLE3": "It works for all elements, not only widgets!",
+            "SUBTITLE4": "Moving them outside their container is not quite possible."
+        }
+    }
+}

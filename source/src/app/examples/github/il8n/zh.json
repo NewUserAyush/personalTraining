@@ -1,0 +1,17 @@
+{
+    "MENU": {
+        "GITHUB": {
+            "GITHUB": "GitHub"
+        }
+    },
+    "GITHUB": {
+        "JOIN": "加入团队",
+        "INTRO": "任何人谁会买三方现在能够加入和见的变化发生时，提交拉的请求，创造问题，并参与了!",
+        "TOOLBAR-TITLE": "填补的形式下参加",
+        "PURCHASE-CODE": "三方采购法》",
+        "GITHUB-USER": "GitHub的用户名",
+        "PURCHASE-CODE-ERROR": "请输入的一个有效的采购法》",
+        "GITHUB-USER-ERROR": "请输入您的GitHub的用户名",
+        "SIGNUP": "给我接触的存放处"
+    }
+}

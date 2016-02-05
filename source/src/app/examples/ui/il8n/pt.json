@@ -1,0 +1,36 @@
+{
+    "MENU": {
+        "UI": {
+            "UI": "INTERFACE do usuário",
+            "COLORS": "Cores",
+            "FONT_AWESOME": "Fonte Incrível",
+            "MATERIAL_ICONS": "Material De Ícones",
+            "TYPOGRAPHY": "Tipografia",
+            "TOOLBAR": "Barra de ferramentas",
+            "THEME-TEST": "Sandbox",
+            "SKINS": "Peles",
+            "WEATHER_ICONS": "Ícones Do Tempo"
+        }
+    },
+    "UI": {
+        "TOOLBARS": {
+            "SIZE": "Tamanho",
+            "SIZE_CHOOSE": "Escolha um tamanho",
+            "SIZE_SHOW": "Alterar o tamanho do painel de administração superior da barra de ferramentas",
+            "BACKGROUND": "Fundo",
+            "BACKGROUND_SHOW": "Usar imagem de plano de fundo na barra de ferramentas",
+            "SHRINK": "Seleccione Diminuir",
+            "SHRINK_SHOW": "Ocultar a barra de ferramentas barra de rolagem"
+        },
+        "SKINS": {
+            "ELEMENTS": {
+                "LOGO": "Logo",
+                "SIDEBAR": "Lateral",
+                "CONTENT": "Conteúdo",
+                "TOOLBAR": "Barra de ferramentas"
+            },
+            "SKIN_CHOOSE": "Escolha uma pele",
+            "SKIN_TRY": "Tente Isso"
+        }
+    }
+}

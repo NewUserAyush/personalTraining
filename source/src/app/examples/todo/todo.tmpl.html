@@ -1,0 +1,32 @@
+<div class="todo-container">
+    <div layout-fill layout="row" layout-align="center center">
+        <md-card flex="70" flex-xs="90" class="margin-top-50 margin-bottom-50">
+            <md-toolbar md-theme="{{triSkin.elements.content}}">
+                <h2 class="md-toolbar-tools" translate>MENU.TODO.HEADER</h2>
+            </md-toolbar>
+        <md-card-content class="overflow-auto">
+                <md-list class="margin-bottom-10">
+                    <md-list-item ng-repeat="todo in vm.todos | orderBy:vm.orderTodos" ng-class="{'md-primary': todo.priority === 'high', 'md-accent': todo.priority === 'medium', 'md-warn': todo.priority === 'low'}" class="slide" md-swipe-right="vm.removeTodo(todo)" md-no-ink>
+                        <md-checkbox ng-model="todo.selected"></md-checkbox>
+                        <p class="no-select">
+                            {{::todo.description}}
+                        </p>
+                        <md-text-float class="no-select">
+                            {{::todo.priority}}
+                        </md-text-float>
+                    </md-list-item>
+                </md-list>
+            </md-card-content>
+        </md-card>
+    </div>
+    <div layout-fill layout="row" layout-align="center center">
+        <md-card flex="70" flex-xs="90" class="margin-top-20 margin-bottom-20">
+            <md-toolbar md-theme="{{triSkin.elements.content}}">
+                <h2 class="md-toolbar-tools" translate>MENU.TODO.NOTE</h2>
+            </md-toolbar>
+            <md-card-content>
+                <p translate>MENU.TODO.REMOVEMSG</p>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>

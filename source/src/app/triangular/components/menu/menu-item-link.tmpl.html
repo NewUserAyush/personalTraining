@@ -1,0 +1,5 @@
+<md-button ng-click="triMenuItem.openLink(triMenuItem.item)" class="md-primary md-raised side-menu-link" ng-class="{ 'md-hue-1': triMenuItem.item.active }">
+    <md-icon ng-if="::(triMenuItem.item.icon !== undefined)" class="side-menu-icon" md-font-icon="{{::triMenuItem.item.icon}}"></md-icon>
+    <span translate>{{::triMenuItem.item.name}}</span>
+    <small ng-if="triMenuItem.item.badge" theme-background="accent" class="side-menu-badge">{{::triMenuItem.item.badge}}</small>
+</md-button>

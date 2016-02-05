@@ -1,0 +1,27 @@
+
+// advanced tables
+
+table.md-data-table {
+  td {
+    vertical-align: middle;
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-sizing: content-box;
+        margin-top: 4px;
+      }
+  }
+}
+
+.md-data-table-toolbar {
+  input {
+    width: 100%;
+    margin: 0;
+    border: none;
+    color: rgba(0, 0, 0, 0.87);
+    &:focus {
+        outline: none;
+    }
+  }
+}

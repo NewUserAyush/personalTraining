@@ -1,0 +1,111 @@
+{
+    "MENU": {
+        "DASHBOARDS": {
+            "DASHBOARDS": "Des tableaux de bord",
+            "GENERAL": "Général",
+            "ANALYTICS": "Analytics",
+            "SERVER": "Serveur",
+            "SALES": "Vente",
+            "WIDGETS": "Les Widgets",
+            "SOCIAL": "Sociale",
+            "DRAGGABLE": "Déplaçable"
+        }
+    },
+    "DASHBOARDS": {
+        "GENERAL": {
+            "CONTACTS": "Contacts",
+            "CHAT": "Chat"
+        },
+        "SALES": {
+            "SALES": "Vente",
+            "TOTAL-SALES": "Total Des Ventes",
+            "ALL-TIME-EARNINGS": "Tous Les Gains De Temps",
+            "TOTAL-EARNINGS": "Le Total Des Recettes",
+            "ORDERS": "Les commandes",
+            "ORDER-STATUS": "Statut De La Commande",
+            "TOP-PRODUCT-CATEGORIES": "Top Catégories De Produits",
+            "DATE-UPDATED": "Date De Mise À Jour De La Gamme",
+            "DATE-CHANGE": {
+                "TITLE": "Sélectionnez une plage de dates",
+                "START-DATE": "Date De Début De",
+                "END-DATE": "Date De Fin",
+                "YEAR-PICK": "Année",
+                "MONTH-PICK": "Mois",
+                "DATE-PICK": "Date"
+            },
+            "ORDER": {
+                "TITLE": "N ° d'ordre",
+                "DATE": "Date De Commande",
+                "BUYER-NAME": "Nom Du Client",
+                "BUYER-EMAIL": "E-Mail Du Client",
+                "NUM-ITEMS": "Nombre d'Éléments",
+                "PRODUCT": "Description Du Produit",
+                "CATEGORY": "Catégorie",
+                "PRICE": "Prix",
+                "SUB-TOTAL": "Sous-Total",
+                "TAX": "L'impôt",
+                "TOTAL": "Total"
+            }
+        },
+        "ANALYTICS": {
+            "COMMENTS": "Commentaires",
+            "TWEETS": "Tweets",
+            "LIKES": "Aime",
+            "REACH": "Atteindre",
+            "PAGEVIEWS": "Le Nombre De Pages Vues Et De Visites",
+            "REFERRALS": "L'Aiguillage De Trafic",
+            "SOCIAL": "Réseau De Références",
+            "LOCATION": "Emplacement",
+            "DATE": "11/03/15 - 11/4/15"
+        },
+        "SERVER": {
+            "IP": "Adresse IP",
+            "MEMORY": "De mémoire",
+            "DISK": "Disque",
+            "LOCATION": "Emplacement",
+            "REAL_TIME": "Temps Réel",
+            "24HRS": "24 Heures",
+            "7DAYS": "7 Jours",
+            "365DAYS": "365 Jours",
+            "CPU": "CPU",
+            "BANDWIDTH": "La bande passante",
+            "DISKS": "Disques",
+            "JOB": "De Travail Hôte De La File D'Attente",
+            "STATUS": "L'État Du Serveur",
+            "CURRENTLY": "Votre serveur est actuellement",
+            "RUNNING": "L'exécution de",
+            "RESTART": "Redémarrer",
+            "SHUTDOWN": "Arrêtez",
+            "USAGE": "Utilisation Mensuelle",
+            "LIMIT": "de la limite mensuelle",
+            "TASKS": "Tâches actuelles",
+            "DATE": "11/03/15 - 11/4/15",
+            "DISKUSAGE": "L'Utilisation Du Disque"
+        },
+        "SOCIAL": {
+            "STATUS": {
+                "UPDATE": "Mise à jour de votre statut",
+                "MIND": "Ce qui est sur votre esprit?"
+            }
+        },
+        "WIDGETS": {
+            "MENU": {
+                "REFRESH": "Actualiser",
+                "DETAILS": "Détails",
+                "SHARE": "Partager",
+                "PRINT": "Imprimer"
+            },
+            "SALES": "Vente",
+            "COMMENTS": "Commentaires",
+            "SERVER_UPTIME": "La Disponibilité Des Serveurs",
+            "FULLDATA": "Les Données Complètes"
+        },
+        "DRAGGABLE": {
+            "TITLE": "Drag Me!",
+            "SUBTITLE1": "Vous avez seulement besoin de spécifier le conteneur que vous souhaitez utiliser.",
+            "SUBTITLE2": "Vous pouvez changer l'ordre de ces widgets à l'intérieur du conteneur.",
+            "SUBTITLE3": "Il fonctionne pour tous les éléments, non seulement les widgets!",
+            "SUBTITLE4": "En les déplaçant à l'extérieur de leur conteneur n'est pas tout à fait possible."
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "MENU": {
+        "ELEMENTS": {
+            "ELEMENTS": "Éléments",
+            "BUTTONS": "Boutons",
+            "CARDS": "Cartes",
+            "ICONS": "Les icônes",
+            "CHECKBOXES": "Des cases à cocher",
+            "SWITCHES": "Les commutateurs",
+            "RADIOS": "Les Radios",
+            "DIALOGS": "Les boîtes de dialogue",
+            "GRIDS": "Grilles",
+            "FAB-SPEED": "FAB le Cadran de Vitesse",
+            "FAB-TOOLBAR": "FAB Barre d'outils",
+            "TABS": "Onglets",
+            "SLIDERS": "Curseurs",
+            "SELECTS": "Sélectionne",
+            "TABLES": "Tables",
+            "PROGRESS": "Progrès",
+            "SIDEBARS": "Encadrés",
+            "TOOLBARS": "Les barres d'outils",
+            "TEXTANGULAR": "Textangular",
+            "TOOLTIPS": "Les info-bulles",
+            "WHITEFRAMES": "Whiteframes",
+            "TOASTS": "Toasts",
+            "LISTS": "Listes",
+            "CHIPS": "Jetons",
+            "MENUS": "Menus"
+        }
+    }
+}

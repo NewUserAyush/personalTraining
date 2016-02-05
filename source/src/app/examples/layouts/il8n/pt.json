@@ -1,0 +1,27 @@
+{
+    "MENU": {
+        "LAYOUTS": {
+            "TITLE": "Layouts",
+            "COMPOSER": "Compositor",
+            "FULL-WIDTH": "Largura Total Do Layout",
+            "ICON-MENU": "Ícone De Menu",
+            "TALL-TOOLBAR": "Altura da barra de Ferramentas com o plano de fundo"
+        }
+    },
+    "EXAMPLES": {
+        "LAYOUTS": {
+            "OPTIONS": {
+                "SIDEMENU-SIZES": {
+                    "HIDDEN": "Escondido",
+                    "ICONS": "Ícones",
+                    "FULL": "Tamanho Completo"
+                },
+                "TOOLBAR-SIZES": {
+                    "DEFAULT": "Padrão",
+                    "MEDIUM": "Médio",
+                    "TALL": "De altura"
+                }
+            }
+        }
+    }
+}
