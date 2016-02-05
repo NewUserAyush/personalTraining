@@ -18,9 +18,7 @@
 
         function addItem()
         {
-            instructormodel.addItem().then(function(data){
-                console.log(data);
-            });
+           var newIns = instructormodel.addItem()
         }
 
 

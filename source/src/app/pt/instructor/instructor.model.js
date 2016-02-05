@@ -50,7 +50,7 @@
         {
             var a=
             {
-                Id:12,
+
                 Name:"rahul",
                 Student:"ahg",
                 Location:"pune",
