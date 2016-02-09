@@ -3,6 +3,7 @@ table#t01 {
 width: 100%;
 background-color: #f1f1c1;
 }
+
 </style>
 <md-content class="padded-content-page">
 
@@ -26,18 +27,56 @@ background-color: #f1f1c1;
             <!--<td><h2>JOIN_Date</h2></td>-->
         <!--</tr>-->
         <!--</table>-->
-    <!--<input type="text" ng-model="search" >-->
+    <input type="search" data-ng-model="vm.itemFilterText">
+
         <ul>
-            <li ng-repeat="x in vm.testData">
+            <li ng-repeat="x in vm.items  | filter: vm.itemFilter()">
             <em>{{x.Id}}</em>
             <em>{{ x.Name }}</em>
             <em>{{ x.Student }}</em>
             <em>{{ x.Student_age }}</em>
                 <em>{{ x.Location }}</em>
-            <em>{{ x.Student_join_date }}</em>
+            <em>{{x.Student_join_date}}</em>
         </li>
             </ul>
 
-    <button ng-click="vm.addItem()" > Create </button>
+    <!--<button ng-click="vm.addItem()" > Create </button>-->
+
+        <!--<form action="addItem()">-->
+    <table bgcolor="gray">
+       <tr><td> NAME:</td> <td><input ng-model="tn"></td></tr>
+        <tr><td>SUTDENT: </td><td><input ng-model="ts"></td></tr>
+      <tr> <td> STUDENT_LOCATION:</td> <td><input ng-model="tl"></td></tr>
+      <tr> <td>STUDENT_AGE:</td><td> <input ng-model="ta"></td><br></tr>
+       <tr> <td>STUDENT_JOIN_DATE:</td> <td><input ng-model="td"></td></tr>
+    <tr><td><button  ng-click="vm.addItem(tn,ts,tl,ta,td)" > create </button></td>
+        <!--<input type="submit" value="create">-->
+        <!--</form>-->
+
+        <td> <button  ng-click="vm.savedata()" > Save_Data </button></td>
+    </tr>
+    </table>
+
+        <span>
+        <ul>
+            <li ng-repeat="x in  vm.items">
+                <em>{{x.Id}}</em>
+                <em>{{ x.Name }}</em>
+                <em>{{ x.Student }}</em>
+                <em>{{ x.Student_age }}</em>
+                <em>{{ x.Location }}</em>
+                <em>{{x.Student_join_date}}</em>
+            </li>
+        </ul>
+    </span>
+
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                  <span flex>My App's Title</span>
+                  <md-button>
+                    Right Bar Button
+                  </md-button>
+                </div>
+        </md-toolbar>
 
 </md-content>

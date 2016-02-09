@@ -17,16 +17,16 @@
         //interface
         this.getData = getData;
         this.addItem = addItem;
-
-
-
+        this.showItem=showItem;
+        this.savedata=savedata;
+        this.itemFilter=itemFilter;
 
 
 
         function getData()
         {
             //var a ={
-            //    title:"Instructor",
+            //    title:"Instructor",serviceNamekh
             //    content:"Hello I am content"
             //     };
 
@@ -34,11 +34,13 @@
             var query= breeze.EntityQuery.from('instructor')
             var deferred=$q.defer();
             manager.executeQuery(query).then(function(result){
-                deferred.resolve(result);
+                //deferred.resolve(result);
+                var query= breeze.EntityQuery.from('instructor')
+                var arrData =  manager.executeQueryLocally(query);
+                deferred.resolve(arrData);
             })
 
             promise=deferred.promise;
-
             return promise;
 
          }
@@ -46,22 +48,48 @@
 
 
 
-        function addItem(a)
+        function addItem(tn,ts,tl,ta,td)
         {
             var a=
             {
 
-                Name:"rahul",
-                Student:"ahg",
-                Location:"pune",
-                Student_age:12,
-                student_join_date:"12/14/14"
+                Name:tn,
+                Student:ts,
+                Location:tl,
+                Student_age:ta,
+                Student_join_date:td
             }
             //var instructtype=manager.metadataStore.getEntities('instuctor');
             //var newinstruct=instructtype.createEntity(a);
             //return manager.addEntity(newinstuct);
 
             return manager.createEntity('Instructor', a);
+        }
+
+
+        function showItem()
+        {
+            var query= breeze.EntityQuery.from('instructor')
+           return  manager.executeQueryLocally(query);
+
+            //var promise=manager.executeQueryLocally('instructor')
+            //return promise;
+        }
+
+        function savedata()
+        {
+
+            return manager.saveChanges().then(function(success)
+            {
+                console.log(success);
+            }).catch(function(error){
+                console.log(error);
+            });
+        }
+
+
+        function itemFilter() {
+
         }
 
     }
