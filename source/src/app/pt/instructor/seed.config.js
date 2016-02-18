@@ -10,7 +10,7 @@
         $translatePartialLoaderProvider.addPart('app/instructor');
 
         $stateProvider
-        .state('triangular.admin-default.instructor', {
+        .state('triangular.admin-default.team', {
             url: '/instructor',
             templateUrl: 'app/pt/instructor/instructor.tmpl.html',
             // set the controller to load for this page
@@ -19,10 +19,10 @@
         });
 
         triMenuProvider.addMenu({
-            name: 'Instructor',
-            icon: 'zmdi zmdi-grade',
+            name: 'Team',
+            icon: 'zmdi zmdi-accounts',
             priority: 1.2,
-                state: 'triangular.admin-default.instructor',
+                state: 'triangular.admin-default.team',
                 type: 'link'
 
         });

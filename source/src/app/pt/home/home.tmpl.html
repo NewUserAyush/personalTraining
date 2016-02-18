@@ -1,69 +1,185 @@
-<style>
-    .box1{
-        position: relative;
-        -webkit-animation: mymove1 20s infinite; /* Chrome, Safari, Opera */
-        animation: mymove1 20s infinite;
-       }
 
-    @-webkit-keyframes mymove1 {
-        from {left: 0px;}
-        to {left: 1000px;}
-    }
-
-    @keyframes mymove1 {
-        from {left: 0px;}
-        to {left: 1000px;}
-    }
-
-    .box2{
-        position: relative;
-        -webkit-animation: mymove2 20s infinite; /* Chrome, Safari, Opera */
-        animation: mymove2 20s infinite;
-    }
-
-    @-webkit-keyframes mymove2 {
-        from {left: 1000px;}
-        to {left:  0px;}
-    }
-
-    @keyframes mymove2 {
-        from {left: 1000px;}
-        to {left: 0px;}
-    }
-
-</style>
+<md-content class="padded-content-page dashboard-container overlay-20 padded-content-page">
+    <!--<link rel="stylesheet" href="ism/css/my-slider.css"/>-->
+    <!--<script src="ism/js/ism-2.1.js"></script>-->
+    <!--<div ng-repeat="x in vm.testData" layout="row" layout-align="center center">-->
+        <!--<h2 class="md-display-3" translate>{{x.Id}}</h2>-->
+    <!--</div>-->
 
 
-<md-content class="padded-content-page">
-    <link rel="stylesheet" href="ism/css/my-slider.css"/>
-    <script src="ism/js/ism-2.1.js"></script>
-    <div ng-repeat="x in vm.testData" layout="row" layout-align="center center">
-        <h2 class="md-display-3" translate>{{x.Id}}</h2>
+    <!--<div  layout="row" layout-xs="column" layout-align="left" layout-margin>-->
+        <!--<tri-widget flex=40 title="Background Image" subtitle="Use any image as a background" background-image="assets/images/backgrounds/material-backgrounds/mb-bg-03.jpg" title-position="top"  content-layout="center center" overlay-title palette-background="triCyan:600"><p class="padding-100"></p>-->
+            <!--<p class="padding-100">-->
+                <!--&lt;!&ndash; Your Content &ndash;&gt;-->
+            <!--</p>-->
+        <!--</tri-widget>-->
+           <!--<p>{{vm.testData[0].content}}</p>-->
+    <!--</div>-->
+
+    <!--<div layout="row" layout-xs="column" layout-align="right" layout-margin>-->
+        <!--<p>{{vm.testData.content}}</p>-->
+        <!--<tri-widget flex=40 title="Background Image" subtitle="Use any image as a background" background-image="assets/images/backgrounds/material-backgrounds/mb-bg-03.jpg" title-position="bottom"  content-layout="right" overlay-title palette-background="triCyan:600">-->
+            <!--<p class="padding-100"></p>-->
+            <!--<p class="padding-100">-->
+                <!--&lt;!&ndash; Your Content &ndash;&gt;-->
+            <!--</p>-->
+        <!--</tri-widget>-->
+    <!--</div>-->
+
+    <!--<div class="margin-20" layout="row" layout-align="center center">-->
+
+                <!--{{vm.testData.content}}-->
+
+    <!--</div>-->
+
+
+        <!--<div layout="row" layout-xs="column" layout-margin>-->
+            <!--<tri-widget class="widget-follower" flex content-layout="column" content-layout-align="center start">-->
+                <!--<div class="widget-follower-header">-->
+                    <!--<img src="assets/images/backgrounds/material-backgrounds/mb-bg-26.jpg" alt="some bg" class="display-block">-->
+                    <!--<img src="assets/images/avatars/avatar-2.png" class="widget-follower-header-avatar"/>-->
+                <!--</div>-->
+                <!--<div class="widget-follower-text padding-10">-->
+                    <!--<h4 class="md-title margin-0">Morris Onions</h4>-->
+                    <!--<p class="md-caption margin-0">@morris</p>-->
+                    <!--<p class="md-body-1">Senior Software Test Engineer at Progressive, Indie Game Developer, Cleveland Game Devs member, a cyberpunk before it was cool & a geek Dad.</p>-->
+                <!--</div>-->
+            <!--</tri-widget>-->
+
+            <!--<tri-widget class="widget-follower" flex content-layout="column" content-layout-align="center start">-->
+                <!--<div class="widget-follower-header">-->
+                    <!--<img src="assets/images/backgrounds/material-backgrounds/mb-bg-12.jpg" alt="some bg" class="display-block">-->
+                    <!--<img src="assets/images/avatars/avatar-6.png" class="widget-follower-header-avatar"/>-->
+                <!--</div>-->
+                <!--<div class="widget-follower-text padding-10">-->
+                    <!--<h4 class="md-title margin-0">Sam Cook</h4>-->
+                    <!--<p class="md-caption margin-0">@scook</p>-->
+                    <!--<p class="md-body-1">Intermediary acquisition customer-facing return on investment customer-facing conscientious outsourcing incrementally increasing sales experienced and confident.</p>-->
+                <!--</div>-->
+            <!--</tri-widget>-->
+            <!--<tri-widget class="widget-follower" flex content-layout="column" content-layout-align="center start">-->
+                <!--<div class="widget-follower-header">-->
+                    <!--<img src="assets/images/backgrounds/material-backgrounds/mb-bg-30.jpg" alt="some bg" class="display-block">-->
+                    <!--<img src="assets/images/avatars/avatar-5.png" class="widget-follower-header-avatar"/>-->
+                <!--</div>-->
+                <!--<div class="widget-follower-text padding-10">-->
+                    <!--<h4 class="md-title margin-0">Manos proistakis</h4>-->
+                    <!--<p class="md-caption margin-0">@proistak</p>-->
+                    <!--<p class="md-body-1">Recruiting key personnel effective management and mentoring of the team acquiring new clients maximised returns in short time frame. </p>-->
+                <!--</div>-->
+            <!--</tri-widget>-->
+        <!--</div>-->
+
+        <!--<div layout="row" layout-xs="column" layout-margin>-->
+            <!--<tri-widget class="widget-follower" flex content-layout="column" content-layout-align="center start">-->
+                <!--<div class="widget-follower-header">-->
+                    <!--<img src="assets/images/backgrounds/material-backgrounds/mb-bg-40.jpg" alt="some bg" class="display-block">-->
+                    <!--<img src="assets/images/avatars/avatar-6.png" class="widget-follower-header-avatar"/>-->
+                <!--</div>-->
+                <!--<div class="widget-follower-text padding-10">-->
+                    <!--<h4 class="md-title margin-0">Jane Onions</h4>-->
+                    <!--<p class="md-caption margin-0">@morris</p>-->
+                    <!--<p class="md-body-1">Entrepreneurial, brand strategy key relationship management cross-functional; handling customer complaints. Preparing financial data going to the cinema dynamic self starter easy to work with. </p>-->
+                <!--</div>-->
+            <!--</tri-widget>-->
+            <!--<tri-widget class="widget-follower" flex content-layout="column" content-layout-align="center start">-->
+                <!--<div class="widget-follower-header">-->
+                    <!--<img src="assets/images/backgrounds/material-backgrounds/mb-bg-07.jpg" alt="some bg" class="display-block">-->
+                    <!--<img src="assets/images/avatars/avatar-4.png" class="widget-follower-header-avatar"/>-->
+                <!--</div>-->
+                <!--<div class="widget-follower-text padding-10">-->
+                    <!--<h4 class="md-title margin-0">Christine Jackson</h4>-->
+                    <!--<p class="md-caption margin-0">@scook</p>-->
+                    <!--<p class="md-body-1">Presenting to senior management streamlined operations outside the box. Incrementally increasing sales customer-centric, commercially minded increased revenue customer-facing.</p>-->
+                <!--</div>-->
+            <!--</tri-widget>-->
+            <!--<tri-widget class="widget-follower" flex content-layout="column" content-layout-align="center start">-->
+                <!--<div class="widget-follower-header">-->
+                    <!--<img src="assets/images/backgrounds/material-backgrounds/mb-bg-18.jpg" alt="some bg" class="display-block">-->
+                    <!--<img src="assets/images/avatars/avatar-1.png" class="widget-follower-header-avatar"/>-->
+                <!--</div>-->
+                <!--<div class="widget-follower-text padding-10">-->
+                    <!--<h4 class="md-title margin-0">John Langan</h4>-->
+                    <!--<p class="md-caption margin-0">@proistak</p>-->
+                    <!--<p class="md-body-1">Recruiting key personnel effective management and mentoring of the team acquiring new clients maximised returns in short time frame. </p>-->
+                <!--</div>-->
+            <!--</tri-widget>-->
+        <!--</div>-->
+    <!--</md-tab-body>-->
+    <!--<md-tab-body>-->
+
+    <div>
+        <!-- Start WOWSlider.com BODY section -->
+        <div id="wowslider-container1">
+            <div class="ws_images"><ul>
+                <li><img src="data1/images/1.jpg" alt="1" title="1" id="wows1_0"/></li>
+                <li><img src="data1/images/2.jpg" alt="2" title="2" id="wows1_1"/></li>
+                <li><img src="data1/images/3.jpg" alt="3" title="3" id="wows1_2"/></li>
+                <li><img src="data1/images/4.jpg" alt="4" title="4" id="wows1_3"/></li>
+                <li><a href="http://wowslider.net"><img src="data1/images/5.jpg" alt="jquery slideshow" title="5" id="wows1_4"/></a></li>
+                <li><img src="data1/images/bg.jpg" alt="bg" title="bg" id="wows1_5"/></li>
+            </ul></div>
+            <div class="ws_bullets"><div>
+                <a href="#" title="1"><span><img src="data1/tooltips/1.jpg" alt="1"/>1</span></a>
+                <a href="#" title="2"><span><img src="data1/tooltips/2.jpg" alt="2"/>2</span></a>
+                <a href="#" title="3"><span><img src="data1/tooltips/3.jpg" alt="3"/>3</span></a>
+                <a href="#" title="4"><span><img src="data1/tooltips/4.jpg" alt="4"/>4</span></a>
+                <a href="#" title="5"><span><img src="data1/tooltips/5.jpg" alt="5"/>5</span></a>
+                <a href="#" title="bg"><span><img src="data1/tooltips/bg.jpg" alt="bg"/>6</span></a>
+            </div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">jquery carousel</a> by WOWSlider.com v8.7</div>
+            <div class="ws_shadow"></div>
+        </div>
+        <script type="text/javascript" src="engine1/wowslider.js"></script>
+        <script type="text/javascript" src="engine1/script.js"></script>
+        <!-- End WOWSlider.com BODY section -->
     </div>
 
 
-    <div  layout="row" layout-xs="column" layout-align="left" layout-margin>
-        <tri-widget flex=40 title="Background Image" subtitle="Use any image as a background" background-image="assets/images/backgrounds/material-backgrounds/mb-bg-03.jpg" title-position="top"  content-layout="center center" overlay-title palette-background="triCyan:600"><p class="padding-100"></p>
-            <p class="padding-100">
-                <!-- Your Content -->
-            </p>
+
+    <div layout="row" layout-xs="column" layout-margin>
+        <tri-widget flex palette-background="teal:300"  title="Personal Tranning" subtitle="Positioned above" title-position="top">
+            <h3>{{vm.testData.content}}</h3>
         </tri-widget>
-           <p>{{vm.testData[0].content}}</p>
+
+        <div class="drag-container" layout="column"  layout-margin dragula='"drag-analytics-container"'>
+            <tri-widget  palette-background="deep-orange:500" content-layout="row" content-layout-align="space-between center" content-padding>
+                <div>
+                    <md-icon class="font-size-5 opacity-50 margin-left-10" md-font-icon="fa fa-comments"></md-icon>
+                </div>
+                <div layout="column" layout-align="center end">
+                    <p class="md-display-3 font-weight-100 margin-top-0 margin-bottom-0 text-ellipsis" countupto="54" decimals="0"></p>
+                    <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>COMMENTS</p>
+                </div>
+            </tri-widget>
+            <tri-widget palette-background="triCyan:500" content-layout="row" content-layout-align="space-between center" content-padding>
+                <div>
+                    <md-icon class="font-size-5 opacity-50 margin-left-10" md-font-icon="fa fa-twitter"></md-icon>
+                </div>
+                <div layout="column" layout-align="center end">
+                    <p class="md-display-3 font-weight-100 margin-top-0 margin-bottom-0 text-ellipsis" countupto="101" decimals="0"></p>
+                    <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>TWEETS</p>
+                </div>
+            </tri-widget>
+            <tri-widget palette-background="indigo:500" content-layout="row" content-layout-align="space-between center" content-padding>
+                <div>
+                    <md-icon class="font-size-5 opacity-50 margin-left-10" md-font-icon="fa fa-facebook"></md-icon>
+                </div>
+                <div layout="column" layout-align="center end">
+                    <p class="md-display-3 font-weight-100 margin-top-0 margin-bottom-0" countupto="943" decimals="0"></p>
+                    <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>LIKES</p>
+                </div>
+            </tri-widget>
+            <tri-widget palette-background="teal:500" content-layout="row" content-layout-align="space-between center" content-padding>
+                <div>
+                    <md-icon class="font-size-5 opacity-50 margin-left-10" md-font-icon="fa fa-eye"></md-icon>
+                </div>
+                <div layout="column" layout-align="center end">
+                    <p class="md-display-3 font-weight-100 margin-top-0 margin-bottom-0" countupto="944" decimals="0"></p>
+                    <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>REACH</p>
+                </div>
+            </tri-widget>
+        </div>
+
     </div>
 
-    <div layout="row" layout-xs="column" layout-align="right" layout-margin>
-        <p>{{vm.testData.content}}</p>
-        <tri-widget flex=40 title="Background Image" subtitle="Use any image as a background" background-image="assets/images/backgrounds/material-backgrounds/mb-bg-03.jpg" title-position="bottom"  content-layout="right" overlay-title palette-background="triCyan:600">
-            <p class="padding-100"></p>
-            <p class="padding-100">
-                <!-- Your Content -->
-            </p>
-        </tri-widget>
-    </div>
-
-    <div class="margin-20" layout="row" layout-align="center center">
-
-                {{vm.testData.content}}
-
-    </div>
 </md-content>

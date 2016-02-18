@@ -36,7 +36,6 @@
             //    controller: 'InstructorDetailsController',
             //    controllerAs: 'vm'
             //})
-
             .state('triangular.admin-default.student_information', {
                 url: '/Admin/blank2',
                 templateUrl: 'app/pt/Admin/blank2.tmpl.html'
@@ -46,7 +45,39 @@
                 url: '/Admin/blank3',
                 templateUrl: 'app/pt/Admin/blank3.tmpl.html'
             });
-            //.state('triangular.admin-default.extra-timeline', {
+
+
+        angular.forEach(function(route) {
+            $stateProvider
+                .state(route.state + '.instructor', {
+                    url: '/instructor/:instructorId',
+                    templateUrl: 'app/pt/Admin/instructor/instructor_layout.tmpl.html',
+                    controller: 'InstructorController',
+                    controllerAs: 'vm',
+                    resolve: {
+                        test: function($stateParams, tests) {
+                            //tests = tests.data;
+                            //var foundinstructor = false;
+                            //for(var i = 0; i < tests.length; i++) {
+                            //    if(tests[i].id === $stateParams.instructorId) {
+                            //        foundinstructor = tests[i];
+                            //        break;
+                            //    }
+                            //}
+                            //return foundinstructor;
+                          return   tests.id === $stateParams.id;
+
+                        }
+                    },
+                    onEnter: function($state, test){
+                        if (false === test) {
+                            $state.go(route.state);
+                        }
+                    }
+                });
+        });
+
+        //.state('triangular.admin-default.extra-timeline', {
             //    url: '/extras/timeline',
             //    templateUrl: 'app/examples/extras/timeline.tmpl.html',
             //    controller: 'TimelineController',
@@ -61,14 +92,17 @@
             children: [{
                 name: 'Instructor',
                 state: 'triangular-no-scroll.admin-default-no-scroll.instructor',
+                icon: 'zmdi zmdi-account-box',
                 type: 'link'
             },{
                 name: 'student_information',
                 state: 'triangular.admin-default.student_information',
+                icon: 'zmdi zmdi-library',
                 type: 'link'
             },{
                 name: 'blank-3',
                 state: 'triangular.admin-default.extra-blank',
+                icon: 'zmdi zmdi-view-list-alt',
                 type: 'link'
             }]
         });

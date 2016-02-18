@@ -1,15 +1,7 @@
-<style>
-table#t01 {
-width: 100%;
-background-color: #f1f1c1;
-}
 
-</style>
-<md-content class="padded-content-page">
 
-    <div layout="row" layout-align="center center">
-        <h2 class="md-display-3" translate> Instructor </h2>
-    </div>
+
+<md-content class="padded-content-page overlay-20">
 
         <!--<form action="">-->
        <!--<div layout="row">-->
@@ -27,56 +19,105 @@ background-color: #f1f1c1;
             <!--<td><h2>JOIN_Date</h2></td>-->
         <!--</tr>-->
         <!--</table>-->
-    <input type="search" data-ng-model="vm.itemFilterText">
 
-        <ul>
-            <li ng-repeat="x in vm.items  | filter: vm.itemFilter()">
-            <em>{{x.Id}}</em>
-            <em>{{ x.Name }}</em>
-            <em>{{ x.Student }}</em>
-            <em>{{ x.Student_age }}</em>
-                <em>{{ x.Location }}</em>
-            <em>{{x.Student_join_date}}</em>
-        </li>
-            </ul>
+ <input type="search" ng-model="vm.itemFilterText">
+
+<div class="gridListdemoBasicUsage" ng-repeat="x in vm.items | filter:vm.itemFilter " >
+    <md-grid-list  md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="4:3" md-gutter="8px" md-gutter-gt-sm="4px" >
+        <md-grid-tile class="green mycolor" md-rowspan="2" md-colspan="2" md-colspan-sm="0" >
+
+            <img class="img" ng-src="person/bill-gates.jpg" width="30" height="200">
+            <md-grid-tile-footer style="height:80px;border-radius:20%" >
+                <h3>Name::{{ x.Name }}</h3>
+                <h3>Style::###### </h3>
+                <h3>Loc::{{x.Location}}</h3>
+                <md-fab-speed-dial md-direction="{{vm.fabDirection}}" md-open="vm.fabStatus" ng-class="vm.fabAnimation" ng-cloak="">
+                    <md-fab-trigger>
+                        <md-button aria-label="share this post" class="md-fab md-warn">
+                            <md-icon md-font-icon="zmdi zmdi-share"></md-icon>
+                        </md-button>
+                    </md-fab-trigger>
+                    <md-fab-actions>
+                        <md-button aria-label="twitter" class="md-fab md-raised md-mini" ng-click="vm.share('Shared on Twitter', $event)">
+                            <md-icon md-font-icon="fa fa-twitter"></md-icon>
+                        </md-button>
+                        <md-button aria-label="facebook" class="md-fab md-raised md-mini" ng-click="vm.share('Shared on Facebook', $event)">
+                            <md-icon md-font-icon="fa fa-facebook"></md-icon>
+                        </md-button>
+                        <md-button aria-label="google-plus" class="md-fab md-raised md-mini" ng-click="vm.share('Shared on Google+', $event)">
+                            <md-icon md-font-icon="fa fa-google-plus"></md-icon>
+                        </md-button>
+                    </md-fab-actions>
+                </md-fab-speed-dial>
+            </md-grid-tile-footer>
+
+          </md-grid-tile>
+     </md-grid-list>
+</div>
+
+    <div layout="row" layout-xs="column" layout-align="space-around center" layout-margin>
+        <div ng-repeat="x in vm.items | filter:vm.itemFilter " layout-align="space-around center" layout-margin>
+
+            <tri-widget palette-background="teal:300" >
+
+            </tri-widget>
+
+        </div>
+
+    </div>
 
     <!--<button ng-click="vm.addItem()" > Create </button>-->
 
         <!--<form action="addItem()">-->
-    <table bgcolor="gray">
-       <tr><td> NAME:</td> <td><input ng-model="tn"></td></tr>
-        <tr><td>SUTDENT: </td><td><input ng-model="ts"></td></tr>
-      <tr> <td> STUDENT_LOCATION:</td> <td><input ng-model="tl"></td></tr>
-      <tr> <td>STUDENT_AGE:</td><td> <input ng-model="ta"></td><br></tr>
-       <tr> <td>STUDENT_JOIN_DATE:</td> <td><input ng-model="td"></td></tr>
-    <tr><td><button  ng-click="vm.addItem(tn,ts,tl,ta,td)" > create </button></td>
-        <!--<input type="submit" value="create">-->
-        <!--</form>-->
 
-        <td> <button  ng-click="vm.savedata()" > Save_Data </button></td>
-    </tr>
-    </table>
+    <!--<table bgcolor="gray">-->
+       <!--<tr><td> NAME:</td> <td><input ng-model="tn"></td></tr>-->
+        <!--<tr><td>SUTDENT: </td><td><input ng-model="ts"></td></tr>-->
+      <!--<tr> <td> STUDENT_LOCATION:</td> <td><input ng-model="tl"></td></tr>-->
+      <!--<tr> <td>STUDENT_AGE:</td><td> <input ng-model="ta"></td><br></tr>-->
+       <!--<tr> <td>STUDENT_JOIN_DATE:</td> <td><input ng-model="td"></td></tr>-->
+    <!--<tr><td><button  ng-click="vm.addItem(tn,ts,tl,ta,td)" > create </button></td>-->
+        <!--&lt;!&ndash;<input type="submit" value="create">&ndash;&gt;-->
+        <!--&lt;!&ndash;</form>&ndash;&gt;-->
 
-        <span>
-        <ul>
-            <li ng-repeat="x in  vm.items">
-                <em>{{x.Id}}</em>
-                <em>{{ x.Name }}</em>
-                <em>{{ x.Student }}</em>
-                <em>{{ x.Student_age }}</em>
-                <em>{{ x.Location }}</em>
-                <em>{{x.Student_join_date}}</em>
-            </li>
-        </ul>
-    </span>
+        <!--<td> <button  ng-click="vm.savedata()" > Save_Data </button></td>-->
+    <!--</tr>-->
+    <!--</table>-->
 
-            <md-toolbar>
-                <div class="md-toolbar-tools">
-                  <span flex>My App's Title</span>
-                  <md-button>
-                    Right Bar Button
-                  </md-button>
-                </div>
-        </md-toolbar>
+
+    <!--<tri-widget palette-background="teal:300" class="img">-->
+        <!--<a target="_blank" href="img_forest.jpg">-->
+            <!--<img ng-src="person/bill-gates.jpg" alt="Forest" width="400" height="200">-->
+        <!--</a>-->
+        <!--<div class="desc">sam-killermann CEO of ######</div>-->
+    <!--</tri-widget>-->
+
+    <!--<tri-widget palette-background="teal:300" class="img">-->
+        <!--<a target="_blank" href="img_forest.jpg">-->
+            <!--<img ng-src="person/sam-killermann.jpg" alt="Forest" width="400" height="200">-->
+        <!--</a>-->
+        <!--<div class="desc">sam-killermann CEO of ######</div>-->
+    <!--</tri-widget>-->
+    <!--<tri-widget palette-background="teal:300" class="img">-->
+        <!--<a target="_blank" href="img_forest.jpg">-->
+            <!--<img ng-src="person/sam-killermann.jpg" alt="Forest" width="400" height="200">-->
+        <!--</a>-->
+        <!--<div class="desc">sam-killermann CEO of ######</div>-->
+    <!--</tri-widget>-->
+    <!--<tri-widget palette-background="teal:300" class="img">-->
+        <!--<a target="_blank" href="img_forest.jpg">-->
+            <!--<img ng-src="person/sam-killermann.jpg" alt="Forest" width="400" height="200">-->
+        <!--</a>-->
+        <!--<div class="desc">sam-killermann CEO of ######</div>-->
+    <!--</tri-widget>-->
+    <!--<tri-widget palette-background="teal:300" class="img">-->
+        <!--<a target="_blank" href="img_forest.jpg">-->
+            <!--<img ng-src="person/sam-killermann.jpg" alt="Forest" width="400" height="200">-->
+        <!--</a>-->
+        <!--<div class="desc">sam-killermann CEO of ######</div>-->
+    <!--</tri-widget>-->
+
+
+
 
 </md-content>

@@ -20,7 +20,7 @@
 
         triMenuProvider.addMenu({
             name: 'Location',
-            icon: 'zmdi zmdi-grade',
+            icon: 'zmdi zmdi-pin',
             priority: 1.4,
                 state: 'triangular.admin-default.location',
                 type: 'link'

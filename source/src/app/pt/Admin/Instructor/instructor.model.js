@@ -11,29 +11,31 @@
     /* @ngInject */
     function fn()
     {
+        var a = [{id: 11, name: 'jay', age: 31, style: 'dance', doj: "31/12/2015"},
+            {id: 12, name: 'ayush', age: 33, style: 'math', doj: "12/2/2015"},
+            {id: 14, name: 'ram', age: 25, style: 'hindi', doj: "12/3/2015"},
+            {id: 15, name: 'shyam', age: 23, style: 'english', doj: "22/04/2016"},
+            {id: 16, name: 'Raju', age: 26, style: 'computer', doj: "31/12/2012"},
+            {id: 17, name: 'priya', age: 45, style: 'physics', doj: "31/12/2011"},
+            {id: 18, name: 'shraddha', age: 25, style: 'chemistry', doj: "31/12/2013"},
+            {id: 19, name: 'snehil', age: 545, style: 'urdu', doj: "31/12/2009"},
+            {id: 20, name: 'amit', age: 65, style: 'geogorophy', doj: "31/12/2008"},
+            {id: 21, name: 'samu', age: 75, style: 'biology', doj: "31/12/2007"},
+            {id: 22, name: 'ajay', age: 35, style: 'giology', doj: "02/02/2006"},
+            {id: 23, name: 'rahul', age: 15, style: 'phycology', doj: "31/07/2013"},
+            {id: 24, name: 'jai', age: 95, style: 'image proccessing', doj: "31/9/2015"},
+            {id: 25, name: 'aman', age: 85, style: 'graphics', doj: "31/12/2015"},
+            {id: 26, name: 'raman', age: 89, style: '', doj: "31/12/2015"},
+            {id: 27, name: 'chaman', age: 67, style: 'information Technology', doj: "05/12/2012"},
+            {id: 28, name: 'daman', age: 78, style: 'Data structure', doj: "31/09/2014"},
+            {id: 29, name: 'saman', age: 89, style: 'Algorithms', doj: "12/08/2014"}
+        ]
 
         this.getData=getData;
+        this.getDetail = getDetail;
 
         function getData() {
-            var a = [{id: 11, name: 'jay', age: 31, style: 'dance', doj: "31/12/2015"},
-                {id: 12, name: 'ayush', age: 33, style: 'math', doj: "12/2/2015"},
-                {id: 14, name: 'ram', age: 25, style: 'hindi', doj: "12/3/2015"},
-                {id: 15, name: 'shyam', age: 23, style: 'english', doj: "22/04/2016"},
-                {id: 16, name: 'Raju', age: 26, style: 'computer', doj: "31/12/2012"},
-                {id: 17, name: 'priya', age: 45, style: 'physics', doj: "31/12/2011"},
-                {id: 18, name: 'shraddha', age: 25, style: 'chemistry', doj: "31/12/2013"},
-                {id: 19, name: 'snehil', age: 545, style: 'urdu', doj: "31/12/2009"},
-                {id: 20, name: 'amit', age: 65, style: 'geogorophy', doj: "31/12/2008"},
-                {id: 21, name: 'samu', age: 75, style: 'biology', doj: "31/12/2007"},
-                {id: 22, name: 'ajay', age: 35, style: 'giology', doj: "02/02/2006"},
-                {id: 23, name: 'rahul', age: 15, style: 'phycology', doj: "31/07/2013"},
-                {id: 24, name: 'jai', age: 95, style: 'image proccessing', doj: "31/9/2015"},
-                {id: 25, name: 'aman', age: 85, style: 'graphics', doj: "31/12/2015"},
-                {id: 26, name: 'raman', age: 89, style: '', doj: "31/12/2015"},
-                {id: 27, name: 'chaman', age: 67, style: 'information Technology', doj: "05/12/2012"},
-                {id: 28, name: 'daman', age: 78, style: 'Data structure', doj: "31/09/2014"},
-                {id: 29, name: 'saman', age: 89, style: 'Algorithms', doj: "12/08/2014"}
-                 ]
+
 
             return a;
           }
@@ -190,10 +192,18 @@
         //
         //createEmailGroups();
 
-        function getDetails(item)
+        function getDetail(id)
         {
-            //call child
-            $state.go('triangular.admin-default.instructor.insDetails',{id:item.id});
+            var result;
+
+            result =   a.filter(function(data){
+                if(data.id === parseInt(id))
+                {
+                    return data;
+                };
+            })
+
+            return result;
 
         }
 

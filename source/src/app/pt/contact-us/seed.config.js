@@ -19,8 +19,8 @@
         });
 
         triMenuProvider.addMenu({
-            name: 'Contact-us',
-            icon: 'zmdi zmdi-grade',
+            name: 'Student Registration',
+            icon: 'zmdi zmdi-account-circle',
             priority: 1.3,
                 state: 'triangular.admin-default.contact',
                 type: 'link'

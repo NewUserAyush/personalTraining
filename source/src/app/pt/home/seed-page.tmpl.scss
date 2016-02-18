@@ -1,3 +1,103 @@
 .seed-list {
   list-style: lower-greek;
 }
+
+.box1{
+    position: relative;
+    -webkit-animation: mymove1 20s infinite; /* Chrome, Safari, Opera */
+    animation: mymove1 20s infinite;
+}
+
+@-webkit-keyframes mymove1 {
+    from {left: 0px;}
+    to {left: 1000px;}
+}
+
+@keyframes mymove1 {
+    from {left: 0px;}
+    to {left: 1000px;}
+}
+
+.box2{
+    position: relative;
+    -webkit-animation: mymove2 20s infinite; /* Chrome, Safari, Opera */
+    animation: mymove2 20s infinite;
+}
+
+@-webkit-keyframes mymove2 {
+    from {left: 1000px;}
+    to {left:  0px;}
+}
+
+@keyframes mymove2 {
+    from {left: 1000px;}
+    to {left: 0px;}
+}
+
+
+img{
+    margin:auto;
+    width: auto;
+}
+#slides_control {
+    position:absolute;
+    width:700px;
+    left:0%;
+    top:10px;
+    margin-left:-20px;
+}
+
+.bgimage {
+    text-align:right;
+    color:white;
+    background-size:cover;
+    height: 100%;
+    background-position: center center;
+}
+
+ul[rn-carousel] {
+    width:400px;
+    height:200px;
+    margin: 0 auto;
+}
+
+.carousel5 li {
+    width:100%;
+    height:100%;
+    font-size:30px;
+    background-color: #ccc;
+}
+
+.carousel-demo {
+    margin-top:20px;
+    display:inline-block;
+    text-align: center;
+}
+//.carousel-demo-fullscreen {
+//    width:100%;
+//    height:100px;
+//}
+
+.carousel-demo-fullscreen ul[rn-carousel] {
+    width:100%;
+    height:400px;
+
+
+}
+
+input.tiny {
+    width:50px;
+    text-align:center;
+}
+
+
+.carousel-demo ul[rn-carousel-transition="hexagon"] {
+    margin-left:100px;
+}
+
+.custom-indicator span {
+    transition: all 0.3s ease-in;
+}
+.custom-indicator span.active {
+    color:yellow !important;
+}

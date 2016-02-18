@@ -21,7 +21,7 @@
 
         triMenuProvider.addMenu({
             name: 'Home',
-            icon: 'zmdi zmdi-grade',
+            icon: 'zmdi zmdi-home',
             priority: 1.1,
                 state: 'triangular.admin-default.home',
                 type: 'link'

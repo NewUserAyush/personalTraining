@@ -1,20 +1,25 @@
-<md-content class="padded-content-page">
+<md-content class="padded-content-page overlay-20">
     <div layout="row" layout-align="center center">
         <h2 class="md-display-3" translate>{{vm.testData.title}}</h2>
     </div>
-    <div layout="row">
+    <div layout="row" layout-margin>
 
-        <div layout="column" layout-align="left">
-    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="600" height="440" src="https://maps.google.com/maps?hl=en&q=pune,panchavati&ie=UTF8&t=m&z=16&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">
-        embed google map
-    </a></small></div><div><small><a href="https://googlemapsgenerator.com">embed google maps</a></small></div></iframe>
-    </div>
+        <tri-widget flex palette-background="teal:300"  title="Map"  title-position="top">
+            <div layout="column" layout-align="left">
+            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="600" height="440" src="https://maps.google.com/maps?hl=en&q=pune,panchavati&ie=UTF8&t=m&z=16&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">
+                <!--embed google map-->
+            </a></small></div><div><small><a href="https://googlemapsgenerator.com">embed google maps</a></small></div></iframe>
+            </div>
+        </tri-widget>
 
+        <tri-widget flex   title-position="top">
         <div layout="column" layout-align="right">
-        <p align="center">
-            {{vm.testData.content}}
-        </p>
-    </div>
+            <h2>Our Information</h2>
+        <h3>{{vm.testData.content}}</h3>
         </div>
+        </tri-widget>
+
+    </div>
+
 
 </md-content>
