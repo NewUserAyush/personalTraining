@@ -3,6 +3,14 @@
 
     angular
         .module('app')
+        .run(
+            [ '$rootScope','$state','$stateParams',function($rootScope,$state, $stateParams)
+            {
+                $rootScope.$state=$state;
+                $rootScope.$stateParams=$stateParams;
+            }
+            ]
+        )
         .config(routeConfig);
 
     /* @ngInject */
@@ -46,4 +54,6 @@
         // always goto 404 if route not found
         $urlRouterProvider.otherwise('/404');
     }
+
+
 })();

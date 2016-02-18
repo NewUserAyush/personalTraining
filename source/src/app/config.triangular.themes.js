@@ -120,7 +120,7 @@
         triThemingProvider.theme('dark')
         .primaryPalette('black', {
             'default': '300',
-            'hue-1': '400'
+            'hue-1': '100'
         })
         .accentPalette('amber')
         .warnPalette('deep-orange')
@@ -220,6 +220,6 @@
         /**
          *  SET DEFAULT SKIN
          */
-        triSkinsProvider.setSkin('dark-knight');
+        triSkinsProvider.setSkin('battleship-grey');
     }
 })();

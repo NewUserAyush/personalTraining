@@ -9,13 +9,13 @@
     function translateConfig(triSettingsProvider, triRouteProvider, APP_LANGUAGES) {
         var now = new Date();
         // set app name & logo (used in loader, sidemenu, footer, login pages, etc)
-        triSettingsProvider.setName('triangular');
-        triSettingsProvider.setCopyright('&copy;' + now.getFullYear() + ' oxygenna.com');
+        triSettingsProvider.setName('Trinity');
+        triSettingsProvider.setCopyright('&copy;' + now.getFullYear() + ' pt.com');
         triSettingsProvider.setLogo('assets/images/logo.png');
         // set current version of app (shown in footer)
         triSettingsProvider.setVersion('2.5.0');
         // set the document title that appears on the browser tab
-        triRouteProvider.setTitle('Triangular');
+        triRouteProvider.setTitle('pt');
         triRouteProvider.setSeparator('|');
 
         // setup available languages in triangular

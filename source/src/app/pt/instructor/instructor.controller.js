@@ -36,24 +36,64 @@
 
         function getData() {
 
-            //vm.items = [ {
-            //
-            //    Name:'dfdf',
-            //    Student:'dfdf',
-            //    Location:'red',
-            //    Student_age:21,
-            //    Student_join_date:'dfdf'
-            //},{
-            //
-            //    Name:'zzzz',
-            //    Student:'dfdf',
-            //    Location:'pune',
-            //    Student_age:22,
-            //    Student_join_date:'dfdf'
-            //}]
-            instructormodel.getData().then(function (data) {
-                vm.items = data;
-            })
+            vm.items = [ {
+
+                Name:'dfdf',
+                Student:'dfdf',
+                Location:'red',
+                Student_age:21,
+                Student_join_date:'dfdf'
+            },{
+
+                Name:'zzzz',
+                Student:'dfdf',
+                Location:'pune',
+                Student_age:22,
+                Student_join_date:'dfdf'
+            },
+                {
+
+                    Name:'zzzz',
+                    Student:'dfdf',
+                    Location:'pune',
+                    Student_age:22,
+                    Student_join_date:'dfdf'
+                },
+                {
+
+                    Name:'zzzz',
+                    Student:'dfdf',
+                    Location:'pune',
+                    Student_age:22,
+                    Student_join_date:'dfdf'
+                },
+                {
+
+                    Name:'zzzz',
+                    Student:'dfdf',
+                    Location:'pune',
+                    Student_age:22,
+                    Student_join_date:'dfdf'
+                },
+                {
+
+                    Name:'zzzz',
+                    Student:'dfdf',
+                    Location:'pune',
+                    Student_age:22,
+                    Student_join_date:'dfdf'
+                },
+                {
+
+                    Name:'zzzz',
+                    Student:'dfdf',
+                    Location:'pune',
+                    Student_age:22,
+                    Student_join_date:'dfdf'
+                }]
+            //instructormodel.getData().then(function (data) {
+            //    vm.items = data;
+            //})
         }
 
         function addItem(tn, ts, tl, ta, td) {

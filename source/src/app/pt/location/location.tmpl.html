@@ -4,7 +4,7 @@
     </div>
     <div layout="row" layout-margin>
 
-        <tri-widget flex palette-background="teal:300"  title="Map"  title-position="top">
+        <tri-widget flex palette-background="teal:300"  title="<span class='md-display-1'>Map</span>"  title-position="top">
             <div layout="column" layout-align="left">
             <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="600" height="440" src="https://maps.google.com/maps?hl=en&q=pune,panchavati&ie=UTF8&t=m&z=16&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">
                 <!--embed google map-->
@@ -14,7 +14,8 @@
 
         <tri-widget flex   title-position="top">
         <div layout="column" layout-align="right">
-            <h2>Our Information</h2>
+            <span class="md-display-1">Our Information</span>
+            <md-divider style="border: 3px solid #1c9aa0"></md-divider>
         <h3>{{vm.testData.content}}</h3>
         </div>
         </tri-widget>
