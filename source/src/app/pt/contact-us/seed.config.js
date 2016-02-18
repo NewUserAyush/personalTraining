@@ -20,7 +20,7 @@
 
         triMenuProvider.addMenu({
             name: 'Student Registration',
-            icon: 'zmdi zmdi-account-circle',
+            icon: 'zmdi zmdi-account-box',
             priority: 1.3,
                 state: 'triangular.admin-default.contact',
                 type: 'link'
