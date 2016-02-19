@@ -1,16 +1,40 @@
 <md-content class="padded-content-page overlay-30 ">
     <md-grid-list class="gridListdemoDynamicTiles"
-        md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="3"
+        md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="4"
         md-row-height-gt-md="1:1" md-row-height="4:3"
-        md-gutter="8px" md-gutter-gt-sm="4px" >
-        <md-grid-tile class="green" ng-repeat="tile in vm.items"
+        md-gutter="8px" md-gutter-gt-sm="8px" >
 
-                      md-colspan-sm="1"
-                       >
-            <md-icon md-svg-icon="{{tile.icon}}"></md-icon>
-            <md-grid-tile-footer><h3>{{tile.Name}}</h3></md-grid-tile-footer>
+        <md-grid-tile class="green" ng-repeat="tile in vm.items" md-colspan-sm="1" ng-cloak="" style="border-radius:10%">
+            <img class="img" ng-src="person/sam-killermann.jpg" width="30" height="200">
+            <md-fab-speed-dial md-direction="up" class="md-fling">
+                <md-fab-trigger>
+                    <md-button aria-label="share this post" class="md-fab md-warn">
+                        <md-icon md-font-icon="zmdi zmdi-share"></md-icon>
+                    </md-button>
+                </md-fab-trigger>
+
+                <md-fab-actions>
+                    <md-button aria-label="twitter" class="md-fab md-raised md-mini" ng-click="share('Shared on Twitter', $event)">
+                        <md-icon md-font-icon="fa fa-twitter"></md-icon>
+                    </md-button>
+                    <md-button aria-label="facebook" class="md-fab md-raised md-mini" ng-click="share('Shared on Facebook', $event)">
+                        <md-icon md-font-icon="fa fa-facebook"></md-icon>
+                    </md-button>
+                    <md-button aria-label="google-plus" class="md-fab md-raised md-mini" ng-click="share('Shared on Google+', $event)">
+                        <md-icon md-font-icon="fa fa-google-plus"></md-icon>
+                    </md-button>
+                </md-fab-actions>
+            </md-fab-speed-dial>
+            <md-grid-tile-footer style="height:70px;border-radius:10%">
+                <h3>{{tile.Name}}</h3>
+                <h3>Style:#######</h3>
+                <h3>Location:#######</h3>
+
+            </md-grid-tile-footer>
         </md-grid-tile>
     </md-grid-list>
+
+
 
         <!--<form action="">-->
        <!--<div layout="row">-->

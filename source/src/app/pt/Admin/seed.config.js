@@ -41,7 +41,7 @@
                 templateUrl: 'app/pt/Admin/blank2.tmpl.html'
             })
 
-            .state('triangular.admin-default.extra-blank', {
+            .state('triangular.admin-default.new_information', {
                 url: '/Admin/blank3',
                 templateUrl: 'app/pt/Admin/blank3.tmpl.html'
             });

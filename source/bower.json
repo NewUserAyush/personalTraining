@@ -13,7 +13,7 @@
     "angular-highlightjs": "0.4.1",
     "angular-linkify": "~1.2.0",
     "angular-local-storage": "~0.2.2",
-    "angular-material": "1.0.1",
+    "angular-material": "1.0.5",
     "angular-material-data-table": "0.8.14",
     "angular-messages": "1.4.8",
     "angular-moment": "~0.10.1",
@@ -33,7 +33,8 @@
     "textAngular": "~1.3.7",
     "weather-icons": "https://github.com/chk1/weather-icons.git#master",
     "ng-file-upload": "~9.0.13",
-     "breeze-client":"~1.5.4"
+     "breeze-client":"~1.5.4",
+      "angular-carousel":""
 
   },
 
