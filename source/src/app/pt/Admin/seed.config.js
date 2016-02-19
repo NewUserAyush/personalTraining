@@ -24,18 +24,7 @@
                 controllerAs: 'vm'
             })
 
-            //.state('triangular.admin-default.instructor', {
-            //    url: '/Admin/instructor',
-            //    templateUrl: 'app/pt/Admin/instructor/instructor.tmpl.html',
-            //    controller: 'InstructorController',
-            //    controllerAs: 'vm'
-            //})
-            //.state('triangular.admin-default.instructor.insDetails', {
-            //    url: '/:id',
-            //    templateUrl: 'app/pt/Admin/instructor/instructorDetails.tmpl.html',
-            //    controller: 'InstructorDetailsController',
-            //    controllerAs: 'vm'
-            //})
+
             .state('triangular.admin-default.student_information', {
                 url: '/Admin/blank2',
                 templateUrl: 'app/pt/Admin/blank2.tmpl.html'
@@ -47,42 +36,7 @@
             });
 
 
-        angular.forEach(function(route) {
-            $stateProvider
-                .state(route.state + '.instructor', {
-                    url: '/instructor/:instructorId',
-                    templateUrl: 'app/pt/Admin/instructor/instructor_layout.tmpl.html',
-                    controller: 'InstructorController',
-                    controllerAs: 'vm',
-                    resolve: {
-                        test: function($stateParams, tests) {
-                            //tests = tests.data;
-                            //var foundinstructor = false;
-                            //for(var i = 0; i < tests.length; i++) {
-                            //    if(tests[i].id === $stateParams.instructorId) {
-                            //        foundinstructor = tests[i];
-                            //        break;
-                            //    }
-                            //}
-                            //return foundinstructor;
-                          return   tests.id === $stateParams.id;
 
-                        }
-                    },
-                    onEnter: function($state, test){
-                        if (false === test) {
-                            $state.go(route.state);
-                        }
-                    }
-                });
-        });
-
-        //.state('triangular.admin-default.extra-timeline', {
-            //    url: '/extras/timeline',
-            //    templateUrl: 'app/examples/extras/timeline.tmpl.html',
-            //    controller: 'TimelineController',
-            //    controllerAs: 'vm'
-            //});
 
         triMenuProvider.addMenu({
             name: 'Admin',
