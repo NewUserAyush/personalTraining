@@ -6,8 +6,10 @@
         .controller('DefaultToolbarController', DefaultToolbarController);
 
     /* @ngInject */
-    function DefaultToolbarController($scope, $rootScope, $mdMedia, $translate, $state, $element, $filter, $mdUtil, $mdSidenav, $mdToast, $timeout, $document, triBreadcrumbsService, triSettings, triLayout) {
+    function DefaultToolbarController($scope, $rootScope, $mdMedia, $translate, $state, $element, $filter, $mdUtil, $mdSidenav, $mdToast, $timeout, $document, triBreadcrumbsService, triSettings, triLayout,$mdDialog,Facebook,triMenu) {
         var vm = this;
+        vm.fbUserName = null;
+       // vm.goToFbLogin = goToFbLogin;
         vm.breadcrumbs = triBreadcrumbsService.breadcrumbs;
         vm.emailNew = false;
         vm.languages = triSettings.languages;
@@ -18,10 +20,15 @@
         vm.isFullScreen = false;
         vm.fullScreenIcon = 'zmdi zmdi-fullscreen';
         vm.toggleFullScreen = toggleFullScreen;
-
+        vm.toggleSearch=toggleSearch;
+        vm.showSearch = false;
         // initToolbar();
 
         ////////////////
+        function toggleSearch() {
+            vm.showSearch = !vm.showSearch;
+        }
+
 
         function openSideNav(navID) {
             $mdUtil.debounce(function(){
@@ -45,9 +52,8 @@
             return triLayout.layout.sideMenuSize !== 'hidden' && $mdMedia('gt-sm');
         }
 
-        function toggleNotificationsTab(tab) {
-            $rootScope.$broadcast('triSwitchNotificationTab', tab);
-            vm.openSideNav('notifications');
+        function toggleNotificationsTab() {
+            $state.go("triangular-no-scroll.admin-default-no-scroll.login.login.tmpl.html");
         }
 
         function toggleFullScreen() {
@@ -80,6 +86,68 @@
 
         $scope.$on('newMailNotification', function(){
             vm.emailNew = true;
-        });
+        })
+        //$rootScope.$on('notifyFBUser', function(event,data){
+        //    vm.fbUserName  = data.userName;
+        //});
+        //
+        //function goToFbLogin()
+        //{
+        //    $state.go("authentication.login");
+        //}
+
+        $scope.showAdvanced = function(ev) {
+            if(vm.fbUserName)
+            {
+                Facebook.logout(function(){
+                    vm.fbUserName=null;
+                    triMenu.removeMenu('triangular-no-scroll.admin-default-no-scroll.instructor');
+                    triMenu.removeMenu('triangular.admin-default.student_information');
+                    triMenu.removeMenu('triangular.admin-default.extra-blank');
+                } );
+                return;
+            }
+            var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
+            $mdDialog.show({
+                    controller: 'LoginController',
+                    templateUrl: 'app/examples/authentication/login/login.tmpl.html',
+                    parent: angular.element(document.body),
+                    targetEvent: ev,
+                    clickOutsideToClose:true,
+                    fullscreen: useFullScreen
+                })
+                .then(function(answer) {
+                    vm.fbUserName = answer;
+                    triMenu.addMenu({
+                        name: 'Admin',
+                        icon: 'zmdi zmdi-view-list-alt',
+                        type: 'dropdown',
+                        priority: 1.5,
+                        children: [{
+                            name: 'Instructor',
+                            state: 'triangular-no-scroll.admin-default-no-scroll.instructor',
+                            icon: 'zmdi zmdi-account-box',
+                            type: 'link'
+                        },{
+                            name: 'student_information',
+                            state: 'triangular.admin-default.student_information',
+                            icon: 'zmdi zmdi-library',
+                            type: 'link'
+                        },{
+                            name: 'blank-3',
+                            state: 'triangular.admin-default.extra-blank',
+                            icon: 'zmdi zmdi-view-list-alt',
+                            type: 'link'
+                        }]
+                    });
+                }, function() {
+                    $scope.status = 'You cancelled the dialog.';
+                });
+            $scope.$watch(function() {
+                return $mdMedia('xs') || $mdMedia('sm');
+            }, function(wantsFullScreen) {
+                $scope.customFullscreen = (wantsFullScreen === true);
+            });
+        };
     }
 })();

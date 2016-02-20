@@ -6,9 +6,8 @@
         .controller('instructorController', fn);
 
     /* @ngInject */
-    function fn(instructormodel) {
+    function fn(instructormodel,$scope, $auth,Facebook) {
         var vm = this;
-
 
         vm.addItem = addItem;
         vm.itemFilter = itemFilter;
@@ -25,6 +24,7 @@
         vm.fabStatus = vm.fabStatuses[0];
         vm.share = share;
 
+
         function share(message) {
             $mdToast.show({
                 template: '<md-toast><span flex>' + message + '</span></md-toast>',
@@ -34,7 +34,38 @@
             });
         }
 
+//fb,google login............
+
+
+         var userName=null;
+        $scope.isLoggedIn=false;
+        $scope.toggleLogIn=function(isLoggedIn)
+        {
+            if(isloggedIn) $scope.logout();
+            else $scope.IntentLogin();
+        };
+
+        $scope.Login=function(){
+           Facebook.login(function(responce){
+               if(responce.status=='connected'){
+                   Facebook.api('/me',function (responce){
+                       console.log(responce);
+                   })
+               }
+            //    userName=response.first.name;
+            //    $scope.title="welcome  "+userName;
+            //    $scope.isLoggedIn=true;
+            });
+        };
+
+
+
+
+
+        //fetching data
+
         function getData() {
+
 
             vm.items = [ {
 

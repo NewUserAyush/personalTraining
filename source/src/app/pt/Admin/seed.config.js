@@ -6,7 +6,7 @@
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
+    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider,$authProvider) {
         $translatePartialLoaderProvider.addPart('app/pt/Admin');
 
         $stateProvider
@@ -36,29 +36,33 @@
             });
 
 
+        //triMenuProvider.addMenu({
+        //    name: 'Admin',
+        //    icon: 'zmdi zmdi-view-list-alt',
+        //    type: 'dropdown',
+        //    priority: 1.5,
+        //    children: [{
+        //        name: 'Instructor',
+        //        state: 'triangular-no-scroll.admin-default-no-scroll.instructor',
+        //        icon: 'zmdi zmdi-account-box',
+        //        type: 'link'
+        //    },{
+        //        name: 'student_information',
+        //        state: 'triangular.admin-default.student_information',
+        //        icon: 'zmdi zmdi-library',
+        //        type: 'link'
+        //    },{
+        //        name: 'blank-3',
+        //        state: 'triangular.admin-default.extra-blank',
+        //        icon: 'zmdi zmdi-view-list-alt',
+        //        type: 'link'
+        //    }]
+        //});
 
+        $authProvider.facebook({
+            clientId: '255268371341858'
 
-        triMenuProvider.addMenu({
-            name: 'Admin',
-            icon: 'zmdi zmdi-view-list-alt',
-            type: 'dropdown',
-            priority: 1.5,
-            children: [{
-                name: 'Instructor',
-                state: 'triangular-no-scroll.admin-default-no-scroll.instructor',
-                icon: 'zmdi zmdi-account-box',
-                type: 'link'
-            },{
-                name: 'student_information',
-                state: 'triangular.admin-default.student_information',
-                icon: 'zmdi zmdi-library',
-                type: 'link'
-            },{
-                name: 'blank-3',
-                state: 'triangular.admin-default.extra-blank',
-                icon: 'zmdi zmdi-view-list-alt',
-                type: 'link'
-            }]
         });
+
     }
 })();

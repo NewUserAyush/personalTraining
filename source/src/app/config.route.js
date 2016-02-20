@@ -14,7 +14,7 @@
         .config(routeConfig);
 
     /* @ngInject */
-    function routeConfig($stateProvider, $urlRouterProvider) {
+    function routeConfig($stateProvider, $urlRouterProvider,FacebookProvider) {
         // Setup the apps routes
 
         // 404 & 500 pages
@@ -53,6 +53,8 @@
 
         // always goto 404 if route not found
         $urlRouterProvider.otherwise('/404');
+
+        FacebookProvider.init('255268371341858');
     }
 
 
