@@ -1,38 +1,43 @@
+<div class="email-inbox full-height overflow-hidden padded-content-page overlay-20" layout="row">
 
-    <div class="email-inbox full-height overflow-hidden padded-content-page overlay-20" layout="row" >
-
-        <div class="email-inbox-list md-whiteframe-z1" flex="100" flex-gt-xs="50" flex-gt-lg="40"  layout="column">
-            <md-content>
+    <div class="email-inbox-list md-whiteframe-z1" flex="100" flex-gt-xs="50" flex-gt-lg="40" layout="column">
+        <md-content>
+            <section class="email-inbox-list-animate-repeat" ng-repeat="(key, value) in vm.items | groupBy: 'age'" ng-if="vm.items.length > 0">
+                <md-subheader  class="md-primary">Age:{{::key}}</md-subheader>
+                <md-divider></md-divider>
                 <md-list>
-                    <md-list-item class="email-inbox-list-item email-inbox-list-animate-repeat md-3-line" ng-repeat="item in vm.items" ng-click="vm.getDetail(item)" ng-class="{ active: selectedMail === item.id, 'email-inbox-list-item-unread': item.unread }" >
-                            <img class="md-avatar animate" ng-src="assets/images/avatars/avatar-4.png" alt="{{::email.from.name}}">
+                    <md-list-item class="email-inbox-list-item email-inbox-list-animate-repeat md-3-line"
+                                  ng-repeat="item in value" ng-click="vm.getDetail(item)"
+                                  ng-class="{ active: selectedMail === item.id, 'email-inbox-list-item-unread': item.unread }">
+                        <img class="md-avatar animate" ng-src="assets/images/avatars/avatar-4.png"
+                             alt="{{::email.from.name}}">
 
-                            <div class="md-list-item-text">
-                                    <div class="email-inbox-list-item-name-time" layout="row" layout-align="space-between start">
-                                        <h3>{{item.name}}</h3>
-                                        <p class="md-caption" am-time-ago="email.date"></p>
-                                    </div>
-                                    <h4>{{item.style}}</h4>
-                                    <p>{{item.age}}</p>
+                        <div class="md-list-item-text">
+                            <div class="email-inbox-list-item-name-time" layout="row"
+                                 layout-align="space-between start">
+                                <h3>{{item.name}}</h3>
+                                <p class="md-caption" am-time-ago="email.date"></p>
                             </div>
+                            <h4>{{item.style}}</h4>
+                            <p>{{item.age}}</p>
+                        </div>
 
-                            <md-divider></md-divider>
-                        </md-list-item>
+                        <md-divider></md-divider>
+                    </md-list-item>
 
-                    </md-list>
-
-            </md-content>
-
-        </div>
-
-        <div class="animate-wrapper" layout="column" layout-align="start center" flex>
-            <div flex id="ui-admin-email" ui-view layout="column" layout-align="start center" class="overflow-auto">
-                <div flex class="email-inbox-no-email-selected" layout="column" layout-align="center">
-                    <h2 hide-xs translate>EMAIL.NO_EMAIL_SELECTED</h2>
-                </div>
-
-            </div>
-        </div>
+                </md-list>
+            </section>
+        </md-content>
 
     </div>
 
+    <div class="animate-wrapper" layout="column" layout-align="start center" flex>
+        <div flex id="ui-admin-email" ui-view layout="column" layout-align="start center" class="overflow-auto">
+            <div flex class="email-inbox-no-email-selected" layout="column" layout-align="center">
+                <h2 hide-xs translate>EMAIL.NO_EMAIL_SELECTED</h2>
+            </div>
+
+        </div>
+    </div>
+
+</div>
