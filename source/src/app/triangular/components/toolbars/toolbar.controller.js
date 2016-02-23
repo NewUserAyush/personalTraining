@@ -107,7 +107,7 @@
                 } );
                 return;
             }
-            var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
+            var useFullScreen = ($mdMedia('lg')||$mdMedia('gt')||$mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
             $mdDialog.show({
                     controller: 'LoginController',
                     templateUrl: 'app/examples/authentication/login/login.tmpl.html',

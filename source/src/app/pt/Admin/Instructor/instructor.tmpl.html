@@ -1,8 +1,9 @@
 <div class="email-inbox full-height overflow-hidden padded-content-page overlay-20" layout="row">
 
     <div class="email-inbox-list md-whiteframe-z1" flex="100" flex-gt-xs="50" flex-gt-lg="40" layout="column">
+        <input type="text" ng-model="vm.mystyle">
         <md-content>
-            <section class="email-inbox-list-animate-repeat" ng-repeat="(key, value) in vm.items | groupBy: 'age'" ng-if="vm.items.length > 0">
+            <section class="email-inbox-list-animate-repeat" ng-repeat="(key, value) in vm.items | groupBy:'age' " ng-if="vm.items.length > 0">
                 <md-subheader  class="md-primary">Age:{{::key}}</md-subheader>
                 <md-divider></md-divider>
                 <md-list>

@@ -12,7 +12,7 @@
     function SalesService()
     {
         this.getData = getData;
-
+        this.submitform=submitform;
 
 
         function getData()
@@ -23,6 +23,11 @@
             };
 
             return a;
+        }
+
+        function  submitform(studentInfo)
+        {
+            console.log(studentInfo);
         }
     }
 })();

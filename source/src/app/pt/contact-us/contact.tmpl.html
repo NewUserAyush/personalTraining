@@ -1,135 +1,183 @@
-<md-content class="padded-content-page overlay-20">
-
+<md-content id="test345" class="padded-content-page overlay-20 ">
+<div>
 
     <div layout="row" layout-align="center center">
-        <span class="md-display-1">STUDENT REGISTRAION FORM</span>
+        <p flex="70"  flex-xs="90" class="md-headline font-weight-300 text-center text-light" translate>Student Information</p>
     </div>
 
     <div flex layout="row" layout-align="center center" layout-fill>
 
         <div flex="90" class="md-whiteframe-z1 margin-bottom-100" tri-wizard>
-
             <md-toolbar class="md-primary">
-                <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
-                     <h2>Fill Student Information</h2>
-                    <h2> {{triWizard.progress}}% Complete</h2>
-                </div>
-                <md-progress-linear class="md-accent padding-bottom-10" ></md-progress-linear>
-            </md-toolbar>
-            <form name="StudentForm" tri-wizard-form novalidate>
-                 <md-tabs class="md-primary" layout-fill md-selected="triWizard.currentStep" md-dynamic-height>
 
-                <md-tab>
+                <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
+                    <h2>Form Wizard</h2><h2> {{triWizard.progress}}% <span translate>COMPLETE</span></h2>
+                </div>
+
+                <md-progress-linear class="md-accent padding-bottom-10" md-mode="determinate" ng-value="triWizard.progress"></md-progress-linear>
+
+            </md-toolbar>
+
+            <md-tabs class="md-primary" layout-fill md-selected="triWizard.currentStep" md-dynamic-height>
+
+                <md-tab id="account">
+
                     <md-tab-label>
-                        <span translate>Student details</span>
+                        <span class="oxy-step-label">1</span>
+                        <span translate>Account Information</span>
                     </md-tab-label>
 
                     <md-tab-body>
-                            <md-content class="md-padding">
 
+                        <md-content class="md-padding">
+
+                            <form name="accountForm" tri-wizard-form novalidate>
+
+                                <div>
+                                    <md-input-container class="md-block">
+                                        <label translate>USERNAME</label>
+                                            <input name="username" ng-model="wizardController.data.account.username" required>
+                                        <div ng-messages="accountForm.username.$error">
+                                            <div ng-message when="required">
+                                                <span translate>please enter username</span>
+                                            </div>
+                                        </div>
+                                    </md-input-container>
+
+                                    <md-input-container class="md-block">
+                                        <label>Email</label>
+                                        <input type="email" name="email" ng-model="wizardController.data.account.email" required>
+                                        <div ng-messages="accountForm.email.$error">
+                                            <div ng-message when="required">
+                                                <span translate>please enter email</span>
+                                            </div>
+                                            <div ng-message when="email">
+                                                <span translate>Please enter valid email</span>
+                                            </div>
+                                        </div>
+                                    </md-input-container>
 
                                     <div layout layout-xs="column" flex>
-                                            <md-input-container flex>
-                                                <label translate>First Name</label>
-                                                <input name="firstName" ng-model="vm.getData.firstName" required>
-                                                <div ng-messages="StudentForm.firstName.$error">
-                                                    <div ng-message when="required">
-                                                        <span translate>Please enter first Name</span>
-                                                    </div>
-                                                </div>
-                                            </md-input-container>
-                                            <md-input-container flex>
-                                                <label translate>Last Name</label>
-                                                <input name="lastName" ng-model="vm.getData.lastName" required>
-                                                <div ng-messages="StudentForm.lastName.$error">
-                                                    <div ng-message when="required">
-                                                        <span translate>Please Enter Last Name</span>
-                                                    </div>
-                                                </div>
-                                            </md-input-container>
-                                        </div>
-                                    <md-input-container flex>
-                                            <label translate>Birth Year</label>
-                                            <input name="Year" ng-model="vm.getData.Year" ng-minlength="4" ng-maxlength="4" ng-pattern="/^[0-9]+$/" required>
 
-                                            <div ng-messages="StudentForm.Year.$error">
+                                        <md-input-container flex>
+                                            <label translate>PASSWORD</label>
+                                            <input type="password" name="password" ng-model="wizardController.data.account.password" required>
+                                            <div ng-messages="accountForm.password.$error">
                                                 <div ng-message when="required">
-                                                    <span translate>Please Enter Date Of Birth</span>
+                                                    <span translate>please enter password</span>
                                                 </div>
                                             </div>
                                         </md-input-container>
-                                    <div layout layout-xs="column" flex>
 
-                                            <md-input-container class="md-block">
-                                                <label>Email</label>
-                                                <input type="email" name="email" ng-model="vm.getData.email" required>
-                                                <div ng-messages="StudentForm.email.$error">
-                                                    <div ng-message when="required">
-                                                        <span translate>Please Enter E-mail</span>
-                                                    </div>
-                                                    <div ng-message when="email">
-                                                        <span translate>Valid E-mail</span>
-                                                    </div>
+                                        <md-input-container flex>
+                                            <label translate>PASSWORD-CONFIRM</label>
+                                            <input type="password" name="passwordConfirm" ng-model="wizardController.data.account.passwordConfirm" required>
+                                            <div ng-messages="accountForm.passwordConfirm.$error">
+                                                <div ng-message when="required">
+                                                    <span translate>please confirm password</span>
                                                 </div>
-                                            </md-input-container>
-                                            <md-input-container flex>
-                                                <label translate>Contact Number</label>
-                                                <input name="MobileNumber" ng-model="vm.getData.MobileNumber" ng-minlength="10" ng-maxlength="10" ng-pattern="/^[0-9]+$/" required>
-                                                <div ng-messages="StudentForm.MobileNumber.$error">
-                                                    <div ng-message when="required">
-                                                        <span translate>Please enter Contact Number</span>
-                                                    </div>
-                                                </div>
-                                            </md-input-container>
+                                            </div>
+                                        </md-input-container>
 
-                                        </div>
-                            </md-content>
-                        </md-tab-body>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </md-content>
+
+                    </md-tab-body>
+
                 </md-tab>
 
-                <md-tab id="address" ng-disabled="!StudentForm.$invalid">
+                <md-tab id="address" ng-disabled="accountForm.$invalid">
+
                     <md-tab-label>
-                        <span translate>Full Address</span>
+                        <span class="oxy-step-label">2</span>
+                        <span translate>ADDRESS</span>
                     </md-tab-label>
 
                     <md-tab-body>
                         <md-content class="md-padding">
-                                    <md-input-container class="md-block">
-                                        <label translate>Addrees</label>
-                                        <input name="address1" ng-model="vm.getData.address1" required>
-                                        <div ng-messages="StudentForm.address1.$error">
-                                            <div ng-message when="required">
-                                                <span translate>Please Enter Address</span>
-                                            </div>
-                                        </div>
-                                    </md-input-container>
-                                    <md-input-container class="md-block">
-                                        <label translate>ADDRESS-2</label>
-                                        <input ng-model="vm.getData.line2">
-                                    </md-input-container>
+                            <form name="addressForm" tri-wizard-form>
 
-                            <div layout layout-xs="column" flex>
+                                <div>
+
+                                    <div layout layout-xs="column" flex>
+
                                         <md-input-container flex>
-                                            <label translate>Town</label>
-                                            <md-select ng-change="triWizard.updateProgress()" name="town" ng-model="vm.getData.Town" required>
-                                                <md-option value="pune" translate>Pune</md-option>
-                                                <md-option value="Kanpur" translate>Kanpur</md-option>
-                                            </md-select>
-                                            <div ng-messages="StudentForm.town.$error">
+                                            <label translate>FIRST-NAME</label>
+                                            <input name="firstName" ng-model="wizardController.data.address.firstName" required>
+                                            <div ng-messages="addressForm.firstName.$error">
                                                 <div ng-message when="required">
-                                                    <span translate>PLEASE-Select Town </span>
+                                                    <span translate>Please Enter first name</span>
                                                 </div>
                                             </div>
                                         </md-input-container>
+
+                                        <md-input-container flex>
+                                            <label translate>LAST-NAME</label>
+                                            <input name="lastName" ng-model="wizardController.data.address.lastName" required>
+                                            <div ng-messages="addressForm.lastName.$error">
+                                                <div ng-message when="required">
+                                                    <span translate>Please enter Last name</span>
+                                                </div>
+                                            </div>
+                                        </md-input-container>
+
+                                    </div>
+
+                                    <md-input-container class="md-block">
+                                        <label translate>ADDRESS</label>
+                                        <input name="address1" ng-model="wizardController.data.address.line1" required>
+                                        <div ng-messages="addressForm.address1.$error">
+                                            <div ng-message when="required">
+                                                <span translate>Please Enter Address1</span>
+                                            </div>
+                                        </div>
+                                    </md-input-container>
+
+                                    <div flex layout layout="row">
+                                        <div flex="30" layout="column">
+
+                                            <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+                                        </div>
+                                        <div layout="column">
+                                        <md-input-container flex>
+                                            <label translate>Gender</label>
+                                            <md-select ng-change="triWizard.updateProgress()" name="Gender" ng-model="wizardController.data.address.Gender" required>
+                                                <md-option value="Male" translate>Male</md-option>
+                                                <md-option value="Female" translate>Female</md-option>
+                                            </md-select>
+                                            <div ng-messages="addressForm.Gender.$error">
+                                                <div ng-message when="required">
+                                                    <span translate>Please Select Gender</span>
+                                                </div>
+                                            </div>
+                                        </md-input-container>
+                                        </div>
+                                    </div>
+
+                                    <div layout layout-xs="column" flex>
+                                        <md-input-container flex>
+                                            <label translate>TOWN</label>
+                                            <input name="town" ng-model="wizardController.data.address.town" required>
+                                            <div ng-messages="addressForm.town.$error">
+                                                <div ng-message when="required">
+                                                    <span translate>Please Enter town</span>
+                                                </div>
+                                            </div>
+                                        </md-input-container>
+
                                         <md-input-container flex>
                                             <label translate>State</label>
-                                            <md-select ng-change="triWizard.updateProgress()" name="State" ng-model="vm.getData.State" required>
+                                            <md-select ng-change="triWizard.updateProgress()" name="State" ng-model="wizardController.data.address.State" required>
                                                 <md-option value="UP" translate>UP</md-option>
+                                                <md-option value="MAHARASTRA" translate>MAHARASTRA</md-option>
                                                 <md-option value="Uttrakhand" translate>Uttrakhand</md-option>
                                             </md-select>
                                             <div ng-messages="addressForm.State.$error">
                                                 <div ng-message when="required">
-                                                    <span translate>PLEASE-ENTER</span>
+                                                    <span translate>Please Select State</span>
                                                 </div>
                                             </div>
                                         </md-input-container>
@@ -137,56 +185,161 @@
 
                                     <div layout layout-xs="column" flex>
                                         <md-input-container flex>
-                                            <label translate>ZIP_Code</label>
-                                            <input name="zip" ng-model="vm.getData.zip" required>
-                                            <div ng-messages="StudentForm.zip.$error">
+                                            <label translate>ZIP</label>
+                                            <input name="zip" ng-model="wizardController.data.address.zip" required>
+                                            <div ng-messages="addressForm.zip.$error">
                                                 <div ng-message when="required">
-                                                    <span translate>Please Enter Student Zip code</span>
+                                                    <span translate>PLEASE-ENTER Zip Code</span>
                                                 </div>
                                             </div>
                                         </md-input-container>
                                         <md-input-container flex>
                                             <label translate>COUNTRY</label>
-                                            <md-select ng-change="triWizard.updateProgress()" name="country" ng-model="vm.getData.country" required>
+                                            <md-select ng-change="triWizard.updateProgress()" name="country" ng-model="wizardController.data.address.country" required>
                                                 <md-option value="US" translate>US</md-option>
                                                 <md-option value="india" translate>india</md-option>
                                             </md-select>
                                             <div ng-messages="addressForm.country.$error">
                                                 <div ng-message when="required">
-                                                    <span translate>PLEASE-ENTER</span>
+                                                    <span translate>Please Select country</span>
                                                 </div>
                                             </div>
                                         </md-input-container>
                                     </div>
 
+                                    <md-input-container class="md-block">
+                                        <label translate>Phone Number</label>
+                                        <input name="Phno" ng-model="wizardController.data.address.phno" ng-minlength="10" ng-maxlength="10"  required>
+                                        <div ng-messages="addressForm.Phno.$error">
+                                            <div ng-message when="required">
+                                                <span translate>Please Enter Phone number</span>
+                                            </div>
+                                            <div ng-message when="maxlength">
+                                                <span translate>Phone Number INVALID</span>
+                                            </div>
+                                            <div ng-message when="minlength">
+                                                <span translate>Phone Number INVALID</span>
+                                            </div>
+                                            <!--<div ng-message when="pattern">-->
+                                            <!--<span translate>Phone number INCORRECT FORMAT</span>-->
+                                            <!--</div>-->
+                                        </div>
+                                    </md-input-container>
+
+                                </div>
+
+                            </form>
                         </md-content>
                     </md-tab-body>
+
                 </md-tab>
 
-                <md-tab id="confirm" ng-disabled="StudentForm.$invalid">
+                <md-tab id="billing" ng-disabled="addressForm.$invalid">
+
                     <md-tab-label>
-                        <span translate>Confirm</span>
+                        <span class="oxy-step-label">3</span>
+                        <span translate>YOUR-BILLING</span>
                     </md-tab-label>
+
+                    <md-tab-body>
+                        <md-content class="md-padding">
+                            <form name="billingForm" tri-wizard-form>
+                                <div>
+                                    <md-input-container class="md-block">
+                                        <label translate>CARD-NUMBER</label>
+                                        <input name="cardNumber" ng-model="wizardController.data.billing.number" required>
+                                        <div ng-messages="billingForm.cardNumber.$error">
+                                            <div ng-message when="required">
+                                                <span translate>PLEASE-ENTER Card Number</span>
+                                            </div>
+                                        </div>
+                                    </md-input-container>
+                                    <md-input-container class="md-block">
+                                        <label translate>CARD-NAME</label>
+                                        <input name="cardName" ng-model="wizardController.data.billing.name" required>
+                                        <div ng-messages="billingForm.cardName.$error">
+                                            <div ng-message when="required">
+                                                <span translate>PLEASE-ENTER CARD NAME</span>
+                                            </div>
+                                        </div>
+                                    </md-input-container>
+                                </div>
+                                <div layout layout-xs="column" flex>
+
+                                    <md-input-container flex>
+                                        <label translate>CARD-EX-MONTH</label>
+                                        <input name="cardMonth" ng-model="wizardController.data.billing.cardMonth" ng-minlength="2" ng-maxlength="2" ng-pattern="/^(0?[1-9]|1[012])$/" required>
+                                        <div ng-messages="billingForm.cardMonth.$error">
+                                            <div ng-message when="required">
+                                                <span translate>PLEASE-ENTER CARD MONTH</span>
+                                            </div>
+                                            <div ng-message when="maxlength">
+                                                <span translate>CARD-MONTH INVALID</span>
+                                            </div>
+                                            <div ng-message when="minlength">
+                                                <span translate>CARD-MONTH-INVALID</span>
+                                            </div>
+                                            <div ng-message when="pattern">
+                                                <span translate>CARD-MONTH INCORRECT FORMAT</span>
+                                            </div>
+                                        </div>
+                                    </md-input-container>
+
+                                    <md-input-container flex>
+                                        <label translate>CARD-EX-YEAR</label>
+                                        <input name="cardYear" ng-model="wizardController.data.billing.cardYear" ng-minlength="4" ng-maxlength="4" ng-pattern="/^[0-9]+$/" required>
+                                        <div ng-messages="billingForm.cardYear.$error">
+                                            <div ng-message when="required">
+                                                <span translate>PLEASE-ENTER CARD YEAR</span>
+                                            </div>
+                                            <div ng-message when="maxlength">
+                                                <span translate>CARD-YEAR INVALID</span>
+                                            </div>
+                                            <div ng-message when="minlength">
+                                                <span translate>CARD-YEAR INVALID</span>
+                                            </div>
+                                            <div ng-message when="pattern">
+                                                <span translate>CARD-YEAR INCORRECT PATTERN</span>
+                                            </div>
+                                        </div>
+                                    </md-input-container>
+                                </div>
+                            </form>
+                        </md-content>
+
+                    </md-tab-body>
+
+                </md-tab>
+
+                <md-tab id="confirm" ng-disabled="billingForm.$invalid">
+
+                    <md-tab-label>
+                        <span class="oxy-step-label">4</span>
+                        <span translate>CONFIRM</span>
+                    </md-tab-label>
+
                     <md-tab-body>
                         <md-content class="md-padding">
                             <div class="padding-40" flex layout="column" layout-align="center center">
                                 <md-icon class="big-icon" md-font-icon="zmdi zmdi-cake"></md-icon>
-                                <h2 class="md-display-2" translate>Successfully Uploaded</h2>
+                                <h2 class="md-display-2" translate>CONGRATS</h2>
                             </div>
                         </md-content>
                     </md-tab-body>
-                </md-tab>
-                </md-tabs>
 
-                <div class="wizard-navbar" layout-fill layout-padding layout="row" layout-align="end center">
-                <md-button class="md-primary md-raised" ng-click="triWizard.prevStep()" ng-hide="triWizard.currentStep >= 2" ng-disabled="triWizard.prevStepDisabled()" translate="Previous"></md-button>
-                <md-button class="md-primary md-raised" ng-click="triWizard.nextStep()" ng-hide="triWizard.progress == 100 && triWizard.currentStep ==1" ng-disabled="triWizard.nextStepDisabled()" translate="Next"></md-button>
-                <md-button class="md-accent md-raised" ng-click="triWizard.currentStep == 2" ng-show="triWizard.progress == 100 " translate="Submit"></md-button>
-                </div>
-            </form>
+                </md-tab>
+
+            </md-tabs>
+
+            <div class="wizard-navbar" layout-fill layout-padding layout="row" layout-align="end center">
+                <md-button class="md-primary md-raised" ng-click="triWizard.prevStep()" ng-hide="triWizard.currentStep > 2" ng-disabled="triWizard.prevStepDisabled()" translate="PREV"></md-button>
+                <md-button class="md-primary md-raised" ng-click="triWizard.nextStep()" ng-hide="triWizard.progress == 100 && triWizard.currentStep > 1" ng-disabled="triWizard.nextStepDisabled()" translate="NEXT"></md-button>
+                <md-button class="md-accent md-raised" ng-click="triWizard.currentStep=3;vm.myfunc(wizardController)" ng-show="triWizard.progress == 100 && triWizard.currentStep <3" translate="SUBMIT"></md-button>
+            </div>
+
         </div>
 
     </div>
 
-
+</div>
 </md-content>

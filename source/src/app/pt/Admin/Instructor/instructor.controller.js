@@ -8,7 +8,6 @@
     /* @ngInject */
     function fnCtrl(instructorService,$state) {
         var vm = this;
-
       vm.items=instructorService.getData();
       vm.getDetail = getDetail;
 
