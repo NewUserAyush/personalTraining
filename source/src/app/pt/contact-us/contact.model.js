@@ -13,8 +13,6 @@
     {
         this.getData = getData;
         this.submitform=submitform;
-
-
         function getData()
         {
             var a ={
@@ -25,9 +23,9 @@
             return a;
         }
 
-        function  submitform(studentInfo)
+        function  submitform(vms)
         {
-            console.log(studentInfo);
+            console.log(vms.STinfo);
         }
     }
 })();

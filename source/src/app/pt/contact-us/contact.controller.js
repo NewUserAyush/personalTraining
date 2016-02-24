@@ -30,8 +30,71 @@
         vm.status = 'idle';  // idle | uploading | complete
         vm.upload = upload;
 
-        vm.items=instructormodel.getData()
+        function getData() {
+
+
+            vm.items = [ {
+
+                Name:'dfdf',
+                Student:'dfdf',
+                Location:'red',
+                Student_age:21,
+                Student_join_date:'dfdf'
+            },{
+
+                Name:'zzzz',
+                Student:'dfdf',
+                Location:'pune',
+                Student_age:22,
+                Student_join_date:'dfdf'
+            },
+                {
+
+                    Name:'zzzz',
+                    Student:'dfdf',
+                    Location:'pune',
+                    Student_age:22,
+                    Student_join_date:'dfdf'
+                },
+                {
+
+                    Name:'zzzz',
+                    Student:'dfdf',
+                    Location:'pune',
+                    Student_age:22,
+                    Student_join_date:'dfdf'
+                },
+                {
+
+                    Name:'zzzz',
+                    Student:'dfdf',
+                    Location:'pune',
+                    Student_age:22,
+                    Student_join_date:'dfdf'
+                },
+                {
+
+                    Name:'zzzz',
+                    Student:'dfdf',
+                    Location:'pune',
+                    Student_age:22,
+                    Student_join_date:'dfdf'
+                },
+                {
+
+                    Name:'zzzz',
+                    Student:'dfdf',
+                    Location:'pune',
+                    Student_age:22,
+                    Student_join_date:'dfdf'
+                }]
+            //instructormodel.getData().then(function (data) {
+            //    vm.items = data;
+            //})
+        }
         var fileList;
+
+
 
         function upload($files) {
             if($files !== null && $files.length > 0) {
