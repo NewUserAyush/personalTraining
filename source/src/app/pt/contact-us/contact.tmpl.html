@@ -1,5 +1,6 @@
 <md-content id="test345" class="padded-content-page overlay-20 ">
-<div>
+
+    <div>
 
     <div layout="row" layout-align="center center">
         <p flex="70"  flex-xs="90" class="md-headline font-weight-300 text-center text-light" translate>Student Information</p>
@@ -138,8 +139,11 @@
 
                                     <div flex layout layout="row">
                                         <div flex="30" layout="column">
-
-                                            <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+                                            <md-datepicker name="dob" ng-model="wizardController.data.address.dob" md-placeholder="Enter date" required></md-datepicker>
+                                            <div class="validation-messages" ng-messages="addressForm.dob.$error">
+                                                <div ng-message when="valid">The entered value is not a date!</div>
+                                                <div ng-message when="required">This date is required!</div>
+                                            </div>
                                         </div>
                                         <div layout="column">
                                         <md-input-container flex>
@@ -311,13 +315,49 @@
 
                 </md-tab>
 
-                <md-tab id="confirm" ng-disabled="billingForm.$invalid">
+                <md-tab id="upload" ng-disabled="billingForm.$invalid">
 
                     <md-tab-label>
                         <span class="oxy-step-label">4</span>
-                        <span translate>CONFIRM</span>
+                        <span translate>Uplad Data</span>
                     </md-tab-label>
 
+                    <md-tab-body>
+                        <md-content class="md-padding">
+                            <form name="uploadForm" tri-wizard-form>
+                                <div layout="row">
+                                    <md-input-container class="md-block" flex>
+
+                                        <md-button class="md-primary md-raised md-fab" ngf-select="vm.upload($files)" ng-disabled="vm.status != 'idle'" ngf-multiple="true" aria-label="upload">
+                                            <md-icon md-font-icon ng-class="{ 'zmdi zmdi-cloud-upload': vm.status == 'idle', 'fa fa-spinner fa-pulse': vm.status == 'uploading', 'zmdi zmdi-check': vm.status == 'complete'}"></md-icon>
+                                        </md-button>
+                                    </md-input-container>
+
+                                    <md-input-container flex>
+                                        <label translate>Select instructor</label>
+                                        <md-select ng-change="triWizard.updateProgress()" name="instructor" ng-model="wizardController.data.address.instuctor" required>
+                                            <md-option ng-repeat="x in vm.items" value="x" translate>{{x.Name}}</md-option>
+                                        </md-select>
+                                        <div ng-messages="uploadForm.instructor.$error">
+                                            <div ng-message when="required">
+                                                <span translate>Please Select instructor</span>
+                                            </div>
+                                        </div>
+                                    </md-input-container>
+                                </div>
+
+                            </form>
+                        </md-content>
+
+                    </md-tab-body>
+
+                </md-tab>
+
+                <md-tab id="confirm" ng-disabled="uploadForm.$invalid">
+                    <md-tab-label>
+                        <span class="oxy-step-label">5</span>
+                        <span translate>CONFIRM</span>
+                    </md-tab-label>
                     <md-tab-body>
                         <md-content class="md-padding">
                             <div class="padding-40" flex layout="column" layout-align="center center">
@@ -326,7 +366,6 @@
                             </div>
                         </md-content>
                     </md-tab-body>
-
                 </md-tab>
 
             </md-tabs>
@@ -334,7 +373,7 @@
             <div class="wizard-navbar" layout-fill layout-padding layout="row" layout-align="end center">
                 <md-button class="md-primary md-raised" ng-click="triWizard.prevStep()" ng-hide="triWizard.currentStep > 2" ng-disabled="triWizard.prevStepDisabled()" translate="PREV"></md-button>
                 <md-button class="md-primary md-raised" ng-click="triWizard.nextStep()" ng-hide="triWizard.progress == 100 && triWizard.currentStep > 1" ng-disabled="triWizard.nextStepDisabled()" translate="NEXT"></md-button>
-                <md-button class="md-accent md-raised" ng-click="triWizard.currentStep=3;vm.myfunc(wizardController)" ng-show="triWizard.progress == 100 && triWizard.currentStep <3" translate="SUBMIT"></md-button>
+                <md-button class="md-accent md-raised" ng-click="triWizard.currentStep=4;vm.myfunc(wizardController)" ng-show="triWizard.progress == 100 && triWizard.currentStep <4" translate="SUBMIT"></md-button>
             </div>
 
         </div>
@@ -342,4 +381,5 @@
     </div>
 
 </div>
+
 </md-content>
