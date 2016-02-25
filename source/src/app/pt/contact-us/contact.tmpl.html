@@ -228,13 +228,12 @@
                             <md-content class = "md-padding">
                                 <form name = "confirmForm" tri-wizard-form>
                                     <div layout layout-xs = "column" flex>
+
                                         <md-input-container flex>
                                             <label translate>Select instructor</label>
                                             <md-select ng-change = "triWizard.updateProgress()" name = "instructor"
                                                        ng-model = "wizardController.data.confirm.instuctor" required>
-                                                <md-option ng-repeat = "x in vm.items" value = "x" translate>
-                                                    {{x.Name}}
-                                                </md-option>
+                                                <md-option ng-repeat = "x in vm.items" value = "{{x.Name}}" translate>{{x.Name}}</md-option>
                                             </md-select>
                                             <div ng-messages = "confirmForm.instructor.$error">
                                                 <div ng-message when = "required">
@@ -242,31 +241,33 @@
                                                 </div>
                                             </div>
                                         </md-input-container>
+
                                         <md-input-container flex>
                                             <label translate>Select Time Slots</label>
-                                            <md-select ng-change = "triWizard.updateProgress()" name = "instructor"
-                                                       ng-model = "wizardController.data.confirm.instuctor" required>
-                                                <md-option ng-repeat = "x in vm.items" value = "x" translate>
-                                                    {{x.Name}}
-                                                </md-option>
-                                            </md-select>
-                                            <div ng-messages = "confirmForm.instructor.$error">
-                                                <div ng-message when = "required">
-                                                    <span translate>Please Select Time Slots</span>
-                                                </div>
-                                            </div>
-                                        </md-input-container>
-                                        <md-input-container flex>
-                                            <label translate>Select Location</label>
                                             <md-select ng-change = "triWizard.updateProgress()" name = "location"
-                                                       ng-model = "wizardController.data.confirm.location" required>>
-                                            </md-select>
+                                                       ng-model = "wizardController.data.confirm.location" required>
+                                                <md-option ng-repeat = "x in vm.items" value = "{{x.Location}}" translate>{{x.Location}}</md-option></md-select>
+
                                             <div ng-messages = "confirmForm.location.$error">
                                                 <div ng-message when = "required">
                                                     <span translate>Please Select Location</span>
                                                 </div>
                                             </div>
                                         </md-input-container>
+
+                                        <md-input-container flex>
+                                            <label translate>Select Time Slots</label>
+                                            <md-select ng-change = "triWizard.updateProgress()" name = "timeslot"
+                                                       ng-model = "wizardController.data.confirm.timeslot" required>
+                                                <md-option ng-repeat = "x in vm.items" value = "{{x.doj}}" translate>{{x.doj}}</md-option></md-select>
+
+                                            <div ng-messages = "confirmForm.timeslot.$error">
+                                                <div ng-message when = "required">
+                                                    <span translate>Please Select Time Slots</span>
+                                                </div>
+                                            </div>
+                                        </md-input-container>
+
                                     </div>
                                 </form>
                             </md-content>

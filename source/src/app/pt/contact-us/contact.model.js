@@ -11,17 +11,9 @@
     /* @ngInject */
     function SalesService()
     {
-        this.getData = getData;
-        this.submitform=submitform;
-        function getData()
-        {
-            var a ={
-                title:"contact",
-                content:"Hello I am content"
-            };
 
-            return a;
-        }
+        this.submitform=submitform;
+
 
         function  submitform(vms)
         {

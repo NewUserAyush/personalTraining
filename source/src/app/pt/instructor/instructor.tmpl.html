@@ -4,27 +4,29 @@
         md-row-height-gt-md="1:1" md-row-height="4:3"
         md-gutter="8px" md-gutter-gt-sm="8px" >
 
-        <md-grid-tile class="green" ng-repeat="tile in vm.items" md-colspan-sm="1" ng-cloak="" style="border-radius:10%">
-            <img class="img" ng-src="person/sam-killermann.jpg" width="30" height="200">
-            <md-fab-speed-dial md-direction="up" class="md-fling ">
-                <md-fab-trigger>
-                    <md-button aria-label="share this post" class="md-fab md-warn">
-                        <md-icon md-font-icon="zmdi zmdi-share"></md-icon>
-                    </md-button>
-                </md-fab-trigger>
 
-                <md-fab-actions>
-                    <md-button aria-label="twitter" class="md-fab md-raised md-mini" ng-click="vm.share('Shared on Twitter', $event)">
-                        <md-icon md-font-icon="fa fa-twitter"></md-icon>
-                    </md-button>
-                    <md-button aria-label="facebook" class="md-fab md-raised md-mini" ng-click="Login()">
-                        <md-icon md-font-icon="fa fa-facebook"></md-icon>
-                    </md-button>
-                    <md-button aria-label="google-plus" class="md-fab md-raised md-mini" ng-click="vm.share('Shared on Google+', $event)">
-                        <md-icon md-font-icon="fa fa-google-plus"></md-icon>
-                    </md-button>
-                </md-fab-actions>
-            </md-fab-speed-dial>
+        <md-grid-tile class="green" ng-repeat="tile in vm.items" md-colspan-sm="1" style="border-radius:10%" ng-cloak="">
+            <img class="img" ng-src="person/sam-killermann.jpg" width="30" height="200">
+                <md-fab-speed-dial md-direction="up" class="md-fling " md-open=false >
+
+                    <md-fab-trigger>
+                        <md-button aria-label="share this post" class="md-fab md-warn">
+                            <md-icon md-font-icon="zmdi zmdi-share"></md-icon>
+                        </md-button>
+                    </md-fab-trigger>
+                    <md-fab-actions>
+                        <md-button aria-label="twitter" class="md-fab md-raised md-mini" ng-click="vm.share('Shared on Twitter', $event)">
+                            <md-icon md-font-icon="fa fa-twitter"></md-icon>
+                        </md-button>
+                        <md-button aria-label="facebook" class="md-fab md-raised md-mini" ng-click="Login()">
+                            <md-icon md-font-icon="fa fa-facebook"></md-icon>
+                        </md-button>
+                        <md-button aria-label="google-plus" class="md-fab md-raised md-mini" ng-click="vm.share('Shared on Google+', $event)">
+                            <md-icon md-font-icon="fa fa-google-plus"></md-icon>
+                        </md-button>
+                    </md-fab-actions>
+                </md-fab-speed-dial>
+
             <md-grid-tile-footer style="height:70px;border-radius:10%">
                 <h3>{{tile.Name}}</h3>
                 <h3>Style:#######</h3>

@@ -10,10 +10,10 @@
 
     /* @ngInject */
     /* @ngInject */
-    function SalesService(breeze, $q)
+    function SalesService(breezeService)
     {
-        var serviceName='http://w2idemo.azurewebsites.net/breeze/home/';
-        var manager = new breeze.EntityManager(serviceName);
+        //var serviceName='http://w2idemo.azurewebsites.net/breeze/home/';
+        //var manager = new breeze.EntityManager(serviceName);
         //interface
         this.getData = getData;
         this.addItem = addItem;
@@ -22,26 +22,30 @@
         this.itemFilter=itemFilter;
 
 
-
         function getData()
         {
-            //var a ={
-            //    title:"Instructor",serviceNamekh
-            //    content:"Hello I am content"
-            //     };
-
-            var promise;
-            var query= breeze.EntityQuery.from('instructor')
-            var deferred=$q.defer();
-            manager.executeQuery(query).then(function(result){
-                //deferred.resolve(result);
-                var query= breeze.EntityQuery.from('instructor')
-                var arrData =  manager.executeQueryLocally(query);
-                deferred.resolve(arrData);
-            })
-
-            promise=deferred.promise;
+            var promise=breezeService.getEntities('instructor');
             return promise;
+
+
+                //instructormodel.getData().then(function (data) {
+                //    vm.items = data;
+                //})
+
+            //var promise;
+            //var query= breeze.EntityQuery.from('instructor')
+            //var deferred=$q.defer();
+            //manager.executeQuery(query).then(function(result){
+            //    //deferred.resolve(result);
+            //    var query= breeze.EntityQuery.from('instructor')
+            //    var arrData =  manager.executeQueryLocally(query);
+            //    deferred.resolve(arrData);
+            //})
+            //
+            //promise=deferred.promise;
+            //return promise;
+
+
 
          }
 

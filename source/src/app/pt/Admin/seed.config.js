@@ -13,13 +13,13 @@
 
             .state('triangular-no-scroll.admin-default-no-scroll.instructor', {
                 url: '/Admin/instructor',
-                templateUrl: 'app/pt/Admin/instructor/instructor.tmpl.html',
+                templateUrl: 'app/pt/Admin/instructor_info/instructor.tmpl.html',
                 controller: 'InstructorController',
                 controllerAs: 'vm'
             })
             .state('triangular-no-scroll.admin-default-no-scroll.instructor.insDetails', {
                 url: '/:id',
-                templateUrl: 'app/pt/Admin/instructor/instructorDetails.tmpl.html',
+                templateUrl: 'app/pt/Admin/instructor_info/instructorDetails.tmpl.html',
                 controller: 'InstructorDetailsController',
                 controllerAs: 'vm'
             })
