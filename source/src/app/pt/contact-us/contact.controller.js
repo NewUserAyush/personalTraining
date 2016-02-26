@@ -6,9 +6,9 @@
         .controller('contactController', fn);
 
     /* @ngInject */
-    function fn(contactmodel,$scope,$timeout, $mdToast,instructormodel) {
+    function fn(contactmodel,$scope,$timeout, $mdToast,instructormodel,breezeService) {
         var vm = this;
-
+         vm.data={};
         //vm.testData = ['contact', '#is', 'great'];
         $scope.myDate = new Date();
         $scope.minDate = new Date(
@@ -30,21 +30,27 @@
         vm.status = 'idle';  // idle | uploading | complete
         vm.upload = upload;
 
-        function getData() {
 
 
             instructormodel.getData().then(function(data){
-                vm.items=data.results;
+                vm.data.instructor=data.results;
             });
+
             //instructormodel.getData().then(function (data) {
             //    vm.items = data;
             //})
-        }
+
+        breezeService.getEntities('TimeSlot').then(function (data){
+            vm.data.timeslot=data.results;
+        });
+
+        breezeService.getEntities('location').then(function (data){
+            vm.data.location=data.results;
+        });
+
+
 
         var fileList;
-
-
-
         function upload($files) {
             if($files !== null && $files.length > 0) {
                 fileList = $files;
@@ -82,7 +88,28 @@
 
        vm.myfunc =function myfun(studentInfo)
        {
-          contactmodel.submitform(studentInfo);
+         var data={
+                    firstName:studentInfo.firstName,
+                    lastName:studentInfo.lastName,
+                    gender:studentInfo.Gender,
+                    email:studentInfo.email,
+                    dob:studentInfo.dob,
+                    ContactNo:studentInfo.phno,
+                    address:studentInfo.line1,
+                    City:studentInfo.town,
+                    zip:studentInfo.zip,
+                    state:studentInfo.State,
+                    country:studentInfo.Country,
+                    InstructorId:instructor,
+                    locationId:location,
+                    TimeslotId:timeslot
+                  }
+
+
+
+           breezeService.createEntity('Student_Registration',data);
+
+
        }
     }
 })();

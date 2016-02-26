@@ -137,6 +137,7 @@
 
                     </md-tab>
                     <!--//address form start here-->
+                    <!--ng-disabled = "studentForm.$invalid"-->
                     <md-tab id = "address" ng-disabled = "studentForm.$invalid">
 
                         <md-tab-label>
@@ -233,7 +234,7 @@
                                             <label translate>Select instructor</label>
                                             <md-select ng-change = "triWizard.updateProgress()" name = "instructor"
                                                        ng-model = "wizardController.data.confirm.instuctor" required>
-                                                <md-option ng-repeat = "x in vm.items" value = "{{x.Name}}" translate>{{x.Name}}</md-option>
+                                                <md-option ng-repeat = "x in vm.data.instructor" value = "{{x.Id}}" translate>{{x.Name}}</md-option>
                                             </md-select>
                                             <div ng-messages = "confirmForm.instructor.$error">
                                                 <div ng-message when = "required">
@@ -243,10 +244,10 @@
                                         </md-input-container>
 
                                         <md-input-container flex>
-                                            <label translate>Select Time Slots</label>
+                                            <label translate>Select Location</label>
                                             <md-select ng-change = "triWizard.updateProgress()" name = "location"
                                                        ng-model = "wizardController.data.confirm.location" required>
-                                                <md-option ng-repeat = "x in vm.items" value = "{{x.Location}}" translate>{{x.Location}}</md-option></md-select>
+                                                <md-option ng-repeat = "x in vm.data.location" value = "{{x.Id}}" translate>{{x.title}}</md-option></md-select>
 
                                             <div ng-messages = "confirmForm.location.$error">
                                                 <div ng-message when = "required">
@@ -259,7 +260,7 @@
                                             <label translate>Select Time Slots</label>
                                             <md-select ng-change = "triWizard.updateProgress()" name = "timeslot"
                                                        ng-model = "wizardController.data.confirm.timeslot" required>
-                                                <md-option ng-repeat = "x in vm.items" value = "{{x.doj}}" translate>{{x.doj}}</md-option></md-select>
+                                                <md-option ng-repeat = "x in vm.data.timeslot" value = "{{x.Id}}" translate>{{x.title}}</md-option></md-select>
 
                                             <div ng-messages = "confirmForm.timeslot.$error">
                                                 <div ng-message when = "required">

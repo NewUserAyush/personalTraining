@@ -24,7 +24,7 @@
 
         function getData()
         {
-            var promise=breezeService.getEntities('instructor');
+            var promise=breezeService.getEntities('instructors');
             return promise;
 
 
