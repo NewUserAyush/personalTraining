@@ -87,26 +87,24 @@
 
 
        vm.myfunc =function myfun(studentInfo)
-       {
+       {   var formData = studentInfo.data;
+
          var data={
-                    firstName:studentInfo.firstName,
-                    lastName:studentInfo.lastName,
-                    gender:studentInfo.Gender,
-                    email:studentInfo.email,
-                    dob:studentInfo.dob,
-                    ContactNo:studentInfo.phno,
-                    address:studentInfo.line1,
-                    City:studentInfo.town,
-                    zip:studentInfo.zip,
-                    state:studentInfo.State,
-                    country:studentInfo.Country,
-                    InstructorId:instructor,
-                    locationId:location,
-                    TimeslotId:timeslot
+                    firstName:formData.student.firstName,
+                    lastName:formData.student.lastName,
+                    gender:formData.student.Gender,
+                    email:formData.student.email,
+                    dob:formData.student.dob,
+                    ContactNo:formData.student.phno,
+                    address:formData.address.line1,
+                    City:formData.address.town,
+                    zip:formData.address.zip,
+                    state:formData.address.State,
+                    country:formData.address.country,
+                    InstructorId:formData.confirm.instuctor,
+                    locationId:formData.confirm.location,
+                    TimeslotId:formData.confirm.timeslot
                   }
-
-
-
            breezeService.createEntity('Student_Registration',data);
 
 
