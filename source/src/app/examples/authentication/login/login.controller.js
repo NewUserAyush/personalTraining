@@ -7,7 +7,7 @@
 
     /* @ngInject */
 
-    function LoginController($state, triSettings,$scope, $auth,Facebook,$rootScope,$mdDialog) {
+    function LoginController($state, triSettings,$scope, $auth,Facebook,$rootScope,$mdDialog,$http,$location,$cookieStore) {
         var vm = this;
         //vm.loginClick = loginClick;
 
@@ -42,20 +42,25 @@
         $scope.toggleLogIn=function(isLoggedIn)
         {
             if(isloggedIn) $scope.logout();
-            else $scope.IntentLogin();
+            else  $scope.IntentLogin();
         };
 
-        $scope.Login=function(){
-            Facebook.login(function(responce){
-                if(responce.status=='connected'){
-                    Facebook.api('/me',function (responce){
+        $scope.Login=function()
+        {
+            Facebook.login(function(responce)
+            {
+                if(responce.status=='connected')
+                {
+                    Facebook.api('/me',function (responce)
+                    {
 
                         $mdDialog.hide(responce.first_name);
 
                         //$rootScope.$emit("notifyFBUser",{userName:responce.first_name})
                        // $state.go("triangular.admin-default.home");
 
-                    })
+                    }
+                    )
                 }
 
             });

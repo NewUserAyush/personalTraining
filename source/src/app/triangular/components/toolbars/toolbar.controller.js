@@ -6,7 +6,7 @@
         .controller('DefaultToolbarController', DefaultToolbarController);
 
     /* @ngInject */
-    function DefaultToolbarController($scope, $rootScope, $mdMedia, $translate, $state, $element, $filter, $mdUtil, $mdSidenav, $mdToast, $timeout, $document, triBreadcrumbsService, triSettings, triLayout,$mdDialog,Facebook,triMenu) {
+    function DefaultToolbarController($scope, $rootScope, $mdMedia, $translate, $state, $element, $filter, $mdUtil, $mdSidenav, $mdToast, $timeout, $document, triBreadcrumbsService, triSettings, triLayout,$mdDialog,Facebook,triMenu,$cookieStore) {
         var vm = this;
         vm.fbUserName = null;
        // vm.goToFbLogin = goToFbLogin;
@@ -23,7 +23,13 @@
         vm.toggleSearch=toggleSearch;
         vm.showSearch = false;
         // initToolbar();
-
+        function init()
+        {
+            //if session load it in vm.fbusername
+            if($cookieStore.get('fblog'))
+            vm.fbUserName=$cookieStore.get('fblog');
+        }
+        init();
         ////////////////
         function toggleSearch() {
             vm.showSearch = !vm.showSearch;
@@ -100,6 +106,8 @@
             if(vm.fbUserName)
             {
                 Facebook.logout(function(){
+                    //remove session
+                    $cookieStore.remove('fblog');
                     vm.fbUserName=null;
                     triMenu.removeMenu('triangular-no-scroll.admin-default-no-scroll.instructor');
                     triMenu.removeMenu('triangular.admin-default.student_information');
@@ -117,6 +125,8 @@
                     fullscreen: useFullScreen
                 })
                 .then(function(answer) {
+                    //save
+                    $cookieStore.put('fblog',answer);
                     vm.fbUserName = answer;
                     triMenu.addMenu({
                         name: 'Admin',
