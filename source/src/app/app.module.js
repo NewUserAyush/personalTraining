@@ -6,7 +6,7 @@
             'triangular',
             'ngAnimate', 'ngCookies', 'ngSanitize', 'ngMessages', 'ngMaterial',
             'ui.router', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'angularMoment', 'textAngular', 'uiGmapgoogle-maps', 'hljs', 'md.data.table', angularDragula(angular), 'ngFileUpload','breeze.angular',
-            'satellizer','facebook','angular.filter','web2',
+            'satellizer','facebook','angular.filter','web2','ngFileUpload',
             // 'seed-module'
             // uncomment above to activate the example seed module
             'app.examples'
