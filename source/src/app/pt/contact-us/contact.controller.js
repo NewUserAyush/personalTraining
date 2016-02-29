@@ -30,7 +30,7 @@
         vm.status = 'idle';  // idle | uploading | complete
         vm.upload = upload;
 
-        function getData() {
+
 
 
             instructormodel.getData().then(function(data){
@@ -39,13 +39,13 @@
             //instructormodel.getData().then(function (data) {
             //    vm.items = data;
             //})
-        }
 
         var fileList;
 
 
 
         function upload($files) {
+            vm.img=$files;
             if($files !== null && $files.length > 0) {
                 fileList = $files;
 
@@ -84,5 +84,12 @@
        {
           contactmodel.submitform(studentInfo);
        }
+
+        $scope.uploadPic = function (file) {
+            $scope.formUpload = true;
+            if (file != null) {
+                $scope.upload(file)
+            }
+        };
     }
 })();

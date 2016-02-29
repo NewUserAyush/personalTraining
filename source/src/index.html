@@ -33,7 +33,9 @@
     <![endif]-->
 
     <div class="full-height" ui-view>
-    <img src="loading.gif" height="400" width="400">
+        <div layout="row" layout-sm="column" layout-align="space-around">
+            <md-progress-circular md-mode="indeterminate" md-diameter="300"></md-progress-circular>
+        </div>
     </div>
 
 
@@ -43,10 +45,12 @@
     <!-- bower:js -->
     <!-- endbower -->
 
+
     <!-- enqueue all translations for calendar (remove if you dont need multilanguage) -->
     <script src="../bower_components/fullcalendar/dist/lang-all.js"></script>
     <!-- endbuild -->
 
+    <script src="path/to/ng-croppie.min.js"></script>
     <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
     <!-- inject:js -->
     <!-- js files will be automatically insert here -->

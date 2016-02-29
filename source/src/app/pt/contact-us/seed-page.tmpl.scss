@@ -26,3 +26,26 @@
 
 .inputdemoBasicUsage .md-datepicker-button {
     width: 36px; }
+
+.thumb {
+    //float: left;
+    width: 300px;
+    height: 150px;
+
+    border-radius: 50%;
+}
+
+form .thumb {
+    width: 300px;
+    height: 150px;
+
+   // float: none;
+    position: relative;
+    top: 0px;
+}
+
+form button {
+    padding: 3px 10px;
+    font-weight: bold;
+    margin-top: 10px;
+}

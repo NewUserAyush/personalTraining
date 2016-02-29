@@ -36,7 +36,8 @@
      "breeze-client":"~1.5.4",
       "satellizer":"",
       "angular-facebook":"",
-      "angular-filter":""
+      "angular-filter":"",
+        "ng-file-upload":""
   },
 
   "devDependencies": {
